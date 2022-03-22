@@ -1,4 +1,4 @@
-package com.lucasfagundes.androidfomezero
+package com.lucasfagundes.fomezero
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -1,4 +1,4 @@
-package com.lucasfagundes.androidfomezero
+package com.lucasfagundes.fomezero
 
 import org.junit.Test
 
