@@ -9,17 +9,10 @@ import com.powerhungers.fomezero.databinding.FragmentWelcomeBinding
 
 class WelcomeFragment : Fragment() {
 
-    private var _binding: FragmentWelcomeBinding? = null
-    private val binding : FragmentWelcomeBinding get() = _binding!!
-
+    private val binding by lazy { FragmentWelcomeBinding.inflate(layoutInflater) }
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View = FragmentWelcomeBinding.inflate(inflater,container,false).apply {
-        _binding = this
-    }.root
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-    }
+    ): View = binding.root
 }
