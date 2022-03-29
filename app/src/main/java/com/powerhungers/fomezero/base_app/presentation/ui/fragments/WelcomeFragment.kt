@@ -10,6 +10,7 @@ import com.powerhungers.fomezero.databinding.FragmentWelcomeBinding
 class WelcomeFragment : Fragment() {
 
     private val binding by lazy { FragmentWelcomeBinding.inflate(layoutInflater) }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
