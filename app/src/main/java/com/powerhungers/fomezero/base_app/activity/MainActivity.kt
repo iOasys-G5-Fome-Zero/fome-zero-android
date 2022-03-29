@@ -1,7 +1,7 @@
-package com.powerhungers.fomezero.base_app
+package com.powerhungers.fomezero.base_app.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.powerhungers.fomezero.R
 

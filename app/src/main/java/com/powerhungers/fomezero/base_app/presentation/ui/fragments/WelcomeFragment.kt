@@ -1,4 +1,4 @@
-package com.powerhungers.fomezero.base_app
+package com.powerhungers.fomezero.base_app.presentation.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
