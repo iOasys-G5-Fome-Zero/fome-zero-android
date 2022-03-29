@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".base_app.presentation.ui.fragments.LoginFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="32dp"
+        android:text="Entrar"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_info_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Informação sobre conta"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/txt_enter"
+        app:layout_constraintTop_toBottomOf="@id/txt_enter" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_txt_email"
+        android:layout_width="248dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:background="#FFF8F8F8"
+        android:inputType="textEmailAddress"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_info_account" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:hint="E-mail"
+        android:textAlignment="center"
+        android:textColorHint="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/edit_txt_email"
+        app:layout_constraintStart_toStartOf="@id/edit_txt_email"
+        app:layout_constraintTop_toTopOf="@id/edit_txt_email" />
+
+    <View
+        android:layout_width="248dp"
+        android:layout_height="1dp"
+        android:background="#FF4E4B59"
+        app:layout_constraintBottom_toBottomOf="@id/edit_txt_email"
+        app:layout_constraintEnd_toEndOf="@id/edit_txt_email"
+        app:layout_constraintStart_toStartOf="@id/edit_txt_email" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_txt_passwd"
+        android:layout_width="248dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:background="#FFF8F8F8"
+        android:inputType="textPassword"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="24dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_txt_email" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_passwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:hint="Senha"
+        android:textAlignment="center"
+        android:textColorHint="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/edit_txt_passwd"
+        app:layout_constraintStart_toStartOf="@id/edit_txt_passwd"
+        app:layout_constraintTop_toTopOf="@id/edit_txt_passwd" />
+
+    <View
+        android:layout_width="248dp"
+        android:layout_height="1dp"
+        android:background="#FF4E4B59"
+        app:layout_constraintBottom_toBottomOf="@id/edit_txt_passwd"
+        app:layout_constraintEnd_toEndOf="@id/edit_txt_passwd"
+        app:layout_constraintStart_toStartOf="@id/edit_txt_passwd" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_forgot_passwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Esqueceu a senha?"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/edit_txt_passwd"
+        app:layout_constraintTop_toBottomOf="@id/edit_txt_passwd" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Recuperar senha"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/edit_txt_passwd"
+        app:layout_constraintTop_toBottomOf="@id/edit_txt_passwd" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/txt_forgot_passwd"
+        app:layout_constraintTop_toBottomOf="@id/txt_forgot_passwd" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_remember_passwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Lembrar minha senha"
+        android:textColor="#FF1F1F1F"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/checkbox"
+        app:layout_constraintTop_toBottomOf="@id/txt_forgot_passwd" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_enter"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button_background"
+        android:gravity="center"
+        android:text="Entrar"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_remember_passwd" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="248dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="48dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/edit_txt_passwd"
+        app:layout_constraintStart_toStartOf="@id/edit_txt_passwd"
+        app:layout_constraintTop_toBottomOf="@id/btn_enter" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:text="ou"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        app:layout_constraintEnd_toEndOf="@id/view"
+        app:layout_constraintStart_toStartOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/view" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Entrar com Google"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/view"
+        app:layout_constraintStart_toStartOf="@id/view"
+        app:layout_constraintTop_toBottomOf="@id/view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

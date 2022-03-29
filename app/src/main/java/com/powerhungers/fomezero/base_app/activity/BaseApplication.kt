@@ -1,4 +1,4 @@
-package com.powerhungers.fomezero.base_app
+package com.powerhungers.fomezero.base_app.activity
 
 import android.app.Application
 import org.koin.core.context.startKoin
