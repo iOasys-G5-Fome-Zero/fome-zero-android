@@ -1,4 +1,4 @@
-package com.powerhungers.fomezero.base_app.util
+package com.powerhungers.fomezero.base_app.common.utils
 
 sealed class ViewState<out T> {
 

@@ -2,7 +2,6 @@ package com.powerhungers.fomezero.base_app.util
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.powerhungers.fomezero.base_app.domain.core.UseCase
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 import org.koin.core.parameter.parametersOf

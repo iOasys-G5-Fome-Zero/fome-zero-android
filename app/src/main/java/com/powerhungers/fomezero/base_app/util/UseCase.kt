@@ -1,4 +1,4 @@
-package com.powerhungers.fomezero.base_app.domain.core
+package com.powerhungers.fomezero.base_app.util
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

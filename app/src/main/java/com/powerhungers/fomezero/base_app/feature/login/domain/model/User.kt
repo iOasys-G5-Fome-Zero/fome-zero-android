@@ -1,4 +1,4 @@
-package com.powerhungers.fomezero.base_app.domain.model
+package com.powerhungers.fomezero.base_app.feature.login.domain.model
 
 data class User(
     val name: String,

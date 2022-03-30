@@ -1,4 +1,4 @@
-package com.powerhungers.fomezero.base_app.activity
+package com.powerhungers.fomezero.base_app.base_app
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

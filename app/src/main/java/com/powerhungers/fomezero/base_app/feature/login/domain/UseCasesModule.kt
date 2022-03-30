@@ -1,10 +1,10 @@
 package com.powerhungers.fomezero.base_app.di
 
-import com.powerhungers.fomezero.base_app.domain.usecases.LoginUseCases
+import com.powerhungers.fomezero.base_app.feature.login.domain.usecase.LoginUseCase
 import org.koin.dsl.module
 
 val useCasesModule = module {
     factory {
-        LoginUseCases(get(), get())
+        LoginUseCase(get(), get())
     }
 }
