@@ -3,20 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/welcomeFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
-        android:id="@+id/welcomeFragment"
-        android:name="com.powerhungers.fomezero.base_app.presentation.ui.fragments.WelcomeFragment"
-        android:label="fragment_welcome"
-        tools:layout="@layout/fragment_welcome" >
-        <action
-            android:id="@+id/action_welcomeFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/loginFragment"
-        android:name="com.powerhungers.fomezero.base_app.presentation.ui.fragments.LoginFragment"
+        android:name="com.powerhungers.fomezero.feature.login.presentation.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
 </navigation>
