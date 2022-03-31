@@ -1,7 +1,7 @@
-package com.powerhungers.fomezero.base_app.common.extension
+package com.powerhungers.fomezero.common.extension
 
 import androidx.lifecycle.MutableLiveData
-import com.powerhungers.fomezero.base_app.feature.login.presentation.ViewState
+import com.powerhungers.fomezero.feature.login.presentation.ViewState
 
 fun <T> MutableLiveData<ViewState<T>>.postSuccess(data: T) {
     postValue(ViewState.Success(data))

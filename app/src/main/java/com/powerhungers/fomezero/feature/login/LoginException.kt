@@ -1,4 +1,4 @@
-package com.powerhungers.fomezero.base_app.feature.login
+package com.powerhungers.fomezero.feature.login
 
 sealed class LoginException(message: String= "", title: String? = null) :
     RuntimeException(message, RuntimeException(title))

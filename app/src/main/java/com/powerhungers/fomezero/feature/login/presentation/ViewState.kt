@@ -1,4 +1,4 @@
-package com.powerhungers.fomezero.base_app.feature.login.presentation
+package com.powerhungers.fomezero.feature.login.presentation
 
 sealed class ViewState<out T> {
 
