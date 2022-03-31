@@ -8,7 +8,6 @@ import com.powerhungers.fomezero.base_app.common.extension.postError
 import com.powerhungers.fomezero.base_app.common.extension.postLoading
 import com.powerhungers.fomezero.base_app.common.extension.postNeutral
 import com.powerhungers.fomezero.base_app.common.extension.postSuccess
-import com.powerhungers.fomezero.base_app.common.utils.ViewState
 import com.powerhungers.fomezero.base_app.feature.login.domain.usecase.LoginUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.catch
@@ -32,6 +31,7 @@ class LoginViewModel(private val loginUseCase: LoginUseCase) : ViewModel() {
                 }.collect { loginViewState.postSuccess(Unit) }
         }
     }
+
     override fun onCleared() {
         super.onCleared()
         loginViewState.postNeutral()

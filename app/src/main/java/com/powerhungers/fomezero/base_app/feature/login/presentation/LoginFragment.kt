@@ -5,15 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.powerhungers.fomezero.databinding.FragmentLoginBinding
-import org.koin.androidx.viewmodel.ext.android.getViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class LoginFragment : Fragment() {
 
     private val binding by lazy { FragmentLoginBinding.inflate(layoutInflater) }
-    private val loginViewModel: LoginViewModel by lazy {
-        getViewModel()
-    }
+    private val loginViewModel: LoginViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,6 +25,7 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         handleClickListener()
+        addObserver()
     }
 
     private fun handleClickListener() {
@@ -35,6 +35,23 @@ class LoginFragment : Fragment() {
                     editTxtEmail.text.toString(),
                     editTxtPasswd.text.toString()
                 )
+            }
+        }
+    }
+
+    private fun addObserver() {
+        loginViewModel.loginLiveData.observe(viewLifecycleOwner) { state ->
+            with(binding) {
+                when (state) {
+                    is ViewState.Loading -> Unit
+                    is ViewState.Success -> {
+                        findNavController()
+                    }
+                    is ViewState.Error -> Unit
+                    else -> {
+                        Unit
+                    }
+                }
             }
         }
     }

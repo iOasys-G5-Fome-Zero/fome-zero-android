@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">Android Fome Zero</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="consumer">Consumidor</string>
     <string name="producer">Produtor</string>
+    <string name="no_account_yet">Ainda não tem uma conta?</string>
+    <string name="sign_up">Cadastre-se aqui</string>
+    <string name="recover_password">Recuperar senha</string>
+    <string name="enter">Entrar</string>
+    <string name="want_register_ong">Deseja registrar uma ONG?</string>
+    <string name="click_here">Clique aqui</string>
+    <string name="remember_my_password">Lembrar minha senha</string>
+    <string name="forgot_password">Esqueceu a senha?</string>
+    <string name="password">Senha</string>
+    <string name="email">E-mail</string>
 </resources>
