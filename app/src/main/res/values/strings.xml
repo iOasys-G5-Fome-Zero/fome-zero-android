@@ -3,4 +3,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="consumer">Consumidor</string>
     <string name="producer">Produtor</string>
+    <string name="jump">Pular</string>
+    <string name="next">Proximo</string>
 </resources>
