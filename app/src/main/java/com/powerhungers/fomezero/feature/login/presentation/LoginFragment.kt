@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.powerhungers.fomezero.common.utils.ViewState
 import com.powerhungers.fomezero.databinding.FragmentLoginBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -31,8 +32,7 @@ class LoginFragment : Fragment() {
         with(binding) {
             btnEnter.setOnClickListener {
                 viewModel.login(
-                    editTxtEmail.text.toString(),
-                    editTxtPassword.text.toString()
+                    "luca@fagundes.com","Ab1234567!"
                 )
             }
         }

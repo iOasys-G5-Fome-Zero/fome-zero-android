@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.powerhungers.fomezero.common.utils.ViewState
 import com.powerhungers.fomezero.common.extension.postError
 import com.powerhungers.fomezero.common.extension.postLoading
 import com.powerhungers.fomezero.common.extension.postNeutral
