@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="32dp"
+    tools:context=".feature.login.presentation.CadastreFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_create_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="32dp"
+            android:text="Criar conta"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_info_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Informação sobre cadastro"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/txt_create_account"
+            app:layout_constraintTop_toBottomOf="@id/txt_create_account" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rbtn_producer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:buttonTint="#FF1F1F1F"
+            android:text="Sou produtor"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/txt_info_register"
+            app:layout_constraintTop_toBottomOf="@id/txt_info_register" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rbtn_consumer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#FF1F1F1F"
+            android:text="Sou consumidor"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/rbtn_producer"
+            app:layout_constraintTop_toBottomOf="@id/rbtn_producer" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_txt_name"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="56dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_txt_background"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rbtn_consumer" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:hint="Nome"
+            android:textAlignment="center"
+            android:textColorHint="#80000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/edit_txt_name"
+            app:layout_constraintStart_toStartOf="@id/edit_txt_name"
+            app:layout_constraintTop_toTopOf="@id/edit_txt_name" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#FF4E4B59"
+            app:layout_constraintBottom_toBottomOf="@id/edit_txt_name"
+            app:layout_constraintEnd_toEndOf="@id/edit_txt_name"
+            app:layout_constraintStart_toStartOf="@id/edit_txt_name" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_txt_email"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_txt_background"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/edit_txt_name"
+            app:layout_constraintStart_toStartOf="@id/edit_txt_name"
+            app:layout_constraintTop_toBottomOf="@id/edit_txt_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:hint="E-mail"
+            android:textAlignment="center"
+            android:textColorHint="#80000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/edit_txt_email"
+            app:layout_constraintStart_toStartOf="@id/edit_txt_email"
+            app:layout_constraintTop_toTopOf="@id/edit_txt_email" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#FF4E4B59"
+            app:layout_constraintBottom_toBottomOf="@id/edit_txt_email"
+            app:layout_constraintEnd_toEndOf="@id/edit_txt_email"
+            app:layout_constraintStart_toStartOf="@id/edit_txt_email" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_txt_passwd"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_txt_background"
+            android:inputType="textPassword"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="16dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/edit_txt_email"
+            app:layout_constraintStart_toStartOf="@id/edit_txt_email"
+            app:layout_constraintTop_toBottomOf="@id/edit_txt_email" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_passwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:hint="Senha"
+            android:textAlignment="center"
+            android:textColorHint="#80000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/edit_txt_passwd"
+            app:layout_constraintStart_toStartOf="@id/edit_txt_passwd"
+            app:layout_constraintTop_toTopOf="@id/edit_txt_passwd" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#FF4E4B59"
+            app:layout_constraintBottom_toBottomOf="@id/edit_txt_passwd"
+            app:layout_constraintEnd_toEndOf="@id/edit_txt_passwd"
+            app:layout_constraintStart_toStartOf="@id/edit_txt_passwd" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_rules_passwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="A senha deve conter:\nPelo menos 1 letra\nPelo menos 1 dígito\nPelo menos 1 caractere especial"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/edit_txt_passwd"
+            app:layout_constraintTop_toBottomOf="@id/view3" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_txt_confirm_passwd"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_txt_background"
+            android:inputType="textPassword"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="24dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/edit_txt_email"
+            app:layout_constraintStart_toStartOf="@id/edit_txt_email"
+            app:layout_constraintTop_toBottomOf="@id/txt_rules_passwd" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_confirm_passwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:hint="Confirmar senha"
+            android:textAlignment="center"
+            android:textColorHint="#80000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/edit_txt_confirm_passwd"
+            app:layout_constraintStart_toStartOf="@id/edit_txt_confirm_passwd"
+            app:layout_constraintTop_toTopOf="@id/edit_txt_confirm_passwd" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#FF4E4B59"
+            app:layout_constraintBottom_toBottomOf="@id/edit_txt_confirm_passwd"
+            app:layout_constraintEnd_toEndOf="@id/edit_txt_confirm_passwd"
+            app:layout_constraintStart_toStartOf="@id/edit_txt_confirm_passwd" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkbox_cadastre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:buttonTint="#FF1F1F1F"
+            android:padding="8dp"
+            android:text="Concordo com a Política de Privacidade e \nTermos de Uso"
+            android:textColor="#FF1F1F1F"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/edit_txt_confirm_passwd"
+            app:layout_constraintTop_toBottomOf="@id/edit_txt_confirm_passwd" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_finalize_registration"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/button_background"
+            android:gravity="center"
+            android:text="Finalizar cadastro"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkbox_cadastre" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+
