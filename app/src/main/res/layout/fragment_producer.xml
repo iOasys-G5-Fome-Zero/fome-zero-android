@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.login.presentation.ProducerFragment">
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:background="#FFD8D8D8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:text="Olá José!"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:drawableTint="@color/black"
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintTop_toTopOf="@id/view1" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/chat_bubble_24"
+        android:backgroundTint="@color/black"
+        app:layout_constraintStart_toEndOf="@id/txt_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_my_products"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Meus produtos"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:drawableTint="@color/black"
+        app:layout_constraintStart_toStartOf="@id/txt_name"
+        app:layout_constraintTop_toBottomOf="@id/view1" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="128dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/view_background"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_my_products" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="16dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. \nMaecenas ac leo mauris."
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/view2"
+        app:layout_constraintTop_toTopOf="@id/view2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="54dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:text="Minhas cestas"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/view2"
+        app:layout_constraintEnd_toEndOf="@id/view2"
+        app:layout_constraintStart_toStartOf="@id/view2" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Lorem ipsum dolor"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/view2"
+        app:layout_constraintTop_toBottomOf="@id/view2" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear_layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="132dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="8dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintStart_toStartOf="@id/txt_2"
+        app:layout_constraintTop_toBottomOf="@id/txt_2">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_1"
+            android:layout_width="96dp"
+            android:layout_height="132dp"
+            android:layout_marginHorizontal="12dp"
+            app:cardCornerRadius="4dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_1"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:background="#FFD8D8D8" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:layout_marginTop="108dp"
+                android:text="Lorem ipsum"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_2"
+            android:layout_width="96dp"
+            android:layout_height="132dp"
+            android:layout_marginHorizontal="12dp"
+            app:cardCornerRadius="4dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_2"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:background="#FFD8D8D8" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:layout_marginTop="108dp"
+                android:text="Lorem ipsum"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_3"
+            android:layout_width="96dp"
+            android:layout_height="132dp"
+            android:layout_marginHorizontal="12dp"
+            app:cardCornerRadius="4dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_3"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:background="#FFD8D8D8" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:layout_marginTop="108dp"
+                android:text="Lorem ipsum"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Lorem ipsum dolor"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/view2"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout_1" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear_layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="8dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintStart_toStartOf="@id/txt_3"
+        app:layout_constraintTop_toBottomOf="@id/txt_3">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_4"
+            android:layout_width="152dp"
+            android:layout_height="96dp"
+            android:layout_marginHorizontal="16dp"
+            app:cardCornerRadius="4dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_4"
+                android:layout_width="152dp"
+                android:layout_height="96dp"
+                android:background="#FFD8D8D8" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_5"
+            android:layout_width="152dp"
+            android:layout_height="96dp"
+            android:layout_marginHorizontal="16dp"
+            app:cardCornerRadius="4dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_5"
+                android:layout_width="152dp"
+                android:layout_height="96dp"
+                android:background="#FFD8D8D8" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_producer"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:background="#FFD8D8D8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
