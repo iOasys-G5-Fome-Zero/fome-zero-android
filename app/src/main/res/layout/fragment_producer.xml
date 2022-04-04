@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".feature.login.presentation.ProducerFragment">
 
     <View
         android:id="@+id/view1"
         android:layout_width="0dp"
         android:layout_height="64dp"
-        android:background="#FFD8D8D8"
+        android:background="@drawable/view_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,6 +31,7 @@
         app:layout_constraintTop_toTopOf="@id/view1" />
 
     <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ibtn_chat_producer"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginTop="16dp"
@@ -39,11 +41,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_my_products"
+        android:id="@+id/txt_my_baskets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Meus produtos"
+        android:text="Minhas cestas"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:drawableTint="@color/black"
@@ -56,21 +58,22 @@
         android:layout_height="128dp"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/view_background"
+        android:background="@drawable/view_background_2"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_my_products" />
+        app:layout_constraintTop_toBottomOf="@id/txt_my_baskets" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginVertical="16dp"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. \nMaecenas ac leo mauris."
+        android:text="Configure quais os tipos e tamanhos de cesta de alimentos \nvocê deseja fornecer."
         android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@id/view2"
+        app:layout_constraintEnd_toEndOf="@id/view2"
         app:layout_constraintTop_toTopOf="@id/view2" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -79,164 +82,138 @@
         android:layout_marginHorizontal="54dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/button_background"
-        android:backgroundTint="@color/white"
         android:gravity="center"
         android:text="Minhas cestas"
         android:textAllCaps="false"
+        android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@id/view2"
         app:layout_constraintEnd_toEndOf="@id/view2"
         app:layout_constraintStart_toStartOf="@id/view2" />
 
+    <!--    <androidx.appcompat.widget.LinearLayoutCompat-->
+    <!--        android:id="@+id/linear_layout_1"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="132dp"-->
+    <!--        android:layout_marginHorizontal="24dp"-->
+    <!--        android:layout_marginVertical="8dp"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:weightSum="3"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/txt_2"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/txt_2">-->
+
+    <!--        <com.google.android.material.card.MaterialCardView-->
+    <!--            android:id="@+id/cv_1"-->
+    <!--            android:layout_width="96dp"-->
+    <!--            android:layout_height="132dp"-->
+    <!--            android:layout_marginHorizontal="12dp"-->
+    <!--            app:cardCornerRadius="4dp">-->
+
+    <!--            <androidx.appcompat.widget.AppCompatImageView-->
+    <!--                android:id="@+id/img_1"-->
+    <!--                android:layout_width="96dp"-->
+    <!--                android:layout_height="96dp"-->
+    <!--                android:background="#FFD8D8D8" />-->
+
+    <!--            <androidx.appcompat.widget.AppCompatTextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginHorizontal="6dp"-->
+    <!--                android:layout_marginTop="108dp"-->
+    <!--                android:text="Lorem ipsum"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textSize="14sp" />-->
+
+    <!--        </com.google.android.material.card.MaterialCardView>-->
+
+    <!--        <com.google.android.material.card.MaterialCardView-->
+    <!--            android:id="@+id/cv_2"-->
+    <!--            android:layout_width="96dp"-->
+    <!--            android:layout_height="132dp"-->
+    <!--            android:layout_marginHorizontal="12dp"-->
+    <!--            app:cardCornerRadius="4dp">-->
+
+    <!--            <androidx.appcompat.widget.AppCompatImageView-->
+    <!--                android:id="@+id/img_2"-->
+    <!--                android:layout_width="96dp"-->
+    <!--                android:layout_height="96dp"-->
+    <!--                android:background="#FFD8D8D8" />-->
+
+    <!--            <androidx.appcompat.widget.AppCompatTextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginHorizontal="6dp"-->
+    <!--                android:layout_marginTop="108dp"-->
+    <!--                android:text="Lorem ipsum"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textSize="14sp" />-->
+
+    <!--        </com.google.android.material.card.MaterialCardView>-->
+
+    <!--        <com.google.android.material.card.MaterialCardView-->
+    <!--            android:id="@+id/cv_3"-->
+    <!--            android:layout_width="96dp"-->
+    <!--            android:layout_height="132dp"-->
+    <!--            android:layout_marginHorizontal="12dp"-->
+    <!--            app:cardCornerRadius="4dp">-->
+
+    <!--            <androidx.appcompat.widget.AppCompatImageView-->
+    <!--                android:id="@+id/img_3"-->
+    <!--                android:layout_width="96dp"-->
+    <!--                android:layout_height="96dp"-->
+    <!--                android:background="#FFD8D8D8" />-->
+
+    <!--            <androidx.appcompat.widget.AppCompatTextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginHorizontal="6dp"-->
+    <!--                android:layout_marginTop="108dp"-->
+    <!--                android:text="Lorem ipsum"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textSize="14sp" />-->
+
+    <!--        </com.google.android.material.card.MaterialCardView>-->
+
+    <!--    </androidx.appcompat.widget.LinearLayoutCompat>-->
+
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_2"
+        android:id="@+id/txt_my_finances"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Lorem ipsum dolor"
+        android:layout_marginTop="32dp"
+        android:text="Minhas finanças"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@id/view2"
         app:layout_constraintTop_toBottomOf="@id/view2" />
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/linear_layout_1"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_income"
         android:layout_width="match_parent"
-        android:layout_height="132dp"
+        android:layout_height="72dp"
         android:layout_marginHorizontal="24dp"
-        android:layout_marginVertical="8dp"
-        android:orientation="horizontal"
-        android:weightSum="3"
-        app:layout_constraintStart_toStartOf="@id/txt_2"
-        app:layout_constraintTop_toBottomOf="@id/txt_2">
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cv_1"
-            android:layout_width="96dp"
-            android:layout_height="132dp"
-            android:layout_marginHorizontal="12dp"
-            app:cardCornerRadius="4dp">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/img_1"
-                android:layout_width="96dp"
-                android:layout_height="96dp"
-                android:background="#FFD8D8D8" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="6dp"
-                android:layout_marginTop="108dp"
-                android:text="Lorem ipsum"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cv_2"
-            android:layout_width="96dp"
-            android:layout_height="132dp"
-            android:layout_marginHorizontal="12dp"
-            app:cardCornerRadius="4dp">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/img_2"
-                android:layout_width="96dp"
-                android:layout_height="96dp"
-                android:background="#FFD8D8D8" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="6dp"
-                android:layout_marginTop="108dp"
-                android:text="Lorem ipsum"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cv_3"
-            android:layout_width="96dp"
-            android:layout_height="132dp"
-            android:layout_marginHorizontal="12dp"
-            app:cardCornerRadius="4dp">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/img_3"
-                android:layout_width="96dp"
-                android:layout_height="96dp"
-                android:background="#FFD8D8D8" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="6dp"
-                android:layout_marginTop="108dp"
-                android:text="Lorem ipsum"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
-
-        </com.google.android.material.card.MaterialCardView>
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Lorem ipsum dolor"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_background_2"
+        android:gravity="center"
+        android:text="Veja agora os seus rendimentos!"
         android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@id/view2"
-        app:layout_constraintTop_toBottomOf="@id/linear_layout_1" />
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_my_finances" />
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/linear_layout_2"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_pix_cadastre"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="72dp"
         android:layout_marginHorizontal="24dp"
-        android:layout_marginVertical="8dp"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        app:layout_constraintStart_toStartOf="@id/txt_3"
-        app:layout_constraintTop_toBottomOf="@id/txt_3">
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cv_4"
-            android:layout_width="152dp"
-            android:layout_height="96dp"
-            android:layout_marginHorizontal="16dp"
-            app:cardCornerRadius="4dp">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/img_4"
-                android:layout_width="152dp"
-                android:layout_height="96dp"
-                android:background="#FFD8D8D8" />
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cv_5"
-            android:layout_width="152dp"
-            android:layout_height="96dp"
-            android:layout_marginHorizontal="16dp"
-            app:cardCornerRadius="4dp">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/img_5"
-                android:layout_width="152dp"
-                android:layout_height="96dp"
-                android:background="#FFD8D8D8" />
-
-        </com.google.android.material.card.MaterialCardView>
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_background_2"
+        android:gravity="center"
+        android:text="Cadastre aqui a sua chave Pix!"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_income" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_producer"
@@ -246,6 +223,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu" />
+        app:menu="@menu/menu_producer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

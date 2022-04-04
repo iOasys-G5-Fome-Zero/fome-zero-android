@@ -5,19 +5,25 @@
     tools:showIn="navigation_view">
 
     <item
-        android:id="@+id/home"
+        android:id="@+id/home_consumer"
         android:enabled="true"
         android:icon="@drawable/home"
         android:title="Início" />
 
     <item
-        android:id="@+id/finances"
+        android:id="@+id/my_bascket_consumer"
         android:enabled="true"
         android:icon="@drawable/piggy_bank"
-        android:title="Financeiro"/>
+        android:title="Minha cesta"/>
 
     <item
-        android:id="@+id/farmer_profile"
+        android:id="@+id/donations_consumer"
+        android:enabled="true"
+        android:icon="@drawable/piggy_bank"
+        android:title="Doações"/>
+
+    <item
+        android:id="@+id/profile_consumer"
         android:enabled="true"
         android:icon="@drawable/farmer_user"
         android:title="Perfil"/>

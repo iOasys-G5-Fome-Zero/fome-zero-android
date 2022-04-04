@@ -3,6 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/05576716124/AndroidStudioProjects/fome-zero-android/app/src/main/res/drawable/button_background.xml" value="0.2985" />
+        <entry key="..\:/Users/05576716124/AndroidStudioProjects/fome-zero-android/app/src/main/res/drawable/button_background_2.xml" value="0.2985" />
+        <entry key="..\:/Users/05576716124/AndroidStudioProjects/fome-zero-android/app/src/main/res/drawable/edit_txt_background.xml" value="0.2985" />
+        <entry key="..\:/Users/05576716124/AndroidStudioProjects/fome-zero-android/app/src/main/res/drawable/profile_background.xml" value="0.2985" />
+        <entry key="..\:/Users/05576716124/AndroidStudioProjects/fome-zero-android/app/src/main/res/drawable/view_background.xml" value="0.2985" />
+        <entry key="..\:/Users/05576716124/AndroidStudioProjects/fome-zero-android/app/src/main/res/drawable/view_background_2.xml" value="0.2985" />
+        <entry key="..\:/Users/05576716124/AndroidStudioProjects/fome-zero-android/app/src/main/res/drawable/view_background_profile.xml" value="0.2985" />
+        <entry key="..\:/Users/05576716124/AndroidStudioProjects/fome-zero-android/app/src/main/res/layout/fragment_basket.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/05576716124/AndroidStudioProjects/fome-zero-android/app/src/main/res/layout/fragment_cadastre.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/05576716124/AndroidStudioProjects/fome-zero-android/app/src/main/res/layout/fragment_consumer.xml" value="0.33" />
+        <entry key="..\:/Users/05576716124/AndroidStudioProjects/fome-zero-android/app/src/main/res/layout/fragment_finances.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/05576716124/AndroidStudioProjects/fome-zero-android/app/src/main/res/layout/fragment_login.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/05576716124/AndroidStudioProjects/fome-zero-android/app/src/main/res/layout/fragment_payment.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/05576716124/AndroidStudioProjects/fome-zero-android/app/src/main/res/layout/fragment_producer.xml" value="0.33" />
+        <entry key="..\:/Users/05576716124/AndroidStudioProjects/fome-zero-android/app/src/main/res/layout/fragment_profile.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/05576716124/AndroidStudioProjects/fome-zero-android/app/src/main/res/layout/fragment_signature.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/05576716124/AndroidStudioProjects/fome-zero-android/app/src/main/res/menu/menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/05576716124/AndroidStudioProjects/fome-zero-android/app/src/main/res/menu/menu_consumer.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/05576716124/AndroidStudioProjects/fome-zero-android/app/src/main/res/menu/menu_producer.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/lukas/Desktop/Ioasys BootCamp/Projetos/android-fome-zero/app/src/main/res/layout/activity_main.xml" value="0.3625" />
         <entry key="..\:/Users/lukas/Desktop/Ioasys BootCamp/Projetos/android-fome-zero/app/src/main/res/layout/fragment_finances.xml" value="0.3625" />
         <entry key="..\:/Users/lukas/Desktop/Ioasys BootCamp/Projetos/android-fome-zero/app/src/main/res/layout/fragment_login.xml" value="0.3625" />
@@ -14,7 +33,7 @@
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

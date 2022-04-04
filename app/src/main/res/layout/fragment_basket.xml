@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".feature.login.presentation.BasketFragment">
 
     <View
         android:id="@+id/view1"
         android:layout_width="0dp"
         android:layout_height="64dp"
-        android:background="#FFD8D8D8"
+        android:background="@drawable/view_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -42,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="24dp"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing \nelit. Maecenas ac leo mauris. Curabitur placerat velit massa."
+        android:text="Escolha abaixo qual o tamanho da cesta você deseja fornecer, e veja quantos e quais os tipos de alimentos  em cada uma."
         android:textAlignment="textStart"
         android:textColor="@color/black"
         android:textSize="14sp"
@@ -67,7 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:buttonTint="#FF1F1F1F"
+        android:buttonTint="@color/neutral_black"
         android:padding="8dp"
         android:text="Pequena \n1 tempero, 2 legumes, 2 verduras e 2 frutas"
         android:textSize="12sp"
@@ -91,7 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:buttonTint="#FF1F1F1F"
+        android:buttonTint="@color/neutral_black"
         android:padding="8dp"
         android:text="Média \n2 temperos, 3 legumes, 3 verduras e 3 frutas"
         android:textSize="12sp"
@@ -115,7 +116,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:buttonTint="#FF1F1F1F"
+        android:buttonTint="@color/neutral_black"
         android:padding="8dp"
         android:text="Grande \n3 temperos, 4 legumes, 4 verduras e 4 frutas"
         android:textSize="12sp"
@@ -131,6 +132,7 @@
         android:gravity="center"
         android:text="Confirmar seleção"
         android:textAllCaps="false"
+        android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -140,10 +142,10 @@
         android:id="@+id/bottom_navigation_my_basckets"
         android:layout_width="0dp"
         android:layout_height="64dp"
-        android:background="#FFD8D8D8"
+        android:background="@color/light_gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu" />
+        app:menu="@menu/menu_producer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

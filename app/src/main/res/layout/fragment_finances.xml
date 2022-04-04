@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".feature.login.presentation.FinancesFragment">
 
     <View
         android:id="@+id/view1"
         android:layout_width="0dp"
         android:layout_height="64dp"
-        android:background="#FFD8D8D8"
+        android:background="@drawable/view_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -117,7 +118,7 @@
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:layout_marginTop="24dp"
-        android:background="#FF4E4B59"
+        android:background="@color/neutral_black"
         app:layout_constraintEnd_toEndOf="@id/btn_extract"
         app:layout_constraintStart_toStartOf="@id/btn_extract"
         app:layout_constraintTop_toBottomOf="@id/btn_extract" />
@@ -143,7 +144,7 @@
         android:layout_marginEnd="64dp"
         android:drawableStart="@drawable/phone_android_24"
         android:drawablePadding="8dp"
-        android:drawableTint="@color/black"
+        android:drawableTint="@color/forest_green"
         android:text="(31) 99999-9999"
         android:textColor="@color/black"
         android:textSize="14sp"
@@ -163,11 +164,11 @@
         android:id="@+id/bottom_navigation_finances"
         android:layout_width="0dp"
         android:layout_height="64dp"
-        android:background="#FFD8D8D8"
+        android:background="@color/light_gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu" />
+        app:menu="@menu/menu_producer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

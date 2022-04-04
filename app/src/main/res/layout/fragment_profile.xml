@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".feature.login.presentation.ProfileFragment">
 
     <View
@@ -56,6 +57,7 @@
         android:layout_height="104dp"
         android:layout_marginTop="104dp"
         android:background="@drawable/profile_background"
+        android:backgroundTint="@color/neutral_black"
         app:layout_constraintEnd_toEndOf="@id/view1"
         app:layout_constraintStart_toStartOf="@id/view1"
         app:layout_constraintTop_toTopOf="@id/view1" />
@@ -67,7 +69,6 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="96dp"
         android:background="@drawable/profile_background"
-        android:backgroundTint="#FF8C8A97"
         android:src="@drawable/pencil_24"
         app:layout_constraintEnd_toEndOf="@id/view1"
         app:layout_constraintStart_toStartOf="@id/view1"
@@ -152,8 +153,6 @@
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/button_background_2"
-        android:drawableEnd="@drawable/arrow_right_24"
-        android:drawableTint="@color/black"
         android:gravity="center_vertical"
         android:paddingHorizontal="16dp"
         android:paddingVertical="16dp"
@@ -191,10 +190,10 @@
         android:id="@+id/bottom_navigation_profile"
         android:layout_width="0dp"
         android:layout_height="64dp"
-        android:background="#FFD8D8D8"
+        android:background="@color/light_gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu" />
+        app:menu="@menu/menu_producer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
