@@ -7,18 +7,18 @@
     <item
         android:id="@+id/home"
         android:enabled="true"
-        android:icon="@drawable/home"
+        android:icon="@drawable/ic_home"
         android:title="Início" />
 
     <item
         android:id="@+id/finances"
         android:enabled="true"
-        android:icon="@drawable/piggy_bank"
+        android:icon="@drawable/ic_money"
         android:title="Financeiro"/>
 
     <item
         android:id="@+id/farmer_profile"
         android:enabled="true"
-        android:icon="@drawable/farmer_user"
+        android:icon="@drawable/ic_user"
         android:title="Perfil"/>
 </menu>
