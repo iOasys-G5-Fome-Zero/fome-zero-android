@@ -33,7 +33,7 @@
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/chat_bubble_24"
+        android:background="@drawable/ic_chat"
         android:backgroundTint="@color/black"
         app:layout_constraintStart_toEndOf="@id/txt_name"
         app:layout_constraintTop_toTopOf="parent" />
@@ -50,43 +50,51 @@
         app:layout_constraintStart_toStartOf="@id/txt_name"
         app:layout_constraintTop_toBottomOf="@id/view1" />
 
-    <View
-        android:id="@+id/view2"
-        android:layout_width="0dp"
-        android:layout_height="128dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/headerCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/view_background"
-        android:padding="16dp"
+        app:cardCornerRadius="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_my_products" />
+        app:layout_constraintTop_toBottomOf="@id/txt_my_products">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginVertical="16dp"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. \nMaecenas ac leo mauris."
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@id/view2"
-        app:layout_constraintTop_toTopOf="@id/view2" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginHorizontal="54dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/button_background"
-        android:backgroundTint="@color/white"
-        android:gravity="center"
-        android:text="Minhas cestas"
-        android:textAllCaps="false"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@id/view2"
-        app:layout_constraintEnd_toEndOf="@id/view2"
-        app:layout_constraintStart_toStartOf="@id/view2" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/headerCardTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. \nMaecenas ac leo mauris."
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="54dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/button_background"
+                android:gravity="center"
+                android:text="Minhas cestas"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/headerCardTextView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/txt_2"
@@ -96,8 +104,8 @@
         android:text="Lorem ipsum dolor"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@id/view2"
-        app:layout_constraintTop_toBottomOf="@id/view2" />
+        app:layout_constraintStart_toStartOf="@id/headerCardView"
+        app:layout_constraintTop_toBottomOf="@id/headerCardView" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/linear_layout_1"
@@ -188,11 +196,12 @@
         android:id="@+id/txt_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_margin="24dp"
         android:text="Lorem ipsum dolor"
         android:textColor="@color/black"
+        android:layout_marginStart="16dp"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@id/view2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linear_layout_1" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
