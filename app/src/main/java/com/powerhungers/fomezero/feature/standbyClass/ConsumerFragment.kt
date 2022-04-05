@@ -1,4 +1,4 @@
-package com.powerhungers.fomezero.feature.login.presentation
+package com.powerhungers.fomezero.feature.standbyClass
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.powerhungers.fomezero.R
 
-class ProducerFragment : Fragment() {
+class ConsumerFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +18,7 @@ class ProducerFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_producer, container, false)
+        return inflater.inflate(R.layout.fragment_consumer, container, false)
     }
 
 }

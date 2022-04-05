@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".feature.login.presentation.BasketFragment">
+    tools:context=".feature.standbyClass.BasketFragment">
 
     <View
         android:id="@+id/view1"
@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:src="@drawable/arrow_back_24"
+        android:src="@drawable/arrow_back"
         android:tint="@color/black"
         app:layout_constraintBottom_toBottomOf="@id/view1"
         app:layout_constraintStart_toStartOf="@id/view1"

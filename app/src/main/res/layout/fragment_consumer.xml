@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".feature.login.presentation.ConsumerFragment">
+    tools:context=".feature.standbyClass.ConsumerFragment">
 
     <View
         android:id="@+id/view1"
@@ -35,7 +35,7 @@
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/chat_bubble_24"
+        android:background="@drawable/ic_chat"
         android:backgroundTint="@color/black"
         app:layout_constraintStart_toEndOf="@id/txt_name"
         app:layout_constraintTop_toTopOf="parent" />

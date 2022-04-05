@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.powerhungers.fomezero.common.utils.ViewState
 import com.powerhungers.fomezero.databinding.FragmentLoginBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -34,6 +35,9 @@ class LoginFragment : Fragment() {
                 viewModel.login(
                     "luca@fagundes.com","Ab1234567!"
                 )
+            }
+            txtCadastre.setOnClickListener {
+                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegistrationFragment())
             }
         }
     }

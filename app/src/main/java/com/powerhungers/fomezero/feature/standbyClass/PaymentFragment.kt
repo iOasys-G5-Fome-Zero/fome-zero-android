@@ -1,4 +1,4 @@
-package com.powerhungers.fomezero.feature.login.presentation
+package com.powerhungers.fomezero.feature.standbyClass
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.powerhungers.fomezero.R
 
-class BasketFragment : Fragment() {
+class PaymentFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +18,7 @@ class BasketFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_basket, container, false)
+        return inflater.inflate(R.layout.fragment_payment, container, false)
     }
 
 }
