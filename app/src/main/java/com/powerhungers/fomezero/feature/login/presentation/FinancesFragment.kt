@@ -6,19 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.powerhungers.fomezero.R
+import com.powerhungers.fomezero.databinding.FragmentFinancesBinding
+import com.powerhungers.fomezero.databinding.FragmentLoginBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class FinancesFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    private val binding by lazy { FragmentFinancesBinding.inflate(layoutInflater) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_finances, container, false)
+    ): View {
+        return binding.root
     }
-
 }
