@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/home_producer"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title="Início" />
+
+    <item
+        android:id="@+id/finances_producer"
+        android:enabled="true"
+        android:icon="@drawable/ic_money"
+        android:title="Financeiro"/>
+
+    <item
+        android:id="@+id/profile_producer"
+        android:enabled="true"
+        android:icon="@drawable/ic_user"
+        android:title="Perfil"/>
+</menu>

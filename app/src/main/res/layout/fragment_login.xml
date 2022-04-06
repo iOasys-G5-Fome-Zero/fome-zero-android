@@ -4,100 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".base_app.presentation.ui.fragments.LoginFragment">
+    android:background="@color/white"
+    tools:context=".feature.login.presentation.LoginFragment">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_enter"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="32dp"
-        android:text="Entrar"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="24sp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/ic_piggy_bank"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_info_account"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Informação sobre conta"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@id/txt_enter"
-        app:layout_constraintTop_toBottomOf="@id/txt_enter" />
-
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_txt_email"
-        android:layout_width="248dp"
+        android:layout_width="0dp"
         android:layout_height="56dp"
-        android:layout_marginTop="32dp"
-        android:background="#FFF8F8F8"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/edit_txt_background"
+        android:gravity="center_vertical"
+        android:hint="Email"
         android:inputType="textEmailAddress"
+        android:paddingHorizontal="16dp"
         android:singleLine="true"
-        android:textColor="@color/black"
+        android:textColor="@color/neutral_black"
+        android:textColorHint="@color/neutral_black"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_info_account" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:hint="E-mail"
-        android:textAlignment="center"
-        android:textColorHint="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/edit_txt_email"
-        app:layout_constraintStart_toStartOf="@id/edit_txt_email"
-        app:layout_constraintTop_toTopOf="@id/edit_txt_email" />
+        app:layout_constraintTop_toBottomOf="@id/img_logo" />
 
     <View
-        android:layout_width="248dp"
+        android:id="@+id/view1"
+        android:layout_width="0dp"
         android:layout_height="1dp"
-        android:background="#FF4E4B59"
+        android:background="@color/neutral_black"
         app:layout_constraintBottom_toBottomOf="@id/edit_txt_email"
         app:layout_constraintEnd_toEndOf="@id/edit_txt_email"
         app:layout_constraintStart_toStartOf="@id/edit_txt_email" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_txt_passwd"
-        android:layout_width="248dp"
+        android:layout_width="0dp"
         android:layout_height="56dp"
+        android:layout_marginHorizontal="24dp"
         android:layout_marginTop="24dp"
-        android:background="#FFF8F8F8"
+        android:background="@drawable/edit_txt_background"
+        android:gravity="center_vertical"
+        android:hint="Senha"
         android:inputType="textPassword"
         android:paddingHorizontal="16dp"
-        android:paddingTop="24dp"
         android:singleLine="true"
-        android:textColor="@color/white"
+        android:textColor="@color/neutral_black"
+        android:textColorHint="@color/neutral_black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edit_txt_email" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_passwd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:hint="Senha"
-        android:textAlignment="center"
-        android:textColorHint="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/edit_txt_passwd"
-        app:layout_constraintStart_toStartOf="@id/edit_txt_passwd"
-        app:layout_constraintTop_toTopOf="@id/edit_txt_passwd" />
-
     <View
-        android:layout_width="248dp"
+        android:id="@+id/view2"
+        android:layout_width="0dp"
         android:layout_height="1dp"
-        android:background="#FF4E4B59"
+        android:background="@color/neutral_black"
         app:layout_constraintBottom_toBottomOf="@id/edit_txt_passwd"
         app:layout_constraintEnd_toEndOf="@id/edit_txt_passwd"
         app:layout_constraintStart_toStartOf="@id/edit_txt_passwd" />
@@ -116,34 +87,28 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:clickable="true"
         android:focusable="true"
         android:text="Recuperar senha"
-        android:textColor="@color/black"
+        android:textColor="@color/forest_green"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/edit_txt_passwd"
+        app:layout_constraintStart_toEndOf="@id/txt_forgot_passwd"
         app:layout_constraintTop_toBottomOf="@id/edit_txt_passwd" />
 
-    <androidx.appcompat.widget.AppCompatCheckBox
-        android:id="@+id/checkbox"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="@id/txt_forgot_passwd"
-        app:layout_constraintTop_toBottomOf="@id/txt_forgot_passwd" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_remember_passwd"
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/checkbox_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:buttonTint="@color/neutral_black_2"
+        android:padding="8dp"
         android:text="Lembrar minha senha"
-        android:textColor="#FF1F1F1F"
+        android:textColor="@color/neutral_black"
         android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@id/checkbox"
+        app:layout_constraintStart_toStartOf="@id/view2"
         app:layout_constraintTop_toBottomOf="@id/txt_forgot_passwd" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -155,44 +120,62 @@
         android:gravity="center"
         android:text="Entrar"
         android:textAllCaps="false"
-        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_remember_passwd" />
+        app:layout_constraintTop_toBottomOf="@id/checkbox_login" />
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="248dp"
-        android:layout_height="1dp"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_create_new_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:background="@color/black"
-        app:layout_constraintEnd_toEndOf="@id/edit_txt_passwd"
-        app:layout_constraintStart_toStartOf="@id/edit_txt_passwd"
+        android:text="Ainda não tem uma conta?"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/view2"
         app:layout_constraintTop_toBottomOf="@id/btn_enter" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_cadastre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:padding="8dp"
-        android:text="ou"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@id/view"
-        app:layout_constraintEnd_toEndOf="@id/view"
-        app:layout_constraintStart_toStartOf="@id/view"
-        app:layout_constraintTop_toTopOf="@id/view" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
         android:clickable="true"
         android:focusable="true"
-        android:text="Entrar com Google"
+        android:text="Cadastre-se aqui"
+        android:textColor="@color/forest_green"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/txt_create_new_account"
+        app:layout_constraintTop_toBottomOf="@id/btn_enter" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_cadastre_ong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Deseja registrar uma ONG?"
         android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@id/view"
-        app:layout_constraintStart_toStartOf="@id/view"
-        app:layout_constraintTop_toBottomOf="@id/view" />
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/view2"
+        app:layout_constraintTop_toBottomOf="@id/txt_create_new_account" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_go_to_site"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Vá para o site"
+        android:textColor="@color/forest_green"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/txt_cadastre_ong"
+        app:layout_constraintTop_toBottomOf="@id/txt_cadastre" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

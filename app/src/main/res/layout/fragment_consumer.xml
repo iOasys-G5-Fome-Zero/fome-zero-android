@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".feature.standbyClass.ConsumerFragment">
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:background="@drawable/view_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:text="Olá Márcia!"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:drawableTint="@color/black"
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintTop_toTopOf="@id/view1" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ibtn_chat_consumer"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_chat"
+        android:backgroundTint="@color/black"
+        app:layout_constraintStart_toEndOf="@id/txt_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@drawable/home_consumer"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_help_fight_hunger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:text="Ajude no combate a fome"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/view2"
+        app:layout_constraintTop_toBottomOf="@id/view2" />
+
+    <!--        <androidx.appcompat.widget.LinearLayoutCompat-->
+    <!--            android:id="@+id/linear_layout_1"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="132dp"-->
+    <!--            android:layout_marginHorizontal="24dp"-->
+    <!--            android:layout_marginVertical="8dp"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            android:weightSum="3"-->
+    <!--            app:layout_constraintStart_toStartOf="@id/txt_help_fight_hunger"-->
+    <!--            app:layout_constraintTop_toBottomOf="@id/txt_help_fight_hunger">-->
+
+    <!--            <com.google.android.material.card.MaterialCardView-->
+    <!--                android:id="@+id/cv_1"-->
+    <!--                android:layout_width="96dp"-->
+    <!--                android:layout_height="132dp"-->
+    <!--                android:layout_marginHorizontal="12dp"-->
+    <!--                app:cardCornerRadius="4dp">-->
+
+    <!--                <androidx.appcompat.widget.AppCompatImageView-->
+    <!--                    android:id="@+id/img_1"-->
+    <!--                    android:layout_width="96dp"-->
+    <!--                    android:layout_height="96dp"-->
+    <!--                    android:background="#FFD8D8D8" />-->
+
+    <!--                <androidx.appcompat.widget.AppCompatTextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginHorizontal="6dp"-->
+    <!--                    android:layout_marginTop="108dp"-->
+    <!--                    android:text="Lorem ipsum"-->
+    <!--                    android:textColor="@color/black"-->
+    <!--                    android:textSize="14sp" />-->
+
+    <!--            </com.google.android.material.card.MaterialCardView>-->
+
+    <!--            <com.google.android.material.card.MaterialCardView-->
+    <!--                android:id="@+id/cv_2"-->
+    <!--                android:layout_width="96dp"-->
+    <!--                android:layout_height="132dp"-->
+    <!--                android:layout_marginHorizontal="12dp"-->
+    <!--                app:cardCornerRadius="4dp">-->
+
+    <!--                <androidx.appcompat.widget.AppCompatImageView-->
+    <!--                    android:id="@+id/img_2"-->
+    <!--                    android:layout_width="96dp"-->
+    <!--                    android:layout_height="96dp"-->
+    <!--                    android:background="#FFD8D8D8" />-->
+
+    <!--                <androidx.appcompat.widget.AppCompatTextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginHorizontal="6dp"-->
+    <!--                    android:layout_marginTop="108dp"-->
+    <!--                    android:text="Lorem ipsum"-->
+    <!--                    android:textColor="@color/black"-->
+    <!--                    android:textSize="14sp" />-->
+
+    <!--            </com.google.android.material.card.MaterialCardView>-->
+
+    <!--            <com.google.android.material.card.MaterialCardView-->
+    <!--                android:id="@+id/cv_3"-->
+    <!--                android:layout_width="96dp"-->
+    <!--                android:layout_height="132dp"-->
+    <!--                android:layout_marginHorizontal="12dp"-->
+    <!--                app:cardCornerRadius="4dp">-->
+
+    <!--                <androidx.appcompat.widget.AppCompatImageView-->
+    <!--                    android:id="@+id/img_3"-->
+    <!--                    android:layout_width="96dp"-->
+    <!--                    android:layout_height="96dp"-->
+    <!--                    android:background="#FFD8D8D8" />-->
+
+    <!--                <androidx.appcompat.widget.AppCompatTextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginHorizontal="6dp"-->
+    <!--                    android:layout_marginTop="108dp"-->
+    <!--                    android:text="Lorem ipsum"-->
+    <!--                    android:textColor="@color/black"-->
+    <!--                    android:textSize="14sp" />-->
+
+    <!--            </com.google.android.material.card.MaterialCardView>-->
+
+    <!--        </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="24dp"
+        android:text="Veja abaixo as instituições e projetos cadastrados na \nnossa rede e ajude-nos a atingir a meta do mês \ndoando suas moedas que serão convertidas em \nalimentos."
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_help_fight_hunger" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear_layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="8dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintStart_toStartOf="@id/txt_4"
+        app:layout_constraintTop_toBottomOf="@id/txt_4">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_4"
+            android:layout_width="152dp"
+            android:layout_height="96dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            app:cardCornerRadius="4dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_4"
+                android:layout_width="152dp"
+                android:layout_height="96dp"
+                android:background="#FFD8D8D8" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_5"
+            android:layout_width="152dp"
+            android:layout_height="96dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            app:cardCornerRadius="4dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_5"
+                android:layout_width="152dp"
+                android:layout_height="96dp"
+                android:background="#FFD8D8D8" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_consumer"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:background="#FFD8D8D8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_producer" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
