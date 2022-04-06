@@ -33,11 +33,12 @@ class LoginFragment : Fragment() {
         with(binding) {
             btnEnter.setOnClickListener {
                 viewModel.login(
-                    "luca@fagundes.com","Ab1234567!"
+                    "teste@api.com", "Ab1234567!"
                 )
             }
             txtCadastre.setOnClickListener {
-                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegistrationFragment())
+                findNavController().navigate(
+                    LoginFragmentDirections.actionLoginFragmentToRegistrationFragment())
             }
         }
     }
@@ -46,9 +47,14 @@ class LoginFragment : Fragment() {
         viewModel.loginLiveData.observe(viewLifecycleOwner) { state ->
             with(binding) {
                 when (state) {
-                    is ViewState.Loading -> Unit
-                    is ViewState.Success -> Unit
-                    is ViewState.Error -> Unit
+                    is ViewState.Loading ->
+                        progressDialog.visibility = View.VISIBLE
+                    is ViewState.Success -> {
+                        findNavController().navigate(
+                            LoginFragmentDirections.actionLoginFragmentToOnboardFragment())
+                    }
+                    is ViewState.Error ->
+                        progressDialog.visibility = View.GONE
                     else -> {
                         Unit
                     }
