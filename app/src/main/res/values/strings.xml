@@ -15,4 +15,5 @@
     <string name="password_confirm">Confirmar senha</string>
     <string name="jump">Pular</string>
     <string name="next">Proximo</string>
+    <string name="go_to_website">Vá para o site</string>
 </resources>
