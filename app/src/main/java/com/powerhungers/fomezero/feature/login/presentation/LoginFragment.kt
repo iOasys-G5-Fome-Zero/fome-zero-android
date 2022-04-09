@@ -33,11 +33,13 @@ class LoginFragment : Fragment() {
         with(binding) {
             btnEnter.setOnClickListener {
                 viewModel.login(
-                    "luca@fagundes.com","Ab1234567!"
+                    editTxtEmail.text.toString(), editTxtPasswd.text.toString()
                 )
             }
             txtCadastre.setOnClickListener {
-                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegistrationFragment())
+                findNavController().navigate(
+                    LoginFragmentDirections.navigateToRegistrationFragment()
+                )
             }
         }
     }
@@ -46,15 +48,19 @@ class LoginFragment : Fragment() {
         viewModel.loginLiveData.observe(viewLifecycleOwner) { state ->
             with(binding) {
                 when (state) {
-                    is ViewState.Loading -> Unit
-                    is ViewState.Success -> Unit
-                    is ViewState.Error -> Unit
-                    else -> {
-                        Unit
+                    is ViewState.Loading ->
+                        progressDialog.visibility = View.VISIBLE
+                    is ViewState.FinishLoading ->
+                        progressDialog.visibility = View.GONE
+                    is ViewState.Success -> {
+                        findNavController().navigate(
+                            LoginFragmentDirections.navigateToOnboardingFragment()
+                        )
                     }
+                    is ViewState.Error -> { }
+                    else -> { }
                 }
             }
         }
     }
 }
-

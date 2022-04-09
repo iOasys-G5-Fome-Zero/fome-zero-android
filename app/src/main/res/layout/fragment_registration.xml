@@ -12,12 +12,12 @@
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txt_create_account"
+            android:id="@+id/createAccountTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="56dp"
             android:layout_marginTop="32dp"
-            android:text="Criar conta"
+            android:text="@string/create_account"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="24sp"
@@ -26,37 +26,49 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txt_info_register"
+            android:id="@+id/registerInfoTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Informação sobre cadastro"
+            android:text="@string/info_about_registration"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@id/txt_create_account"
-            app:layout_constraintTop_toBottomOf="@id/txt_create_account" />
+            app:layout_constraintStart_toStartOf="@id/createAccountTextView"
+            app:layout_constraintTop_toBottomOf="@id/createAccountTextView" />
 
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/rbtn_producer"
+        <RadioGroup
+            android:id="@+id/radioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:buttonTint="@color/neutral_black"
-            android:text="Sou produtor"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@id/txt_info_register"
-            app:layout_constraintTop_toBottomOf="@id/txt_info_register" />
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/registerInfoTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24sp">
 
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/rbtn_consumer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="@color/neutral_black"
-            android:text="Sou consumidor"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@id/rbtn_producer"
-            app:layout_constraintTop_toBottomOf="@id/rbtn_producer" />
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/producerRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:buttonTint="@color/neutral_black"
+                android:text="@string/i_am_producer"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/registerInfoTextView"
+                app:layout_constraintTop_toBottomOf="@id/registerInfoTextView" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/consumerRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/neutral_black"
+                android:text="@string/i_am_consumer"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/producerRadioButton"
+                app:layout_constraintTop_toBottomOf="@id/producerRadioButton" />
+
+        </RadioGroup>
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nameInputLayout"
@@ -64,123 +76,101 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="16dp"
-            android:hint="Nome"
-            android:background="@drawable/edit_txt_background"
+            android:hint="@string/name"
+            app:boxBackgroundColor="@color/pale_green"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rbtn_consumer">
+            app:layout_constraintTop_toBottomOf="@id/radioGroup">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
                 android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
-
-
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
-            android:background="@drawable/edit_txt_background"
             android:layout_marginTop="16dp"
-            android:hint="Email"
+            android:hint="@string/email"
+            app:boxBackgroundColor="@color/pale_green"
             app:layout_constraintEnd_toEndOf="@id/nameInputLayout"
             app:layout_constraintStart_toStartOf="@id/nameInputLayout"
             app:layout_constraintTop_toBottomOf="@id/nameInputLayout">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:singleLine="true" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
-
-
-
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/passwordInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
-            android:hint="@string/password"
-            android:background="@drawable/edit_txt_background"
             android:layout_marginTop="16dp"
+            android:hint="@string/password"
+            app:boxBackgroundColor="@color/pale_green"
             app:layout_constraintEnd_toEndOf="@id/emailInputLayout"
             app:layout_constraintStart_toStartOf="@id/emailInputLayout"
-            app:layout_constraintTop_toBottomOf="@id/emailInputLayout" >
+            app:layout_constraintTop_toBottomOf="@id/emailInputLayout"
+            app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="numberPassword"
                 android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txt_rules_passwd"
-            android:layout_width="wrap_content"
+            android:id="@+id/rulesPasswordTextView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
-            android:text="A senha deve conter:\nPelo menos 1 letra\nPelo menos 1 dígito\nPelo menos 1 caractere especial"
+            android:text="@string/rules_password_text"
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="@id/passwordInputLayout"
             app:layout_constraintTop_toBottomOf="@id/passwordInputLayout" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/passwordConfirmInputLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:hint="@string/password_confirm"
-            android:background="@drawable/edit_txt_background"
-            android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="@id/passwordInputLayout"
-            app:layout_constraintStart_toStartOf="@id/passwordInputLayout"
-            app:layout_constraintTop_toBottomOf="@id/txt_rules_passwd"  >
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:singleLine="true" />
-        </com.google.android.material.textfield.TextInputLayout>
-
 
         <com.google.android.material.checkbox.MaterialCheckBox
-            android:id="@+id/checkbox_cadastre"
+            android:id="@+id/registerCheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:buttonTint="@color/neutral_black"
             android:padding="8dp"
-            android:text="Concordo com a Política de Privacidade e \nTermos de Uso"
+            android:text="@string/agree_privacy_policy_and_use_terms"
             android:textColor="@color/neutral_black"
             android:textSize="12sp"
-            app:layout_constraintStart_toStartOf="@id/passwordConfirmInputLayout"
-            app:layout_constraintTop_toBottomOf="@id/passwordConfirmInputLayout" />
+            app:layout_constraintStart_toStartOf="@id/passwordInputLayout"
+            app:layout_constraintTop_toBottomOf="@id/rulesPasswordTextView" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_finalize_registration"
+            android:id="@+id/finishRegisterButton"
             android:layout_width="200dp"
             android:layout_height="48dp"
             android:layout_marginTop="40dp"
             android:background="@drawable/button_background"
             android:gravity="center"
-            android:text="Finalizar cadastro"
+            android:text="@string/finish_registration"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_cadastre" />
-
+            app:layout_constraintTop_toBottomOf="@id/registerCheckBox" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.core.widget.NestedScrollView>
 

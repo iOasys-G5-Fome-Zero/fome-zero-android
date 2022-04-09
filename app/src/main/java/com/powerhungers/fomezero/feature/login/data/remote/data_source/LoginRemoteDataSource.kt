@@ -17,9 +17,7 @@ class LoginRemoteDataSource(private val service: LoginService) {
             response.body()?.let { loginResponse ->
                 emit(loginResponse.toDomain())
             }
-        } else {
-            throw GenericException()
-        }
+        } else throw GenericException()
     }
 
     private fun LoginResponse.toDomain() = User(
@@ -33,5 +31,4 @@ class LoginRemoteDataSource(private val service: LoginService) {
         createdAt = createdAt.orEmpty(),
         updatedAt = updatedAt.orEmpty(),
     )
-
 }

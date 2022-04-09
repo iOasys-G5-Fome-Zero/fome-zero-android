@@ -1,18 +1,25 @@
 <resources>
     <string name="app_name">Android Fome Zero</string>
-    <string name="consumer">Consumidor</string>
-    <string name="producer">Produtor</string>
     <string name="no_account_yet">Ainda não tem uma conta?</string>
-    <string name="sign_up">Cadastre-se aqui</string>
+    <string name="sign_up">Cadastre-se</string>
+    <string name="create_account">Criar conta</string>
     <string name="recover_password">Recuperar senha</string>
     <string name="enter">Entrar</string>
     <string name="want_register_ong">Deseja registrar uma ONG?</string>
-    <string name="click_here">Clique aqui</string>
     <string name="remember_my_password">Lembrar minha senha</string>
     <string name="forgot_password">Esqueceu a senha?</string>
     <string name="password">Senha</string>
     <string name="email">E-mail</string>
-    <string name="password_confirm">Confirmar senha</string>
+    <string name="go_to_website">Vá para o site</string>
+
+    <string name="name">Nome</string>
+    <string name="info_about_registration">Informação sobre cadastro</string>
+    <string name="i_am_producer">Sou produtor</string>
+    <string name="i_am_consumer">Sou consumidor</string>
+    <string name="rules_password_text">A senha deve conter pelo menos 6 caracteres, incluindo letras e números.</string>
+    <string name="agree_privacy_policy_and_use_terms">Concordo com a Política de Privacidade e Termos de Uso</string>
+
     <string name="jump">Pular</string>
     <string name="next">Proximo</string>
+    <string name="finish_registration">Finalizar cadastro</string>
 </resources>

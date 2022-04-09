@@ -5,11 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.powerhungers.fomezero.databinding.FragmentOnboardBinding
+import com.powerhungers.fomezero.databinding.FragmentOnboardingBinding
 
-class OnboardFragment : Fragment() {
+class OnboardingFragment : Fragment() {
 
-    private val binding by lazy { FragmentOnboardBinding.inflate(layoutInflater) }
+    private val binding by lazy { FragmentOnboardingBinding.inflate(layoutInflater) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
