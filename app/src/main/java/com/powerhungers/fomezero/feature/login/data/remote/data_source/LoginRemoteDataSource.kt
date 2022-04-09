@@ -30,5 +30,7 @@ class LoginRemoteDataSource(private val service: LoginService) {
         cpf = cpf.orEmpty(),
         createdAt = createdAt.orEmpty(),
         updatedAt = updatedAt.orEmpty(),
+        token = token.orEmpty(),
+        refresh_token = refresh_token.orEmpty()
     )
 }

@@ -33,7 +33,8 @@ class LoginFragment : Fragment() {
         with(binding) {
             btnEnter.setOnClickListener {
                 viewModel.login(
-                    editTxtEmail.text.toString(), editTxtPasswd.text.toString()
+                    "testeeeea@api.com", "Ab1234567!"
+                    //editTxtEmail.text.toString(), editTxtPasswd.text.toString()
                 )
             }
             txtCadastre.setOnClickListener {
@@ -57,10 +58,11 @@ class LoginFragment : Fragment() {
                             LoginFragmentDirections.navigateToOnboardingFragment()
                         )
                     }
-                    is ViewState.Error -> { }
-                    else -> { }
+                    is ViewState.Error -> {}
+                    else -> {}
                 }
             }
         }
     }
 }
+

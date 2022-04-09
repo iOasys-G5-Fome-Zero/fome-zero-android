@@ -10,4 +10,7 @@ data class User(
     val cpf: String,
     val createdAt: String,
     val updatedAt: String,
+    val token: String,
+    val refresh_token : String
 )
+

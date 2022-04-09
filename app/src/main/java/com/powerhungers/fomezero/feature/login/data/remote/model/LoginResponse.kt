@@ -21,4 +21,8 @@ data class LoginResponse(
     val createdAt: String?,
     @SerializedName("updatedAt")
     val updatedAt: String?,
+    @SerializedName("token")
+    val token:String?,
+    @SerializedName("refresh_token")
+    val refresh_token:String?
 )
