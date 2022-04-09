@@ -33,12 +33,13 @@ class LoginFragment : Fragment() {
         with(binding) {
             btnEnter.setOnClickListener {
                 viewModel.login(
-                    "teste@api.com", "Ab1234567!"
+                    editTxtEmail.text.toString(), editTxtPasswd.text.toString()
                 )
             }
             txtCadastre.setOnClickListener {
                 findNavController().navigate(
-                    LoginFragmentDirections.actionLoginFragmentToRegistrationFragment())
+                    LoginFragmentDirections.navigateToRegistrationFragment()
+                )
             }
         }
     }
@@ -51,7 +52,8 @@ class LoginFragment : Fragment() {
                         progressDialog.visibility = View.VISIBLE
                     is ViewState.Success -> {
                         findNavController().navigate(
-                            LoginFragmentDirections.actionLoginFragmentToOnboardFragment())
+                            LoginFragmentDirections.navigateToOnboardingFragment()
+                        )
                     }
                     is ViewState.Error ->
                         progressDialog.visibility = View.GONE
@@ -63,4 +65,3 @@ class LoginFragment : Fragment() {
         }
     }
 }
-

@@ -1,6 +1,6 @@
 package com.powerhungers.fomezero.feature.registration.domain.model
 
-data class Register(
+data class RegistrationModel(
     val id: String,
     val firstName: String,
     val lastName: String,

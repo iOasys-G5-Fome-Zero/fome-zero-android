@@ -12,7 +12,7 @@
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txt_create_account"
+            android:id="@+id/createAccountTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="56dp"
@@ -26,7 +26,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txt_info_register"
+            android:id="@+id/registerInfoTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -34,29 +34,41 @@
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@id/txt_create_account"
-            app:layout_constraintTop_toBottomOf="@id/txt_create_account" />
+            app:layout_constraintStart_toStartOf="@id/createAccountTextView"
+            app:layout_constraintTop_toBottomOf="@id/createAccountTextView" />
 
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/rbtn_producer"
+        <RadioGroup
+            android:id="@+id/radioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:buttonTint="@color/neutral_black"
-            android:text="@string/i_am_producer"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@id/txt_info_register"
-            app:layout_constraintTop_toBottomOf="@id/txt_info_register" />
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/registerInfoTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24sp">
 
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/rbtn_consumer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="@color/neutral_black"
-            android:text="@string/i_am_consumer"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@id/rbtn_producer"
-            app:layout_constraintTop_toBottomOf="@id/rbtn_producer" />
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/producerRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:buttonTint="@color/neutral_black"
+                android:text="@string/i_am_producer"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/registerInfoTextView"
+                app:layout_constraintTop_toBottomOf="@id/registerInfoTextView" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/consumerRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/neutral_black"
+                android:text="@string/i_am_consumer"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/producerRadioButton"
+                app:layout_constraintTop_toBottomOf="@id/producerRadioButton" />
+
+        </RadioGroup>
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nameInputLayout"
@@ -68,15 +80,15 @@
             app:boxBackgroundColor="@color/pale_green"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rbtn_consumer">
+            app:layout_constraintTop_toBottomOf="@id/radioGroup">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
                 android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
-
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailInputLayout"
@@ -91,12 +103,12 @@
             app:layout_constraintTop_toBottomOf="@id/nameInputLayout">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
                 android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
-
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/passwordInputLayout"
@@ -112,15 +124,15 @@
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="numberPassword"
                 android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txt_rules_password"
+            android:id="@+id/rulesPasswordTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -133,7 +145,7 @@
 
 
         <com.google.android.material.checkbox.MaterialCheckBox
-            android:id="@+id/checkbox_cadastre"
+            android:id="@+id/registerCheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -143,10 +155,10 @@
             android:textColor="@color/neutral_black"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="@id/passwordInputLayout"
-            app:layout_constraintTop_toBottomOf="@id/txt_rules_password" />
+            app:layout_constraintTop_toBottomOf="@id/rulesPasswordTextView" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_finalize_registration"
+            android:id="@+id/finishRegisterButton"
             android:layout_width="200dp"
             android:layout_height="48dp"
             android:layout_marginTop="40dp"
@@ -158,9 +170,7 @@
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_cadastre" />
-
+            app:layout_constraintTop_toBottomOf="@id/registerCheckBox" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.core.widget.NestedScrollView>
 

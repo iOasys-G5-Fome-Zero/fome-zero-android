@@ -1,8 +1,8 @@
-package com.powerhungers.fomezero.feature.login.data.remote.model
+package com.powerhungers.fomezero.feature.registration.data.remote.model
 
 import com.google.gson.annotations.SerializedName
 
-data class LoginResponse(
+data class RegistrationResponse(
     @SerializedName("id")
     val id: String?,
     @SerializedName("firstName")

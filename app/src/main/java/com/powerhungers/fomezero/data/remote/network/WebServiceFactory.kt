@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit
 
 object WebServiceFactory {
 
-    fun createWebService(okHttpClient: OkHttpClient) = Retrofit.Builder()
+    fun createWebService(okHttpClient: OkHttpClient): Retrofit = Retrofit.Builder()
         .baseUrl(BuildConfig.BASE_URL)
         .client(okHttpClient)
         .addConverterFactory(GsonConverterFactory.create())

@@ -10,4 +10,5 @@ sealed class ParamException(message: String, title: String? = null) :
 
 class EmptyEmailException : ParamException(Constants.EMPTY_EMAIL)
 class EmptyPasswordException : ParamException(Constants.EMPTY_PASSWORD)
-class MissInformationException : ParamException(Constants.MISS_INFOR)
+class EmptyNameException : ParamException(Constants.EMPTY_NAME)
+class EmptyUserTypeException : ParamException(Constants.EMPTY_USER_TYPE)
