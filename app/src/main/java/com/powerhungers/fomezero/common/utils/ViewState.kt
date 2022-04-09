@@ -10,4 +10,6 @@ sealed class ViewState<out T> {
 
     object Loading: ViewState<Nothing>()
 
+    object FinishLoading: ViewState<Nothing>()
+
 }

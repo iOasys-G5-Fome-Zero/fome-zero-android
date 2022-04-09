@@ -50,16 +50,15 @@ class LoginFragment : Fragment() {
                 when (state) {
                     is ViewState.Loading ->
                         progressDialog.visibility = View.VISIBLE
+                    is ViewState.FinishLoading ->
+                        progressDialog.visibility = View.GONE
                     is ViewState.Success -> {
                         findNavController().navigate(
                             LoginFragmentDirections.navigateToOnboardingFragment()
                         )
                     }
-                    is ViewState.Error ->
-                        progressDialog.visibility = View.GONE
-                    else -> {
-                        Unit
-                    }
+                    is ViewState.Error -> { }
+                    else -> { }
                 }
             }
         }
