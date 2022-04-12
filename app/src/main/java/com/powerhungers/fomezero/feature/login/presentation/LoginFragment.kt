@@ -34,8 +34,7 @@ class LoginFragment : Fragment() {
         with(binding) {
             btnEnter.setOnClickListener {
                 viewModel.login(
-                    "testeeeea@api.com", "Ab1234567!"
-                    //editTxtEmail.text.toString(), editTxtPasswd.text.toString()
+                    editTxtEmail.text.toString(), editTxtPasswd.text.toString()
                 )
             }
             txtCadastre.setOnClickListener {
@@ -52,14 +51,10 @@ class LoginFragment : Fragment() {
                 when (state) {
                     is ViewState.Loading ->
                         progressDialog.visibility = View.VISIBLE
-                    is ViewState.FinishLoading ->
-                        progressDialog.visibility = View.GONE
-                    is ViewState.Success -> {
+                    is ViewState.Success ->
                         navigateToOnboarding(state.data)
-                    }
                     is ViewState.Error -> {
                         progressDialog.visibility = View.GONE
-
                     }
                     else -> {}
                 }
