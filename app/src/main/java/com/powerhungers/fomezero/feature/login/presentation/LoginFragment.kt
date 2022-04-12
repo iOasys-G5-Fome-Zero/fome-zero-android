@@ -57,10 +57,11 @@ class LoginFragment : Fragment() {
                             LoginFragmentDirections.navigateToOnboardingFragment()
                         )
                     }
-                    is ViewState.Error -> { }
-                    else -> { }
+                    is ViewState.Error -> {}
+                    else -> {}
                 }
             }
         }
     }
 }
+

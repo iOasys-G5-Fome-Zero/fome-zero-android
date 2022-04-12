@@ -1,6 +1,8 @@
 package com.powerhungers.fomezero.feature.login.data.remote.data_source
 
 import com.powerhungers.fomezero.common.exception.GenericException
+import com.powerhungers.fomezero.feature.login.data.exception.EmptyRefreshTokenException
+import com.powerhungers.fomezero.feature.login.data.exception.EmptyTokenException
 import com.powerhungers.fomezero.feature.login.data.remote.model.LoginRequest
 import com.powerhungers.fomezero.feature.login.data.remote.model.LoginResponse
 import com.powerhungers.fomezero.feature.login.data.remote.service.LoginService
@@ -20,15 +22,23 @@ class LoginRemoteDataSource(private val service: LoginService) {
         } else throw GenericException()
     }
 
-    private fun LoginResponse.toDomain() = User(
-        id = id.orEmpty(),
-        firstName = firstName.orEmpty(),
-        lastName = lastName.orEmpty(),
-        userType = userType.orEmpty(),
-        email = email.orEmpty(),
-        phone = phone.orEmpty(),
-        cpf = cpf.orEmpty(),
-        createdAt = createdAt.orEmpty(),
-        updatedAt = updatedAt.orEmpty(),
-    )
+    private fun LoginResponse.toDomain() = when {
+        token.isNullOrBlank() ->
+            throw EmptyTokenException()
+        refreshToken.isNullOrBlank() ->
+            throw EmptyRefreshTokenException()
+        else -> User(
+            id = id.orEmpty(),
+            firstName = firstName.orEmpty(),
+            lastName = lastName.orEmpty(),
+            userType = userType.orEmpty(),
+            email = email.orEmpty(),
+            phone = phone.orEmpty(),
+            cpf = cpf.orEmpty(),
+            createdAt = createdAt.orEmpty(),
+            updatedAt = updatedAt.orEmpty(),
+            token = token,
+            refreshToken = refreshToken
+        )
+    }
 }

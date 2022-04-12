@@ -1,6 +1,9 @@
 package com.powerhungers.fomezero.common.exception
 
-import com.powerhungers.fomezero.common.utils.Constants
+private const val EMPTY_EMAIL = "Campo email vazio"
+private const val EMPTY_PASSWORD = "Campo senha vazio"
+private const val EMPTY_NAME = "Campo nome vazio"
+private const val EMPTY_USER_TYPE = "Tipo do usuario não selecionado"
 
 open class DomainException(message: String, title: String? = null) :
     RuntimeException(message, RuntimeException(title))
@@ -8,7 +11,7 @@ open class DomainException(message: String, title: String? = null) :
 sealed class ParamException(message: String, title: String? = null) :
     DomainException(message, title)
 
-class EmptyEmailException : ParamException(Constants.EMPTY_EMAIL)
-class EmptyPasswordException : ParamException(Constants.EMPTY_PASSWORD)
-class EmptyNameException : ParamException(Constants.EMPTY_NAME)
-class EmptyUserTypeException : ParamException(Constants.EMPTY_USER_TYPE)
+class EmptyEmailException : ParamException(EMPTY_EMAIL)
+class EmptyPasswordException : ParamException(EMPTY_PASSWORD)
+class EmptyNameException : ParamException(EMPTY_NAME)
+class EmptyUserTypeException : ParamException(EMPTY_USER_TYPE)
