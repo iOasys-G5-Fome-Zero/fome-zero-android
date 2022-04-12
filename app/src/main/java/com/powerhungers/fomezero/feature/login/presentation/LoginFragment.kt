@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.powerhungers.fomezero.common.utils.ViewState
+import com.powerhungers.fomezero.data.remote.model.UserType
 import com.powerhungers.fomezero.databinding.FragmentLoginBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -50,18 +51,22 @@ class LoginFragment : Fragment() {
                 when (state) {
                     is ViewState.Loading ->
                         progressDialog.visibility = View.VISIBLE
-                    is ViewState.FinishLoading ->
+                    is ViewState.Success ->
+                        navigateToOnboarding(state.data)
+                    is ViewState.Error -> {
                         progressDialog.visibility = View.GONE
-                    is ViewState.Success -> {
-                        findNavController().navigate(
-                            LoginFragmentDirections.navigateToOnboardingFragment()
-                        )
                     }
-                    is ViewState.Error -> {}
                     else -> {}
                 }
             }
         }
     }
-}
 
+    private fun navigateToOnboarding(userType: UserType) {
+        val destination = when (userType) {
+            UserType.CONSUMER -> LoginFragmentDirections.navigateToConsumerNavGraph()
+            UserType.PRODUCER -> LoginFragmentDirections.navigateToProducerNavGraph()
+        }
+        findNavController().navigate(destination)
+    }
+}

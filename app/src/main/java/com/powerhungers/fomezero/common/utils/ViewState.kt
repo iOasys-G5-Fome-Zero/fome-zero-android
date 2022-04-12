@@ -9,7 +9,4 @@ sealed class ViewState<out T> {
     object Neutral: ViewState<Nothing>()
 
     object Loading: ViewState<Nothing>()
-
-    object FinishLoading: ViewState<Nothing>()
-
 }
