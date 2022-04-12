@@ -15,7 +15,7 @@ class LoginRepositoryImpl(
 
     override fun login(phoneOrEmail: String, password: String): Flow<User> = flow {
         remoteDataSource.login(phoneOrEmail, password).collect { userData ->
-            localDataSource.savaAccessToken(token = userData.token)
+            localDataSource.saveAccessToken(token = userData.token)
 
             emit(userData)
         }

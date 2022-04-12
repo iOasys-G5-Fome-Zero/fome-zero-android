@@ -17,12 +17,12 @@ data class LoginResponse(
     val phone: String?,
     @SerializedName("cpf")
     val cpf: String?,
-    @SerializedName("createdAt")
+    @SerializedName("created_at")
     val createdAt: String?,
-    @SerializedName("updatedAt")
+    @SerializedName("updated_at")
     val updatedAt: String?,
     @SerializedName("token")
     val token:String?,
     @SerializedName("refresh_token")
-    val refresh_token:String?
+    val refreshToken:String?
 )

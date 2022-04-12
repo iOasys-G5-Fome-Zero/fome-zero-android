@@ -1,12 +1,13 @@
 package com.powerhungers.fomezero.data.local
 
 import android.content.Context
-import com.powerhungers.fomezero.common.utils.Constants
+
+private const val SHARED_PREFERENCE_NAME = "com.powerhungers.fomezero.sharedprefenreces"
 
 class SharedPreferenceHelper(context: Context) {
 
     private val sharedPreferences = context.getSharedPreferences(
-        Constants.SHARED_PREFERENCE_NAME, Context.MODE_PRIVATE
+        SHARED_PREFERENCE_NAME, Context.MODE_PRIVATE
     )
 
     fun saveString(key: String, value: String) = sharedPreferences.edit().run {

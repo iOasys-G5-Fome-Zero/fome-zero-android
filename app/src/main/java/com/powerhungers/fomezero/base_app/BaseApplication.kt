@@ -16,9 +16,9 @@ class BaseApplication : Application() {
             modules(
                 listOf(
                     dataRemoteModule,
+                    dataLocalModule,
                     loginModule,
-                    registrationModule,
-                    dataLocalModule
+                    registrationModule
                 )
             )
         }.androidContext(applicationContext)

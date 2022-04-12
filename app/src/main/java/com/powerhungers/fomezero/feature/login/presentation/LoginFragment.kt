@@ -33,8 +33,7 @@ class LoginFragment : Fragment() {
         with(binding) {
             btnEnter.setOnClickListener {
                 viewModel.login(
-                    "testeeeea@api.com", "Ab1234567!"
-                    //editTxtEmail.text.toString(), editTxtPasswd.text.toString()
+                    editTxtEmail.text.toString(), editTxtPasswd.text.toString()
                 )
             }
             txtCadastre.setOnClickListener {

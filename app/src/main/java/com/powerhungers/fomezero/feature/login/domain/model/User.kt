@@ -11,6 +11,6 @@ data class User(
     val createdAt: String,
     val updatedAt: String,
     val token: String,
-    val refresh_token : String
+    val refreshToken : String
 )
 
