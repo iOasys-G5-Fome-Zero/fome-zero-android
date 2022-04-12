@@ -24,6 +24,7 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
         classpath "android.arch.navigation:navigation-safe-args-gradle-plugin:$safeargs_version"
+        classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
     }
 }
 

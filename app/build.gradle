@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'androidx.navigation.safeargs'
     id 'kotlin-parcelize'
+    id 'kotlinx-serialization'
 }
 
 android {
@@ -25,7 +26,8 @@ android {
             buildConfigField "String", "BASE_URL", '"https://ioasys-g5-fome-zero-api-dev.herokuapp.com/"'
         }
         debug{
-            buildConfigField "String", "BASE_URL", '"https://ioasys-g5-fome-zero-api-dev.herokuapp.com/"'
+            //buildConfigField "String", "BASE_URL", '"https://ioasys-g5-fome-zero-api-dev.herokuapp.com/"'
+            buildConfigField "String", "BASE_URL", '"http://10.0.2.2:7000"'
         }
     }
     compileOptions {
@@ -86,4 +88,7 @@ dependencies {
 
     //splash
     implementation 'androidx.core:core-splashscreen:1.0.0-beta01'
+
+    //serialization
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2"
 }
