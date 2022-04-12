@@ -18,7 +18,3 @@ fun <T> MutableLiveData<ViewState<T>>.postNeutral() {
 fun <T> MutableLiveData<ViewState<T>>.postLoading() {
     postValue(ViewState.Loading)
 }
-
-fun <T> MutableLiveData<ViewState<T>>.postFinishLoading() {
-    postValue(ViewState.FinishLoading)
-}

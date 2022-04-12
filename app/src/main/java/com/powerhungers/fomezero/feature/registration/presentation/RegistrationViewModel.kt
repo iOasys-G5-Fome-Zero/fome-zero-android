@@ -22,7 +22,6 @@ class RegistrationViewModel(private val registrationUseCase: RegistrationUseCase
             registrationUseCase(name, userType, email, password)
                 .flowOn(Dispatchers.IO)
                 .onStart { registrationViewState.postLoading() }
-                .onCompletion { registrationViewState.postFinishLoading() }
                 .catch { registrationViewState.postError(it) }
                 .collect { registrationViewState.postSuccess(Unit) }
         }

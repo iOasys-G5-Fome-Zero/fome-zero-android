@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isGone
+import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.powerhungers.fomezero.common.utils.ViewState
 import com.powerhungers.fomezero.data.remote.model.UserType
@@ -50,13 +52,15 @@ class LoginFragment : Fragment() {
             with(binding) {
                 when (state) {
                     is ViewState.Loading ->
-                        progressDialog.visibility = View.VISIBLE
-                    is ViewState.Success ->
+                        progressDialog.isVisible = true
+                    is ViewState.Success -> {
+                        progressDialog.isGone = true
                         navigateToOnboarding(state.data)
-                    is ViewState.Error -> {
-                        progressDialog.visibility = View.GONE
                     }
-                    else -> {}
+                    is ViewState.Error -> {
+                        progressDialog.isGone = true
+                    }
+                    else -> Unit
                 }
             }
         }
@@ -68,5 +72,10 @@ class LoginFragment : Fragment() {
             UserType.PRODUCER -> LoginFragmentDirections.navigateToProducerNavGraph()
         }
         findNavController().navigate(destination)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        viewModel.clearViewState()
     }
 }

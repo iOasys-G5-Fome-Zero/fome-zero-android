@@ -27,8 +27,7 @@ class LoginViewModel(private val loginUseCase: LoginUseCase) : ViewModel() {
         }
     }
 
-    override fun onCleared() {
-        super.onCleared()
+    fun clearViewState() {
         loginViewState.postNeutral()
     }
 }

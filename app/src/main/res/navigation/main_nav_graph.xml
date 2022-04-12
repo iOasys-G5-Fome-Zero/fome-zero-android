@@ -15,10 +15,14 @@
             app:destination="@id/registrationFragment" />
         <action
             android:id="@+id/navigateToConsumerNavGraph"
-            app:destination="@id/consumer_nav_graph" />
+            app:destination="@id/consumer_nav_graph"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/navigateToProducerNavGraph"
-            app:destination="@id/producer_nav_graph" />
+            app:destination="@id/producer_nav_graph"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment

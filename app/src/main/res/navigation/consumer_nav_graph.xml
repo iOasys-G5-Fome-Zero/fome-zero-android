@@ -3,11 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/consumer_nav_graph"
-    app:startDestination="@id/onboardingConsumerFragment">
+    app:startDestination="@id/onboardingFragment">
 
     <fragment
-        android:id="@+id/onboardingConsumerFragment"
+        android:id="@+id/onboardingFragment"
         android:name="com.powerhungers.fomezero.OnboardingFragment"
         android:label="fragment_onboarding"
-        tools:layout="@layout/fragment_onboarding" />
+        tools:layout="@layout/fragment_onboarding" >
+        <action
+            android:id="@+id/navigateToHome"
+            app:destination="@id/consumerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/consumerFragment"
+        android:name="com.powerhungers.fomezero.feature.standbyClass.ConsumerFragment"
+        android:label="fragment_consumer"
+        tools:layout="@layout/fragment_consumer" />
 </navigation>
