@@ -36,7 +36,7 @@ class LoginFragment : Fragment() {
         with(binding) {
             btnEnter.setOnClickListener {
                 viewModel.login(
-                    editTxtEmail.text.toString(), editTxtPasswd.text.toString()
+                editTxtEmail.text.toString(), editTxtPasswd.text.toString()
                 )
             }
             txtCadastre.setOnClickListener {

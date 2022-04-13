@@ -1,14 +1,18 @@
 package com.powerhungers.fomezero.feature.registration.presentation
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import org.koin.androidx.viewmodel.ext.android.viewModel
 import android.view.ViewGroup
 import android.widget.RadioGroup
-import com.powerhungers.fomezero.common.exception.EmptyUserTypeException
+import androidx.core.view.isGone
+import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
+import com.powerhungers.fomezero.R
+import com.powerhungers.fomezero.common.utils.ViewState
 import com.powerhungers.fomezero.databinding.FragmentRegistrationBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
+
 
 class RegistrationFragment : Fragment() {
 
@@ -25,16 +29,30 @@ class RegistrationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        handleClickListener()
+        checkRadioButton(binding.radioGroup)
         addObserver()
     }
 
-    private fun handleClickListener() {
+    private fun checkRadioButton(radio: RadioGroup) {
+
+        radio.setOnCheckedChangeListener { _, checkedId ->
+            when (checkedId) {
+                R.id.consumerRadioButton -> {
+                    handleClickListener("consumer")
+                }
+                R.id.producerRadioButton -> {
+                    handleClickListener("producer")
+                }
+            }
+        }
+    }
+
+    private fun handleClickListener(usertype: String) {
         with(binding) {
             finishRegisterButton.setOnClickListener {
                 viewModel.registration(
                     nameEditText.text.toString(),
-                    "radioSelected",
+                    usertype,
                     emailEditText.text.toString(),
                     passwordEditText.text.toString()
                 )
@@ -43,5 +61,19 @@ class RegistrationFragment : Fragment() {
     }
 
     private fun addObserver() {
+        viewModel.registrationLiveData.observe(viewLifecycleOwner){state ->
+            with(binding){
+                when(state){
+                    is ViewState.Loading ->
+                        progressDialog.isVisible = true
+                    is ViewState.Success ->{
+                        progressDialog.isGone = true
+                    }
+                    is ViewState.Error ->
+                        progressDialog.isGone = true
+                    else -> {Unit}
+                }
+            }
+        }
     }
 }
