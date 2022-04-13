@@ -24,20 +24,26 @@ class ConsumerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.leftOngImageView.setOnClickListener {
-            val intent =
-                Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://powerhungers.netlify.app/"))
-            startActivity(intent)
-        }
+        handleButtonClick()
+    }
 
-        binding.rightOngImageView.setOnClickListener {
-            val intent =
-                Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://powerhungers.netlify.app/"))
-            startActivity(intent)
-        }
+    private fun handleButtonClick() {
+        with(binding){
+            leftOngImageView.setOnClickListener {
+                val intent =
+                    Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://powerhungers.netlify.app/"))
+                startActivity(intent)
+            }
 
-        binding.makeYourSignature.setOnClickListener {
-            findNavController().navigate(ConsumerFragmentDirections.navigateToSignatureFragment3())
+            rightOngImageView.setOnClickListener {
+                val intent =
+                    Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://powerhungers.netlify.app/"))
+                startActivity(intent)
+            }
+
+            makeYourSignature.setOnClickListener {
+                findNavController().navigate(ConsumerFragmentDirections.navigateToSignatureFragment3())
+            }
         }
     }
 }
