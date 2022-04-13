@@ -18,5 +18,30 @@
         android:id="@+id/producerHomeFragment"
         android:name="com.powerhungers.fomezero.feature.standbyClass.ProducerHomeFragment"
         android:label="fragment_producer_home"
-        tools:layout="@layout/fragment_producer_home" />
+        tools:layout="@layout/fragment_producer_home" >
+        <action
+            android:id="@+id/navigate_to_basketFragment"
+            app:destination="@id/basketFragment" />
+        <action
+            android:id="@+id/navigate_to_financesFragment"
+            app:destination="@id/financesFragment" />
+        <action
+            android:id="@+id/navigate_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/basketFragment"
+        android:name="com.powerhungers.fomezero.feature.standbyClass.BasketFragment"
+        android:label="fragment_basket"
+        tools:layout="@layout/fragment_basket" />
+    <fragment
+        android:id="@+id/financesFragment"
+        android:name="com.powerhungers.fomezero.feature.standbyClass.FinancesFragment"
+        android:label="fragment_finances"
+        tools:layout="@layout/fragment_finances" />
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.powerhungers.fomezero.feature.standbyClass.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" />
 </navigation>
