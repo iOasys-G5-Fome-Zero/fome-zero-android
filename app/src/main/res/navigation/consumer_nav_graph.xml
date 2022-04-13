@@ -18,5 +18,14 @@
         android:id="@+id/consumerFragment"
         android:name="com.powerhungers.fomezero.feature.standbyClass.ConsumerFragment"
         android:label="fragment_consumer"
-        tools:layout="@layout/fragment_consumer" />
+        tools:layout="@layout/fragment_consumer" >
+        <action
+            android:id="@+id/navigateToSignatureFragment3"
+            app:destination="@id/signatureFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/signatureFragment3"
+        android:name="com.powerhungers.fomezero.feature.standbyClass.SignatureFragment"
+        android:label="fragment_signature"
+        tools:layout="@layout/fragment_signature" />
 </navigation>
