@@ -1,16 +1,17 @@
 package com.powerhungers.fomezero.feature.standbyClass
 
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.powerhungers.fomezero.common.extension.openExternalUrl
 import com.powerhungers.fomezero.databinding.FragmentConsumerBinding
 
-class ConsumerFragment : Fragment() {
+const val FOME_ZERO_URL = "https://powerhungers.netlify.app/"
+
+class ConsumerHomeFragment : Fragment() {
 
     private val binding by lazy { FragmentConsumerBinding.inflate(layoutInflater) }
 
@@ -28,21 +29,19 @@ class ConsumerFragment : Fragment() {
     }
 
     private fun handleButtonClick() {
-        with(binding){
+        with(binding) {
             leftOngImageView.setOnClickListener {
-                val intent =
-                    Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://powerhungers.netlify.app/"))
-                startActivity(intent)
+                openExternalUrl(FOME_ZERO_URL)
             }
 
             rightOngImageView.setOnClickListener {
-                val intent =
-                    Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://powerhungers.netlify.app/"))
-                startActivity(intent)
+                openExternalUrl(FOME_ZERO_URL)
             }
 
             makeYourSignature.setOnClickListener {
-                findNavController().navigate(ConsumerFragmentDirections.navigateToSignatureFragment3())
+                findNavController().navigate(
+                    ConsumerHomeFragmentDirections.navigateToSignatureFragment()
+                )
             }
         }
     }
