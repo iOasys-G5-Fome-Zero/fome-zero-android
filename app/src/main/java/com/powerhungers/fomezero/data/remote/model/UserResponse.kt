@@ -10,7 +10,7 @@ data class UserResponse(
     @SerializedName("last_name")
     val lastName: String?,
     @SerializedName("user_type")
-    val userType: UserType?,
+    val userTypeResponse: UserTypeResponse?,
     @SerializedName("email")
     val email: String?,
     @SerializedName("phone")
@@ -27,7 +27,7 @@ data class UserResponse(
     val refreshToken: String?
 )
 
-enum class UserType(val value: String) {
+enum class UserTypeResponse(val value: String) {
     @SerializedName("consumer")
     CONSUMER("consumer"),
     @SerializedName("producer")

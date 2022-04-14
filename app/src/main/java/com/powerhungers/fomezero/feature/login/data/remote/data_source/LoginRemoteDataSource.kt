@@ -28,13 +28,13 @@ class LoginRemoteDataSource(private val service: LoginService) {
             throw EmptyTokenException()
         refreshToken.isNullOrBlank() ->
             throw EmptyRefreshTokenException()
-        userType == null || userType.value.isBlank() ->
+        userTypeResponse == null || userTypeResponse.value.isBlank() ->
             throw EmptyUserTypeException()
         else -> User(
             id = id.orEmpty(),
             firstName = firstName.orEmpty(),
             lastName = lastName.orEmpty(),
-            userType = userType,
+            userTypeResponse = userTypeResponse,
             email = email.orEmpty(),
             phone = phone.orEmpty(),
             cpf = cpf.orEmpty(),
