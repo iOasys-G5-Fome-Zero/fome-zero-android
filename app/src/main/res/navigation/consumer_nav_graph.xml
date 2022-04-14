@@ -9,14 +9,24 @@
         android:id="@+id/onboardingFragment"
         android:name="com.powerhungers.fomezero.OnboardingFragment"
         android:label="fragment_onboarding"
-        tools:layout="@layout/fragment_onboarding" >
+        tools:layout="@layout/fragment_onboarding">
         <action
             android:id="@+id/navigateToHome"
             app:destination="@id/consumerFragment" />
     </fragment>
     <fragment
         android:id="@+id/consumerFragment"
-        android:name="com.powerhungers.fomezero.feature.standbyClass.ConsumerFragment"
+        android:name="com.powerhungers.fomezero.feature.standbyClass.ConsumerHomeFragment"
         android:label="fragment_consumer"
-        tools:layout="@layout/fragment_consumer" />
+        tools:layout="@layout/fragment_consumer">
+
+        <action
+            android:id="@+id/navigateToSignatureFragment"
+            app:destination="@id/signatureFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signatureFragment"
+        android:name="com.powerhungers.fomezero.feature.standbyClass.SignatureFragment"
+        android:label="fragment_signature"
+        tools:layout="@layout/fragment_signature" />
 </navigation>
