@@ -1,8 +1,8 @@
 package com.powerhungers.fomezero.feature.login.domain.repository
 
-import com.powerhungers.fomezero.data.remote.model.UserType
+import com.powerhungers.fomezero.data.remote.model.UserTypeResponse
 import kotlinx.coroutines.flow.Flow
 
 interface LoginRepository {
-    fun login(phoneOrEmail: String, password: String): Flow<UserType>
+    fun login(phoneOrEmail: String, password: String): Flow<UserTypeResponse>
 }
