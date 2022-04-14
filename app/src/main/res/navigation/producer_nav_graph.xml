@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/onboardingFragment"
-        android:name="com.powerhungers.fomezero.OnboardingFragment"
+        android:name="com.powerhungers.fomezero.feature.standbyClass.OnboardingFragment"
         android:label="fragment_onboarding"
         tools:layout="@layout/fragment_onboarding" >
         <action

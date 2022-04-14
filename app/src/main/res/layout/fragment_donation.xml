@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.donation.DonationFragment">
+
+    <View
+        android:id="@+id/viewBackground"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/view_background_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/coinBalanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:text="@string/coin_balance"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/viewBackground"
+        app:layout_constraintStart_toStartOf="@id/viewBackground"
+        app:layout_constraintTop_toTopOf="@id/viewBackground" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/amountCoins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@string/total_coin"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/coinBalanceTextView"
+        app:layout_constraintStart_toEndOf="@id/coinBalanceTextView"
+        app:layout_constraintTop_toTopOf="@id/coinBalanceTextView" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="24dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/amountCoins"
+        app:layout_constraintStart_toEndOf="@id/amountCoins"
+        app:layout_constraintTop_toTopOf="@id/amountCoins"
+        app:srcCompat="@drawable/ic_money" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/help_against_hunger"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewBackground" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/subtitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/donation_information"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/rightOngImageView"
+        android:layout_width="152dp"
+        android:layout_height="130dp"
+        android:layout_margin="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/leftOngImageView"
+        app:layout_constraintTop_toBottomOf="@id/subtitleTextView"
+        app:srcCompat="@drawable/ong_child_without_hungry" />
+
+    <ProgressBar
+        android:id="@+id/progressBarRight"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/rightOngImageView"
+        app:layout_constraintStart_toStartOf="@id/rightOngImageView"
+        app:layout_constraintTop_toBottomOf="@id/rightOngImageView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/ong_child_without_hunger"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/rightOngImageView"
+        app:layout_constraintStart_toStartOf="@id/rightOngImageView"
+        app:layout_constraintTop_toBottomOf="@id/progressBarRight" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/leftOngImageView"
+        android:layout_width="152dp"
+        android:layout_height="130dp"
+        android:layout_margin="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/rightOngImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitleTextView"
+        app:srcCompat="@drawable/ong_food_on_table" />
+
+    <ProgressBar
+        android:id="@+id/progressBarLeft"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/leftOngImageView"
+        app:layout_constraintStart_toStartOf="@id/leftOngImageView"
+        app:layout_constraintTop_toBottomOf="@id/leftOngImageView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/ong_food_on_table"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/leftOngImageView"
+        app:layout_constraintStart_toStartOf="@id/leftOngImageView"
+        app:layout_constraintTop_toBottomOf="@id/progressBarLeft" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

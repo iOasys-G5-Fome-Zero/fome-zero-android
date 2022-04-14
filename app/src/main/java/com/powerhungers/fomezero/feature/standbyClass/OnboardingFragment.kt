@@ -1,4 +1,4 @@
-package com.powerhungers.fomezero
+package com.powerhungers.fomezero.feature.standbyClass
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
