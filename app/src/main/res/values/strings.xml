@@ -30,4 +30,5 @@
     <string name="ong_food_on_table">ONG Comida na mesa</string>
     <string name="ong_child_without_hunger">ONG criança sem \nfome</string>
     <string name="account_created">Cadastro realizado!</string>
+    <string name="usertype_not_selected">Usuario não selecionado</string>
 </resources>

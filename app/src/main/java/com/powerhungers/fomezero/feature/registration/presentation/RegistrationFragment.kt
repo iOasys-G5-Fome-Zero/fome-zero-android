@@ -33,7 +33,9 @@ class RegistrationFragment : Fragment() {
 
         handleClickListener()
         userType = checkRadioButton()
+        addRegistrationObserver()
         addObserver()
+        clearError()
     }
 
     private fun handleClickListener() {
@@ -61,6 +63,70 @@ class RegistrationFragment : Fragment() {
         return userType
     }
 
+    private fun addRegistrationObserver() {
+        observeNameLiveData()
+        observeUserTypeLiveData()
+        observeEmailLiveData()
+        observePasswordLiveData()
+    }
+
+    private fun observeNameLiveData() {
+        viewModel.nameLiveData.observe(viewLifecycleOwner) { state ->
+            with(binding) {
+                if (state is ViewState.Error) {
+                    progressDialog.isGone = true
+                    nameInputLayout.error = state.throwable.message
+
+                } else {
+                    progressDialog.isGone = true
+                    nameInputLayout.error = null
+                }
+            }
+        }
+    }
+
+    private fun observeUserTypeLiveData() {
+        viewModel.userTypeLiveData.observe(viewLifecycleOwner) { state ->
+            with(binding) {
+                if (state is ViewState.Error) {
+                    progressDialog.isGone = true
+                    Toast.makeText(context, R.string.usertype_not_selected, Toast.LENGTH_LONG).show()
+
+                } else {
+                    progressDialog.isGone = true
+                }
+            }
+        }
+    }
+
+    private fun observeEmailLiveData() {
+        viewModel.emailLiveData.observe(viewLifecycleOwner) { state ->
+            with(binding) {
+                if (state is ViewState.Error) {
+                    progressDialog.isGone = true
+                    emailInputLayout.error = state.throwable.message
+                } else {
+                    progressDialog.isGone = true
+                    emailInputLayout.error = null
+                }
+            }
+        }
+    }
+
+    private fun observePasswordLiveData() {
+        viewModel.passwordLiveData.observe(viewLifecycleOwner) { state ->
+            with(binding) {
+                if (state is ViewState.Error) {
+                    progressDialog.isGone = true
+                    passwordInputLayout.error = state.throwable.message
+                } else {
+                    progressDialog.isGone = true
+                    passwordInputLayout.error = null
+                }
+            }
+        }
+    }
+
     private fun addObserver() {
         viewModel.registrationLiveData.observe(viewLifecycleOwner) { state ->
             with(binding) {
@@ -74,6 +140,26 @@ class RegistrationFragment : Fragment() {
                     is ViewState.Error ->
                         progressDialog.isGone = true
                     else -> Unit
+                }
+            }
+        }
+    }
+
+    private fun clearError() {
+        with(binding) {
+            nameEditText.setOnFocusChangeListener { _, hasFocus ->
+                if (hasFocus) {
+                    viewModel.clearViewState()
+                }
+            }
+            emailEditText.setOnFocusChangeListener { _, hasFocus ->
+                if (hasFocus) {
+                    viewModel.clearViewState()
+                }
+            }
+            passwordEditText.setOnFocusChangeListener { _, hasFocus ->
+                if (hasFocus) {
+                    viewModel.clearViewState()
                 }
             }
         }
