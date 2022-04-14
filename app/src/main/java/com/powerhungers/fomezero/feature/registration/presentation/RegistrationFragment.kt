@@ -4,21 +4,22 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import com.powerhungers.fomezero.R
-import com.powerhungers.fomezero.common.exception.EmptyUserTypeException
 import com.powerhungers.fomezero.common.utils.ViewState
 import com.powerhungers.fomezero.databinding.FragmentRegistrationBinding
 import com.powerhungers.fomezero.domain.model.UserType
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-
 class RegistrationFragment : Fragment() {
 
     private val binding by lazy { FragmentRegistrationBinding.inflate(layoutInflater) }
     private val viewModel: RegistrationViewModel by viewModel()
+    private var userType = ""
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,6 +32,7 @@ class RegistrationFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         handleClickListener()
+        userType = checkRadioButton()
         addObserver()
     }
 
@@ -39,7 +41,7 @@ class RegistrationFragment : Fragment() {
             finishRegisterButton.setOnClickListener {
                 viewModel.registration(
                     name = nameEditText.text.toString(),
-                    userType = checkRadioButton(),
+                    userType = userType,
                     email = emailEditText.text.toString(),
                     password = passwordEditText.text.toString()
                 )
@@ -48,7 +50,6 @@ class RegistrationFragment : Fragment() {
     }
 
     private fun checkRadioButton(): String {
-        var userType = ""
         binding.radioGroup.setOnCheckedChangeListener { _, checkedId ->
             when (checkedId) {
                 R.id.consumerRadioButton ->
@@ -66,8 +67,10 @@ class RegistrationFragment : Fragment() {
                 when (state) {
                     is ViewState.Loading ->
                         progressDialog.isVisible = true
-                    is ViewState.Success ->
+                    is ViewState.Success -> {
                         progressDialog.isGone = true
+                        Toast.makeText(context, R.string.account_created, Toast.LENGTH_LONG).show()
+                    }
                     is ViewState.Error ->
                         progressDialog.isGone = true
                     else -> Unit

@@ -17,6 +17,6 @@ data class User(
 )
 
 enum class UserType(val value : String) {
-    PRODUCER("produtor"),
-    CONSUMER("consumidor")
+    PRODUCER("producer"),
+    CONSUMER("consumer")
 }
