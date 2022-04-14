@@ -1,12 +1,10 @@
 package com.powerhungers.fomezero.domain.model
 
-import com.powerhungers.fomezero.data.remote.model.UserTypeResponse
-
 data class User(
     val id: String,
     val firstName: String,
     val lastName: String,
-    val userTypeResponse: UserTypeResponse,
+    val userType: UserType,
     val email: String,
     val phone: String,
     val cpf: String,

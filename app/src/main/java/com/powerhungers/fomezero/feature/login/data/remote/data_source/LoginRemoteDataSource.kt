@@ -3,7 +3,9 @@ package com.powerhungers.fomezero.feature.login.data.remote.data_source
 import com.powerhungers.fomezero.common.exception.EmptyUserTypeException
 import com.powerhungers.fomezero.common.exception.GenericException
 import com.powerhungers.fomezero.data.remote.model.UserResponse
+import com.powerhungers.fomezero.data.remote.model.UserTypeResponse
 import com.powerhungers.fomezero.domain.model.User
+import com.powerhungers.fomezero.domain.model.UserType
 import com.powerhungers.fomezero.feature.login.data.exception.EmptyRefreshTokenException
 import com.powerhungers.fomezero.feature.login.data.exception.EmptyTokenException
 import com.powerhungers.fomezero.feature.login.data.remote.model.LoginRequest
@@ -34,7 +36,7 @@ class LoginRemoteDataSource(private val service: LoginService) {
             id = id.orEmpty(),
             firstName = firstName.orEmpty(),
             lastName = lastName.orEmpty(),
-            userTypeResponse = userTypeResponse,
+            userType = userTypeResponse.toDomain(),
             email = email.orEmpty(),
             phone = phone.orEmpty(),
             cpf = cpf.orEmpty(),
@@ -43,5 +45,10 @@ class LoginRemoteDataSource(private val service: LoginService) {
             token = token,
             refreshToken = refreshToken
         )
+    }
+
+    private fun UserTypeResponse.toDomain() = when (this) {
+        UserTypeResponse.CONSUMER -> UserType.CONSUMER
+        UserTypeResponse.PRODUCER -> UserType.PRODUCER
     }
 }
