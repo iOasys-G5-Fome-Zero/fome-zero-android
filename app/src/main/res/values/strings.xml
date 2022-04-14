@@ -22,4 +22,5 @@
     <string name="jump">Pular</string>
     <string name="next">Proximo</string>
     <string name="finish_registration">Finalizar cadastro</string>
+    <string name="account_created">Cadastro realizado!</string>
 </resources>

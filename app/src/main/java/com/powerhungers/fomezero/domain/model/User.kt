@@ -1,12 +1,12 @@
 package com.powerhungers.fomezero.domain.model
 
-import com.powerhungers.fomezero.data.remote.model.UserType
+import com.powerhungers.fomezero.data.remote.model.UserTypeResponse
 
 data class User(
     val id: String,
     val firstName: String,
     val lastName: String,
-    val userType: UserType,
+    val userTypeResponse: UserTypeResponse,
     val email: String,
     val phone: String,
     val cpf: String,
@@ -15,3 +15,8 @@ data class User(
     val token: String,
     val refreshToken: String
 )
+
+enum class UserType(val value : String) {
+    PRODUCER("produtor"),
+    CONSUMER("consumidor")
+}

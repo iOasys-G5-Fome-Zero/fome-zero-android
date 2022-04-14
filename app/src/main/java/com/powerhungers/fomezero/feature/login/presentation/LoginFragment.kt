@@ -9,7 +9,7 @@ import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.powerhungers.fomezero.common.utils.ViewState
-import com.powerhungers.fomezero.data.remote.model.UserType
+import com.powerhungers.fomezero.data.remote.model.UserTypeResponse
 import com.powerhungers.fomezero.databinding.FragmentLoginBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -36,7 +36,7 @@ class LoginFragment : Fragment() {
         with(binding) {
             btnEnter.setOnClickListener {
                 viewModel.login(
-                    editTxtEmail.text.toString(), editTxtPasswd.text.toString()
+                editTxtEmail.text.toString(), editTxtPasswd.text.toString()
                 )
             }
             txtCadastre.setOnClickListener {
@@ -66,10 +66,10 @@ class LoginFragment : Fragment() {
         }
     }
 
-    private fun navigateToOnboarding(userType: UserType) {
-        val destination = when (userType) {
-            UserType.CONSUMER -> LoginFragmentDirections.navigateToConsumerNavGraph()
-            UserType.PRODUCER -> LoginFragmentDirections.navigateToProducerNavGraph()
+    private fun navigateToOnboarding(userTypeResponse: UserTypeResponse) {
+        val destination = when (userTypeResponse) {
+            UserTypeResponse.CONSUMER -> LoginFragmentDirections.navigateToConsumerNavGraph()
+            UserTypeResponse.PRODUCER -> LoginFragmentDirections.navigateToProducerNavGraph()
         }
         findNavController().navigate(destination)
     }

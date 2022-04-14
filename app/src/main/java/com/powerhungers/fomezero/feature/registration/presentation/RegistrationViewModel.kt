@@ -18,7 +18,6 @@ class RegistrationViewModel(private val registrationUseCase: RegistrationUseCase
 
     fun registration(name: String, userType: String, email: String, password: String) {
         viewModelScope.launch {
-
             registrationUseCase(name, userType, email, password)
                 .flowOn(Dispatchers.IO)
                 .onStart { registrationViewState.postLoading() }
@@ -32,4 +31,3 @@ class RegistrationViewModel(private val registrationUseCase: RegistrationUseCase
         registrationViewState.postNeutral()
     }
 }
-

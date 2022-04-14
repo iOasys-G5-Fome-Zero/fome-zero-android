@@ -1,14 +1,19 @@
 package com.powerhungers.fomezero.feature.registration.presentation
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import org.koin.androidx.viewmodel.ext.android.viewModel
 import android.view.ViewGroup
-import android.widget.RadioGroup
+import androidx.core.view.isGone
+import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
+import com.powerhungers.fomezero.R
 import com.powerhungers.fomezero.common.exception.EmptyUserTypeException
+import com.powerhungers.fomezero.common.utils.ViewState
 import com.powerhungers.fomezero.databinding.FragmentRegistrationBinding
+import com.powerhungers.fomezero.domain.model.UserType
+import org.koin.androidx.viewmodel.ext.android.viewModel
+
 
 class RegistrationFragment : Fragment() {
 
@@ -33,15 +38,41 @@ class RegistrationFragment : Fragment() {
         with(binding) {
             finishRegisterButton.setOnClickListener {
                 viewModel.registration(
-                    nameEditText.text.toString(),
-                    "radioSelected",
-                    emailEditText.text.toString(),
-                    passwordEditText.text.toString()
+                    name = nameEditText.text.toString(),
+                    userType = checkRadioButton(),
+                    email = emailEditText.text.toString(),
+                    password = passwordEditText.text.toString()
                 )
             }
         }
     }
 
+    private fun checkRadioButton(): String {
+        var userType = ""
+        binding.radioGroup.setOnCheckedChangeListener { _, checkedId ->
+            when (checkedId) {
+                R.id.consumerRadioButton ->
+                    userType = UserType.CONSUMER.value
+                R.id.producerRadioButton ->
+                    userType = UserType.PRODUCER.value
+            }
+        }
+        return userType
+    }
+
     private fun addObserver() {
+        viewModel.registrationLiveData.observe(viewLifecycleOwner) { state ->
+            with(binding) {
+                when (state) {
+                    is ViewState.Loading ->
+                        progressDialog.isVisible = true
+                    is ViewState.Success ->
+                        progressDialog.isGone = true
+                    is ViewState.Error ->
+                        progressDialog.isGone = true
+                    else -> Unit
+                }
+            }
+        }
     }
 }
