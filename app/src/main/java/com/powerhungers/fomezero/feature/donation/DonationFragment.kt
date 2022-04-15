@@ -1,5 +1,6 @@
 package com.powerhungers.fomezero.feature.donation
 
+import android.animation.ObjectAnimator
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -16,5 +17,16 @@ class DonationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.progressBarLeft.max = 1000
+        val currentProgress = 600
+
+        ObjectAnimator.ofInt(binding.progressBarLeft,"progress",currentProgress)
+            .setDuration(2000)
+            .start()
     }
 }
