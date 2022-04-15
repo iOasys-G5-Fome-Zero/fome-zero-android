@@ -9,6 +9,8 @@ import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import com.powerhungers.fomezero.R
+import com.powerhungers.fomezero.common.extension.showToast
+import com.powerhungers.fomezero.common.extension.teste
 import com.powerhungers.fomezero.common.utils.ViewState
 import com.powerhungers.fomezero.databinding.FragmentRegistrationBinding
 import com.powerhungers.fomezero.domain.model.UserType
@@ -33,7 +35,6 @@ class RegistrationFragment : Fragment() {
 
         handleClickListener()
         userType = checkRadioButton()
-        addRegistrationObserver()
         addObserver()
         clearError()
     }
@@ -63,11 +64,28 @@ class RegistrationFragment : Fragment() {
         return userType
     }
 
-    private fun addRegistrationObserver() {
+    private fun addObserver() {
+
         observeNameLiveData()
         observeUserTypeLiveData()
         observeEmailLiveData()
         observePasswordLiveData()
+
+        viewModel.registrationLiveData.observe(viewLifecycleOwner) { state ->
+            with(binding) {
+                when (state) {
+                    is ViewState.Loading ->
+                        progressDialog.isVisible = true
+                    is ViewState.Success -> {
+                        progressDialog.isGone = true
+                        showToast(R.string.account_created)
+                    }
+                    is ViewState.Error ->
+                        progressDialog.isGone = true
+                    else -> Unit
+                }
+            }
+        }
     }
 
     private fun observeNameLiveData() {
@@ -90,8 +108,7 @@ class RegistrationFragment : Fragment() {
             with(binding) {
                 if (state is ViewState.Error) {
                     progressDialog.isGone = true
-                    Toast.makeText(context, R.string.usertype_not_selected, Toast.LENGTH_LONG).show()
-
+                    showToast(R.string.usertype_not_selected)
                 } else {
                     progressDialog.isGone = true
                 }
@@ -127,27 +144,9 @@ class RegistrationFragment : Fragment() {
         }
     }
 
-    private fun addObserver() {
-        viewModel.registrationLiveData.observe(viewLifecycleOwner) { state ->
-            with(binding) {
-                when (state) {
-                    is ViewState.Loading ->
-                        progressDialog.isVisible = true
-                    is ViewState.Success -> {
-                        progressDialog.isGone = true
-                        Toast.makeText(context, R.string.account_created, Toast.LENGTH_LONG).show()
-                    }
-                    is ViewState.Error ->
-                        progressDialog.isGone = true
-                    else -> Unit
-                }
-            }
-        }
-    }
-
     private fun clearError() {
         with(binding) {
-            nameEditText.setOnFocusChangeListener { _, hasFocus ->
+            binding.nameEditText.setOnFocusChangeListener { _, hasFocus ->
                 if (hasFocus) {
                     viewModel.clearViewState()
                 }
@@ -157,11 +156,7 @@ class RegistrationFragment : Fragment() {
                     viewModel.clearViewState()
                 }
             }
-            passwordEditText.setOnFocusChangeListener { _, hasFocus ->
-                if (hasFocus) {
-                    viewModel.clearViewState()
-                }
-            }
+            teste(nameEditText, )
         }
     }
 }
