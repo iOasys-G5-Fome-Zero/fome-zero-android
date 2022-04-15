@@ -7,9 +7,9 @@
     tools:context=".feature.donation.DonationFragment">
 
     <View
-        android:id="@+id/viewBackground"
+        android:id="@+id/viewCoinsBackground"
         android:layout_width="0dp"
-        android:layout_height="56dp"
+        android:layout_height="75dp"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/view_background_2"
@@ -25,9 +25,9 @@
         android:text="@string/coin_balance"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/viewBackground"
-        app:layout_constraintStart_toStartOf="@id/viewBackground"
-        app:layout_constraintTop_toTopOf="@id/viewBackground" />
+        app:layout_constraintBottom_toBottomOf="@id/viewCoinsBackground"
+        app:layout_constraintStart_toStartOf="@id/viewCoinsBackground"
+        app:layout_constraintTop_toTopOf="@id/viewCoinsBackground" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/amountCoins"
@@ -61,7 +61,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/viewBackground" />
+        app:layout_constraintTop_toBottomOf="@id/viewCoinsBackground" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/subtitleTextView"
@@ -73,38 +73,6 @@
         android:text="@string/donation_information"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titleTextView" />
-
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/rightOngImageView"
-        android:layout_width="152dp"
-        android:layout_height="130dp"
-        android:layout_margin="16dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/leftOngImageView"
-        app:layout_constraintTop_toBottomOf="@id/subtitleTextView"
-        app:srcCompat="@drawable/ong_child_without_hungry" />
-
-    <ProgressBar
-        android:id="@+id/progressBarRight"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="@id/rightOngImageView"
-        app:layout_constraintStart_toStartOf="@id/rightOngImageView"
-        app:layout_constraintTop_toBottomOf="@id/rightOngImageView" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/ong_child_without_hunger"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/rightOngImageView"
-        app:layout_constraintStart_toStartOf="@id/rightOngImageView"
-        app:layout_constraintTop_toBottomOf="@id/progressBarRight" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/leftOngImageView"
@@ -136,5 +104,81 @@
         app:layout_constraintEnd_toEndOf="@id/leftOngImageView"
         app:layout_constraintStart_toStartOf="@id/leftOngImageView"
         app:layout_constraintTop_toBottomOf="@id/progressBarLeft" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/rightOngImageView"
+        android:layout_width="152dp"
+        android:layout_height="130dp"
+        android:layout_margin="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/leftOngImageView"
+        app:layout_constraintTop_toBottomOf="@id/subtitleTextView"
+        app:srcCompat="@drawable/ong_child_without_hungry" />
+
+    <ProgressBar
+        android:id="@+id/progressBarRight"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/rightOngImageView"
+        app:layout_constraintStart_toStartOf="@id/rightOngImageView"
+        app:layout_constraintTop_toBottomOf="@id/rightOngImageView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/rightOngTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/ong_child_without_hunger"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/rightOngImageView"
+        app:layout_constraintStart_toStartOf="@id/rightOngImageView"
+        app:layout_constraintTop_toBottomOf="@id/progressBarRight" />
+
+    <View
+        android:id="@+id/websiteBackground"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/view_background_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rightOngTextView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/websiteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/website_information"
+        app:layout_constraintEnd_toEndOf="@id/websiteBackground"
+        app:layout_constraintStart_toStartOf="@id/websiteBackground"
+        app:layout_constraintTop_toTopOf="@id/websiteBackground" />
+
+    <View
+        android:id="@+id/buttonWebsiteBackground"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="24dp"
+        android:background="@drawable/view_background_2"
+        app:layout_constraintBottom_toBottomOf="@id/websiteBackground"
+        app:layout_constraintEnd_toEndOf="@id/websiteBackground"
+        app:layout_constraintStart_toStartOf="@id/websiteBackground"
+        app:layout_constraintTop_toBottomOf="@id/websiteTextView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/websiteButtonTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/go_website"
+        app:layout_constraintBottom_toBottomOf="@id/buttonWebsiteBackground"
+        app:layout_constraintEnd_toEndOf="@id/buttonWebsiteBackground"
+        app:layout_constraintStart_toStartOf="@id/buttonWebsiteBackground"
+        app:layout_constraintTop_toTopOf="@id/buttonWebsiteBackground" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

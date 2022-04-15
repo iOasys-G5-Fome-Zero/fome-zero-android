@@ -6,7 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.powerhungers.fomezero.common.extension.openExternalUrl
 import com.powerhungers.fomezero.databinding.FragmentDonationBinding
+
+const val FOME_ZERO_URL = "https://powerhungers.netlify.app/"
 
 class DonationFragment : Fragment() {
 
@@ -22,11 +25,26 @@ class DonationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.progressBarLeft.max = 1000
-        val currentProgress = 600
+        setupProgressBar()
 
-        ObjectAnimator.ofInt(binding.progressBarLeft,"progress",currentProgress)
-            .setDuration(2000)
-            .start()
+        binding.websiteButtonTextView.setOnClickListener {
+            openExternalUrl(FOME_ZERO_URL)
+        }
+    }
+
+    private fun setupProgressBar() {
+        with(binding) {
+            progressBarLeft.max = 1000
+            progressBarRight.max = 1000
+            val currentLeftProgress = 600
+            val currentRightProgress = 600
+
+            ObjectAnimator.ofInt(progressBarLeft, "progress", currentLeftProgress)
+                .setDuration(2000)
+                .start()
+            ObjectAnimator.ofInt(progressBarRight, "progress", currentRightProgress)
+                .setDuration(2000)
+                .start()
+        }
     }
 }

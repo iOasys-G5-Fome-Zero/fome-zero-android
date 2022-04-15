@@ -11,6 +11,7 @@
     <string name="password">Senha</string>
     <string name="email">E-mail</string>
     <string name="go_to_website">Vá para o site</string>
+    <string name="go_website">Ir para site</string>
 
     <string name="name">Nome</string>
     <string name="info_about_registration">Informação sobre cadastro</string>
@@ -28,12 +29,12 @@
     <string name="make_your_signature">Faça sua \nassinatura</string>
     <string name="fresh_products">Produtos fresquinhos de\n produtores locais toda\nsemana na sua mesa</string>
     <string name="ong_food_on_table">ONG Comida na mesa</string>
-    <string name="ong_child_without_hunger">ONG criança sem \nfome</string>
+    <string name="ong_child_without_hunger">ONG criança sem fome</string>
     <string name="account_created">Cadastro realizado!</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="coin_balance">Saldo de moedas Horticoins\n gerados da sua cesta</string>
     <string name="total_coin">10</string>
     <string name="help_against_hunger">Ajude no combate a fome</string>
     <string name="donation_information">Veja abaixo as instituições e projetos cadastrados na\n nossa rede e ajude-nos a atingir a meta do mês\n doando suas Horticoins que serão convertidas\n em alimentos.</string>
+    <string name="website_information">Para saber mais sobre os projetos e instituições que \nestamos ajudando, acesse o nosso site.</string>
 </resources>
