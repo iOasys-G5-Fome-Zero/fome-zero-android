@@ -1,15 +1,17 @@
-package com.powerhungers.fomezero.feature.donation
+package com.powerhungers.fomezero.feature.consumer.donation.presentation
 
-import android.animation.ObjectAnimator
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.powerhungers.fomezero.common.extension.openExternalUrl
+import com.powerhungers.fomezero.common.extension.setAnimationDuration
 import com.powerhungers.fomezero.databinding.FragmentDonationBinding
 
-const val FOME_ZERO_URL = "https://powerhungers.netlify.app/"
+private const val FOME_ZERO_URL = "https://powerhungers.netlify.app/"
+private const val LEFT_PROGRESS = 400
+private const val RIGHT_PROGRESS = 600
 
 class DonationFragment : Fragment() {
 
@@ -27,24 +29,15 @@ class DonationFragment : Fragment() {
 
         setupProgressBar()
 
-        binding.websiteButtonTextView.setOnClickListener {
+        binding.websiteButton.setOnClickListener {
             openExternalUrl(FOME_ZERO_URL)
         }
     }
 
     private fun setupProgressBar() {
         with(binding) {
-            progressBarLeft.max = 1000
-            progressBarRight.max = 1000
-            val currentLeftProgress = 600
-            val currentRightProgress = 600
-
-            ObjectAnimator.ofInt(progressBarLeft, "progress", currentLeftProgress)
-                .setDuration(2000)
-                .start()
-            ObjectAnimator.ofInt(progressBarRight, "progress", currentRightProgress)
-                .setDuration(2000)
-                .start()
+            progressBarLeft.setAnimationDuration(LEFT_PROGRESS)
+            progressBarRight.setAnimationDuration(RIGHT_PROGRESS)
         }
     }
 }

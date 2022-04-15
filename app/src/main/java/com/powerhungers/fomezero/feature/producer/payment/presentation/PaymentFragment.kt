@@ -1,4 +1,4 @@
-package com.powerhungers.fomezero.feature.standbyClass
+package com.powerhungers.fomezero.feature.producer.payment.presentation
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.powerhungers.fomezero.R
 
-class SignatureFragment : Fragment() {
+class PaymentFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +18,7 @@ class SignatureFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_signature, container, false)
+        return inflater.inflate(R.layout.fragment_payment, container, false)
     }
 
 }

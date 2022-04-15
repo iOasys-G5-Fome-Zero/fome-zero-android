@@ -6,49 +6,59 @@
     android:layout_height="match_parent"
     tools:context=".feature.donation.DonationFragment">
 
-    <View
+    <androidx.cardview.widget.CardView
         android:id="@+id/viewCoinsBackground"
         android:layout_width="0dp"
         android:layout_height="75dp"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="24dp"
-        android:background="@drawable/view_background_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/coinBalanceTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:text="@string/coin_balance"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/viewCoinsBackground"
-        app:layout_constraintStart_toStartOf="@id/viewCoinsBackground"
-        app:layout_constraintTop_toTopOf="@id/viewCoinsBackground" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_green_stroke"
+            android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/amountCoins"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="@string/total_coin"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/coinBalanceTextView"
-        app:layout_constraintStart_toEndOf="@id/coinBalanceTextView"
-        app:layout_constraintTop_toTopOf="@id/coinBalanceTextView" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/coinBalanceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:text="@string/coin_balance"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="24dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="@id/amountCoins"
-        app:layout_constraintStart_toEndOf="@id/amountCoins"
-        app:layout_constraintTop_toTopOf="@id/amountCoins"
-        app:srcCompat="@drawable/ic_money" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/amountCoins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="@string/total_coin"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/coinBalanceTextView"
+                app:layout_constraintStart_toEndOf="@id/coinBalanceTextView"
+                app:layout_constraintTop_toTopOf="@id/coinBalanceTextView" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/amountCoins"
+                app:layout_constraintStart_toEndOf="@id/amountCoins"
+                app:layout_constraintTop_toTopOf="@id/amountCoins"
+                app:srcCompat="@drawable/ic_money" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/titleTextView"
@@ -71,6 +81,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:text="@string/donation_information"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titleTextView" />
 
@@ -91,6 +102,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:max="1000"
         app:layout_constraintEnd_toEndOf="@id/leftOngImageView"
         app:layout_constraintStart_toStartOf="@id/leftOngImageView"
         app:layout_constraintTop_toBottomOf="@id/leftOngImageView" />
@@ -100,6 +112,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/ong_food_on_table"
+        android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/leftOngImageView"
         app:layout_constraintStart_toStartOf="@id/leftOngImageView"
@@ -122,6 +135,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:max="1000"
         app:layout_constraintEnd_toEndOf="@id/rightOngImageView"
         app:layout_constraintStart_toStartOf="@id/rightOngImageView"
         app:layout_constraintTop_toBottomOf="@id/rightOngImageView" />
@@ -132,53 +146,55 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/ong_child_without_hunger"
+        android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/rightOngImageView"
         app:layout_constraintStart_toStartOf="@id/rightOngImageView"
         app:layout_constraintTop_toBottomOf="@id/progressBarRight" />
 
-    <View
-        android:id="@+id/websiteBackground"
-        android:layout_width="0dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/goToWebsiteCardView"
+        android:layout_width="match_parent"
         android:layout_height="140dp"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="32dp"
-        android:background="@drawable/view_background_2"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rightOngTextView" />
+        app:layout_constraintTop_toBottomOf="@id/rightOngTextView">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/websiteTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/website_information"
-        app:layout_constraintEnd_toEndOf="@id/websiteBackground"
-        app:layout_constraintStart_toStartOf="@id/websiteBackground"
-        app:layout_constraintTop_toTopOf="@id/websiteBackground" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <View
-        android:id="@+id/buttonWebsiteBackground"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginHorizontal="24dp"
-        android:background="@drawable/view_background_2"
-        app:layout_constraintBottom_toBottomOf="@id/websiteBackground"
-        app:layout_constraintEnd_toEndOf="@id/websiteBackground"
-        app:layout_constraintStart_toStartOf="@id/websiteBackground"
-        app:layout_constraintTop_toBottomOf="@id/websiteTextView" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/websiteTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/website_information"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/websiteButtonTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
-        android:text="@string/go_website"
-        app:layout_constraintBottom_toBottomOf="@id/buttonWebsiteBackground"
-        app:layout_constraintEnd_toEndOf="@id/buttonWebsiteBackground"
-        app:layout_constraintStart_toStartOf="@id/buttonWebsiteBackground"
-        app:layout_constraintTop_toTopOf="@id/buttonWebsiteBackground" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/websiteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_green_stroke"
+                android:padding="8dp"
+                android:text="@string/go_website"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/websiteTextView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -37,4 +37,6 @@
     <string name="help_against_hunger">Ajude no combate a fome</string>
     <string name="donation_information">Veja abaixo as instituições e projetos cadastrados na\n nossa rede e ajude-nos a atingir a meta do mês\n doando suas Horticoins que serão convertidas\n em alimentos.</string>
     <string name="website_information">Para saber mais sobre os projetos e instituições que \nestamos ajudando, acesse o nosso site.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

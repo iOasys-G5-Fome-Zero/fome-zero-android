@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/onboardingFragment"
-        android:name="com.powerhungers.fomezero.feature.standbyClass.OnboardingFragment"
+        android:name="com.powerhungers.fomezero.feature.onboarding.presentation.OnboardingFragment"
         android:label="fragment_onboarding"
         tools:layout="@layout/fragment_onboarding">
         <action
@@ -26,7 +26,7 @@
     </fragment>
     <fragment
         android:id="@+id/signatureFragment"
-        android:name="com.powerhungers.fomezero.feature.standbyClass.SignatureFragment"
+        android:name="com.powerhungers.fomezero.feature.consumer.signature.presentation.SignatureFragment"
         android:label="fragment_signature"
         tools:layout="@layout/fragment_signature" />
 </navigation>
