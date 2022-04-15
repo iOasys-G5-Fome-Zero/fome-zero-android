@@ -7,6 +7,7 @@ import android.view.View
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import android.view.ViewGroup
 import android.widget.RadioGroup
+import android.widget.Toast
 import com.powerhungers.fomezero.common.exception.EmptyUserTypeException
 import com.powerhungers.fomezero.databinding.FragmentRegistrationBinding
 
@@ -25,13 +26,18 @@ class RegistrationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        handleClickListener()
         addObserver()
+        handleClickListener()
     }
 
     private fun handleClickListener() {
         with(binding) {
             finishRegisterButton.setOnClickListener {
+                if(binding.registerCheckBox.isChecked){
+                    handleClickListener()
+                }else{
+                    Toast.makeText(context,"Necessario aceitar os termos",Toast.LENGTH_LONG).show()
+                }
                 viewModel.registration(
                     nameEditText.text.toString(),
                     "radioSelected",
