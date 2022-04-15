@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/producer_bottom_navigation"
+    app:startDestination="@id/producerHomeFragment2">
+
+    <fragment
+        android:id="@+id/producerHomeFragment2"
+        android:name="com.powerhungers.fomezero.feature.standbyClass.ProducerHomeFragment"
+        android:label="fragment_producer_home"
+        tools:layout="@layout/fragment_producer_home" />
+    <fragment
+        android:id="@+id/basketFragment"
+        android:name="com.powerhungers.fomezero.feature.standbyClass.BasketFragment"
+        android:label="fragment_basket"
+        tools:layout="@layout/fragment_basket" />
+    <fragment
+        android:id="@+id/financesFragment"
+        android:name="com.powerhungers.fomezero.feature.standbyClass.FinancesFragment"
+        android:label="fragment_finances"
+        tools:layout="@layout/fragment_finances" />
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.powerhungers.fomezero.feature.standbyClass.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.powerhungers.fomezero.feature.standbyClass.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
