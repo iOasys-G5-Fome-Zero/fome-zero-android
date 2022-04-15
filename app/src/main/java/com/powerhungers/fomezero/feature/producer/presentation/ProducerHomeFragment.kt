@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.powerhungers.fomezero.databinding.FragmentProducerHomeBinding
-import com.powerhungers.fomezero.feature.standbyClass.ProducerHomeFragmentDirections
 
 class ProducerHomeFragment : Fragment() {
 
@@ -40,6 +39,11 @@ class ProducerHomeFragment : Fragment() {
             btnPixCadastre.setOnClickListener {
                 findNavController().navigate(
                     ProducerHomeFragmentDirections.navigateToPaymentFragment()
+                )
+            }
+            btnSeeMessages.setOnClickListener {
+                findNavController().navigate(
+                    ProducerHomeFragmentDirections.navigateToMessagesFragment()
                 )
             }
         }

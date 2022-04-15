@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/producerHomeFragment"
-        android:name="com.powerhungers.fomezero.feature.standbyClass.ProducerHomeFragment"
+        android:name="com.powerhungers.fomezero.feature.producer.presentation.ProducerHomeFragment"
         android:label="fragment_producer_home"
         tools:layout="@layout/fragment_producer_home" >
         <action
@@ -28,6 +28,9 @@
         <action
             android:id="@+id/navigate_to_paymentFragment"
             app:destination="@id/paymentFragment" />
+        <action
+            android:id="@+id/navigate_to_messagesFragment"
+            app:destination="@id/messagesFragment" />
     </fragment>
     <fragment
         android:id="@+id/basketFragment"
@@ -44,4 +47,9 @@
         android:name="com.powerhungers.fomezero.feature.standbyClass.PaymentFragment"
         android:label="fragment_payment"
         tools:layout="@layout/fragment_payment" />
+    <fragment
+        android:id="@+id/messagesFragment"
+        android:name="com.powerhungers.fomezero.feature.standbyClass.MessagesFragment"
+        android:label="fragment_messages"
+        tools:layout="@layout/fragment_messages" />
 </navigation>
