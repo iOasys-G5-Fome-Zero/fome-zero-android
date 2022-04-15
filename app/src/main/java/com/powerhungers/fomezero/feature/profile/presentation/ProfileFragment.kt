@@ -1,15 +1,15 @@
-package com.powerhungers.fomezero.feature.standbyClass
+package com.powerhungers.fomezero.feature.profile.presentation
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.powerhungers.fomezero.databinding.FragmentProducerHomeBinding
+import com.powerhungers.fomezero.databinding.FragmentProfileBinding
 
-class ProducerHomeFragment : Fragment() {
+class ProfileFragment : Fragment() {
 
-    private val binding by lazy { FragmentProducerHomeBinding.inflate(layoutInflater) }
+    private val binding by lazy { FragmentProfileBinding.inflate(layoutInflater) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -17,4 +17,5 @@ class ProducerHomeFragment : Fragment() {
     ): View {
         return binding.root
     }
+
 }

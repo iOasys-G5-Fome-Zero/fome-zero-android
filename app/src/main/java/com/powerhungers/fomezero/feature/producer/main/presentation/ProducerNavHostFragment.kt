@@ -1,4 +1,4 @@
-package com.powerhungers.fomezero.feature.standbyClass
+package com.powerhungers.fomezero.feature.producer.main.presentation
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,13 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.powerhungers.fomezero.R
-import com.powerhungers.fomezero.databinding.FragmentBasketBinding
-import com.powerhungers.fomezero.databinding.FragmentLoginBinding
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import com.powerhungers.fomezero.databinding.FragmentFinancesBinding
+import com.powerhungers.fomezero.databinding.FragmentProducerNavHostBinding
 
-class BasketFragment : Fragment() {
+class ProducerNavHostFragment : Fragment() {
 
-    private val binding by lazy { FragmentBasketBinding.inflate(layoutInflater) }
+    private val binding by lazy { FragmentProducerNavHostBinding.inflate(layoutInflater) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
