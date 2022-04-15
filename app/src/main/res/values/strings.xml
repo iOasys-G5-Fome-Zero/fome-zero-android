@@ -30,4 +30,10 @@
     <string name="ong_food_on_table">ONG Comida na mesa</string>
     <string name="ong_child_without_hunger">ONG criança sem \nfome</string>
     <string name="account_created">Cadastro realizado!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Início</string>
+    <string name="my_basket">Minha cesta</string>
+    <string name="donation">Doações</string>
+    <string name="profile">Perfil</string>
 </resources>

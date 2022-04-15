@@ -17,5 +17,4 @@ class ProfileFragment : Fragment() {
     ): View {
         return binding.root
     }
-
 }

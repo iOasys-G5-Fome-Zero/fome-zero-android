@@ -12,8 +12,15 @@
         tools:layout="@layout/fragment_onboarding">
         <action
             android:id="@+id/navigateToHome"
-            app:destination="@id/consumerFragment" />
+            app:destination="@id/consumerNavHostFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/consumerNavHostFragment"
+        android:name="com.powerhungers.fomezero.feature.consumer.main.presentation.ConsumerNavHostFragment"
+        android:label="fragment_consumer_nav_host"
+        tools:layout="@layout/fragment_consumer_nav_host" />
+
     <fragment
         android:id="@+id/consumerFragment"
         android:name="com.powerhungers.fomezero.feature.standbyClass.ConsumerHomeFragment"
@@ -29,4 +36,5 @@
         android:name="com.powerhungers.fomezero.feature.standbyClass.SignatureFragment"
         android:label="fragment_signature"
         tools:layout="@layout/fragment_signature" />
+
 </navigation>
