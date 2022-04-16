@@ -41,10 +41,10 @@
             android:id="@+id/radioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="24sp"
             android:orientation="vertical"
-            app:layout_constraintTop_toBottomOf="@id/registerInfoTextView"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="24sp">
+            app:layout_constraintTop_toBottomOf="@id/registerInfoTextView">
 
             <com.google.android.material.radiobutton.MaterialRadioButton
                 android:id="@+id/producerRadioButton"
@@ -68,7 +68,6 @@
                 app:layout_constraintTop_toBottomOf="@id/producerRadioButton" />
 
         </RadioGroup>
-
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nameInputLayout"
@@ -127,7 +126,7 @@
                 android:id="@+id/passwordEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberPassword"
+                android:inputType="text"
                 android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -171,6 +170,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/registerCheckBox" />
+
+        <ProgressBar
+            android:id="@+id/progressDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/black"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
 

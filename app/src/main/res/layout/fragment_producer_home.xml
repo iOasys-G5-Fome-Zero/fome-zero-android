@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".feature.standbyClass.ProducerHomeFragment">
+    tools:context=".feature.producer.home.presentation.ProducerHomeFragment">
 
     <View
         android:id="@+id/view1"
@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_name"
+        android:id="@+id/helloTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -35,7 +35,7 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/ic_chat"
         android:backgroundTint="@color/black"
-        app:layout_constraintStart_toEndOf="@id/txt_name"
+        app:layout_constraintStart_toEndOf="@id/helloTextView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -47,7 +47,7 @@
         android:textColor="@color/black"
         android:textSize="16sp"
         app:drawableTint="@color/black"
-        app:layout_constraintStart_toStartOf="@id/txt_name"
+        app:layout_constraintStart_toStartOf="@id/helloTextView"
         app:layout_constraintTop_toBottomOf="@id/view1" />
 
     <androidx.cardview.widget.CardView
@@ -225,7 +225,7 @@
             app:cardCornerRadius="4dp">
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/img_4"
+                android:id="@+id/leftOngImageView"
                 android:layout_width="152dp"
                 android:layout_height="96dp"
                 android:background="#FFD8D8D8" />

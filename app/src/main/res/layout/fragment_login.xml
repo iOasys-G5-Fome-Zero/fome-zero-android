@@ -17,72 +17,58 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edit_txt_email"
-        android:layout_width="0dp"
-        android:layout_height="56dp"
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/edit_txt_background"
-        android:gravity="center_vertical"
+        android:layout_marginTop="16dp"
         android:hint="@string/email"
-        android:inputType="textEmailAddress"
-        android:paddingHorizontal="16dp"
-        android:singleLine="true"
-        android:textColor="@color/neutral_black"
-        android:textColorHint="@color/neutral_black"
-        android:textSize="16sp"
+        app:boxBackgroundColor="@color/pale_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_logo" />
+        app:layout_constraintTop_toBottomOf="@id/img_logo">
 
-    <View
-        android:id="@+id/view1"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:background="@color/neutral_black"
-        app:layout_constraintBottom_toBottomOf="@id/edit_txt_email"
-        app:layout_constraintEnd_toEndOf="@id/edit_txt_email"
-        app:layout_constraintStart_toStartOf="@id/edit_txt_email" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edit_txt_passwd"
-        android:layout_width="0dp"
-        android:layout_height="56dp"
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/edit_txt_background"
-        android:gravity="center_vertical"
+        android:layout_marginTop="16dp"
         android:hint="@string/password"
-        android:inputType="textPassword"
-        android:paddingHorizontal="16dp"
-        android:singleLine="true"
-        android:textColor="@color/neutral_black"
-        android:textColorHint="@color/neutral_black"
-        android:textSize="16sp"
+        app:boxBackgroundColor="@color/pale_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_txt_email" />
+        app:layout_constraintTop_toBottomOf="@id/emailInputLayout">
 
-    <View
-        android:id="@+id/view2"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:background="@color/neutral_black"
-        app:layout_constraintBottom_toBottomOf="@id/edit_txt_passwd"
-        app:layout_constraintEnd_toEndOf="@id/edit_txt_passwd"
-        app:layout_constraintStart_toStartOf="@id/edit_txt_passwd" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_forgot_passwd"
+        android:id="@+id/forgotPasswordTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/forgot_password"
         android:textColor="@color/black"
         android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@id/edit_txt_passwd"
-        app:layout_constraintTop_toBottomOf="@id/edit_txt_passwd" />
+        app:layout_constraintStart_toStartOf="@id/passwordInputLayout"
+        app:layout_constraintTop_toBottomOf="@id/passwordInputLayout" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
@@ -95,8 +81,8 @@
         android:textColor="@color/forest_green"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/txt_forgot_passwd"
-        app:layout_constraintTop_toBottomOf="@id/edit_txt_passwd" />
+        app:layout_constraintStart_toEndOf="@id/forgotPasswordTextView"
+        app:layout_constraintTop_toBottomOf="@id/passwordInputLayout" />
 
     <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/checkbox_login"
@@ -108,8 +94,8 @@
         android:text="@string/remember_my_password"
         android:textColor="@color/neutral_black"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@id/view2"
-        app:layout_constraintTop_toBottomOf="@id/txt_forgot_passwd" />
+        app:layout_constraintStart_toStartOf="@id/forgotPasswordTextView"
+        app:layout_constraintTop_toBottomOf="@id/forgotPasswordTextView" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_enter"
@@ -130,11 +116,12 @@
         android:id="@+id/txt_create_new_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="48dp"
         android:text="@string/no_account_yet"
         android:textColor="@color/black"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@id/view2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_enter" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -142,25 +129,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="48dp"
         android:clickable="true"
         android:focusable="true"
         android:text="@string/sign_up"
         android:textColor="@color/forest_green"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/txt_create_new_account"
-        app:layout_constraintTop_toBottomOf="@id/btn_enter" />
+        app:layout_constraintBottom_toBottomOf="@id/txt_create_new_account"
+        app:layout_constraintStart_toEndOf="@id/txt_create_new_account" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/txt_cadastre_ong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="24dp"
         android:layout_marginTop="24dp"
         android:text="@string/want_register_ong"
         android:textColor="@color/black"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@id/view2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txt_create_new_account" />
 
     <androidx.appcompat.widget.AppCompatTextView
