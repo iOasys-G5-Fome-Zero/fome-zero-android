@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
+import com.powerhungers.fomezero.common.extension.hasEditTextFocusChanged
 import com.powerhungers.fomezero.common.utils.ViewState
 import com.powerhungers.fomezero.databinding.FragmentLoginBinding
 import com.powerhungers.fomezero.domain.model.UserType
@@ -103,16 +104,8 @@ class LoginFragment : Fragment() {
 
     private fun clearError() {
         with(binding) {
-            emailEditText.setOnFocusChangeListener { _, hasFocus ->
-                if (hasFocus) {
-                    viewModel.clearViewState()
-                }
-            }
-            passwordEditText.setOnFocusChangeListener { _, hasFocus ->
-                if (hasFocus) {
-                    viewModel.clearViewState()
-                }
-            }
+            emailEditText.hasEditTextFocusChanged { viewModel.clearViewState() }
+            passwordEditText.hasEditTextFocusChanged { viewModel.clearViewState() }
         }
     }
 

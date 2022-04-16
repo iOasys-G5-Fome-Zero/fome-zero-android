@@ -4,11 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import com.powerhungers.fomezero.R
+import com.powerhungers.fomezero.common.extension.showToast
+import com.powerhungers.fomezero.common.extension.hasEditTextFocusChanged
 import com.powerhungers.fomezero.common.utils.ViewState
 import com.powerhungers.fomezero.databinding.FragmentRegistrationBinding
 import com.powerhungers.fomezero.domain.model.UserType
@@ -34,6 +35,7 @@ class RegistrationFragment : Fragment() {
         handleClickListener()
         userType = checkRadioButton()
         addObserver()
+        clearError()
     }
 
     private fun handleClickListener() {
@@ -62,6 +64,12 @@ class RegistrationFragment : Fragment() {
     }
 
     private fun addObserver() {
+
+        observeNameLiveData()
+        observeUserTypeLiveData()
+        observeEmailLiveData()
+        observePasswordLiveData()
+
         viewModel.registrationLiveData.observe(viewLifecycleOwner) { state ->
             with(binding) {
                 when (state) {
@@ -69,7 +77,7 @@ class RegistrationFragment : Fragment() {
                         progressDialog.isVisible = true
                     is ViewState.Success -> {
                         progressDialog.isGone = true
-                        Toast.makeText(context, R.string.account_created, Toast.LENGTH_LONG).show()
+                        showToast(R.string.account_created)
                     }
                     is ViewState.Error ->
                         progressDialog.isGone = true
@@ -78,4 +86,69 @@ class RegistrationFragment : Fragment() {
             }
         }
     }
+
+    private fun observeNameLiveData() {
+        viewModel.nameLiveData.observe(viewLifecycleOwner) { state ->
+            with(binding) {
+                if (state is ViewState.Error) {
+                    progressDialog.isGone = true
+                    nameInputLayout.error = state.throwable.message
+
+                } else {
+                    progressDialog.isGone = true
+                    nameInputLayout.error = null
+                }
+            }
+        }
+    }
+
+    private fun observeUserTypeLiveData() {
+        viewModel.userTypeLiveData.observe(viewLifecycleOwner) { state ->
+            with(binding) {
+                if (state is ViewState.Error) {
+                    progressDialog.isGone = true
+                    showToast(R.string.usertype_not_selected)
+                } else {
+                    progressDialog.isGone = true
+                }
+            }
+        }
+    }
+
+    private fun observeEmailLiveData() {
+        viewModel.emailLiveData.observe(viewLifecycleOwner) { state ->
+            with(binding) {
+                if (state is ViewState.Error) {
+                    progressDialog.isGone = true
+                    emailInputLayout.error = state.throwable.message
+                } else {
+                    progressDialog.isGone = true
+                    emailInputLayout.error = null
+                }
+            }
+        }
+    }
+
+    private fun observePasswordLiveData() {
+        viewModel.passwordLiveData.observe(viewLifecycleOwner) { state ->
+            with(binding) {
+                if (state is ViewState.Error) {
+                    progressDialog.isGone = true
+                    passwordInputLayout.error = state.throwable.message
+                } else {
+                    progressDialog.isGone = true
+                    passwordInputLayout.error = null
+                }
+            }
+        }
+    }
+
+    private fun clearError() {
+        with(binding) {
+            nameEditText.hasEditTextFocusChanged { viewModel.clearViewState() }
+            emailEditText.hasEditTextFocusChanged { viewModel.clearViewState() }
+        }
+    }
 }
+
+
