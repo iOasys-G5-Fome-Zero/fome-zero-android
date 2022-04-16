@@ -16,7 +16,7 @@
 
     <style name="SplashTheme" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/white</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/cestou_logo</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_splash_foreground</item>
         <item name="windowSplashScreenAnimationDuration">200</item>
         <item name="postSplashScreenTheme">@style/Theme.FomeZero</item>
     </style>
