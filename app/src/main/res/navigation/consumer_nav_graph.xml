@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/onboardingFragment"
-        android:name="com.powerhungers.fomezero.OnboardingFragment"
+        android:name="com.powerhungers.fomezero.feature.onboarding.presentation.OnboardingFragment"
         android:label="fragment_onboarding"
         tools:layout="@layout/fragment_onboarding">
         <action
@@ -23,7 +23,7 @@
 
     <fragment
         android:id="@+id/consumerFragment"
-        android:name="com.powerhungers.fomezero.feature.standbyClass.ConsumerHomeFragment"
+        android:name="com.powerhungers.fomezero.feature.consumer.home.presentation.ConsumerHomeFragment"
         android:label="fragment_consumer"
         tools:layout="@layout/fragment_consumer">
 
@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/signatureFragment"
-        android:name="com.powerhungers.fomezero.feature.standbyClass.SignatureFragment"
+        android:name="com.powerhungers.fomezero.feature.consumer.signature.presentation.SignatureFragment"
         android:label="fragment_signature"
         tools:layout="@layout/fragment_signature" />
 

@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.powerhungers.fomezero.common.extension.openExternalUrl
 import com.powerhungers.fomezero.databinding.FragmentConsumerBinding
-import com.powerhungers.fomezero.feature.standbyClass.ConsumerHomeFragmentDirections
 
 const val FOME_ZERO_URL = "https://powerhungers.netlify.app/"
 

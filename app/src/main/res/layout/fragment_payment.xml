@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".feature.standbyClass.PaymentFragment">
+    tools:context=".feature.producer.payment.presentation.PaymentFragment">
 
     <View
         android:id="@+id/view1"
@@ -187,15 +187,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/view6" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation_pix"
-        android:layout_width="0dp"
-        android:layout_height="64dp"
-        android:background="@color/light_gray"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu_producer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

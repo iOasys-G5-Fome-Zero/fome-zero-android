@@ -6,10 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".feature.consumer.main.presentation.ConsumerNavHostFragment">
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/consumerNavHostContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/consumerBottomNavHost"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomConsumerNavHost"
+        android:id="@+id/consumerBottomNavHost"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        app:itemRippleColor="@color/forest_green"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/menu_consumer" />

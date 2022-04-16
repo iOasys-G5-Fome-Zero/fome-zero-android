@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".feature.standbyClass.ProfileFragment">
+    tools:context=".feature.profile.presentation.ProfileFragment">
 
     <View
         android:id="@+id/view1"
@@ -185,15 +185,5 @@
         android:backgroundTint="@color/black"
         app:layout_constraintStart_toEndOf="@id/txt_logout"
         app:layout_constraintTop_toBottomOf="@id/btn_help" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation_profile"
-        android:layout_width="0dp"
-        android:layout_height="64dp"
-        android:background="@color/light_gray"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu_producer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
