@@ -25,7 +25,7 @@ android {
             buildConfigField "String", "BASE_URL", '"https://ioasys-g5-fome-zero-api-dev.herokuapp.com/"'
         }
         debug{
-            buildConfigField "String", "BASE_URL", '"https://ioasys-g5-fome-zero-api-dev.herokuapp.com/"'
+            buildConfigField "String", "BASE_URL", '"http://10.0.2.2:7000/"'
         }
     }
     compileOptions {
@@ -67,7 +67,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
 
     //coroutines
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
 
     //Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
@@ -85,5 +85,5 @@ dependencies {
     implementation "io.coil-kt:coil:$coil_version"
 
     //splash
-    implementation 'androidx.core:core-splashscreen:1.0.0-beta01'
+    implementation 'androidx.core:core-splashscreen:1.0.0-beta02'
 }

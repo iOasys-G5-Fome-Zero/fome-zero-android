@@ -4,13 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import com.powerhungers.fomezero.R
 import com.powerhungers.fomezero.common.extension.showToast
-import com.powerhungers.fomezero.common.extension.teste
+import com.powerhungers.fomezero.common.extension.hasEditTextFocusChanged
 import com.powerhungers.fomezero.common.utils.ViewState
 import com.powerhungers.fomezero.databinding.FragmentRegistrationBinding
 import com.powerhungers.fomezero.domain.model.UserType
@@ -146,17 +145,10 @@ class RegistrationFragment : Fragment() {
 
     private fun clearError() {
         with(binding) {
-            binding.nameEditText.setOnFocusChangeListener { _, hasFocus ->
-                if (hasFocus) {
-                    viewModel.clearViewState()
-                }
-            }
-            emailEditText.setOnFocusChangeListener { _, hasFocus ->
-                if (hasFocus) {
-                    viewModel.clearViewState()
-                }
-            }
-            teste(nameEditText, )
+            nameEditText.hasEditTextFocusChanged { viewModel.clearViewState() }
+            emailEditText.hasEditTextFocusChanged { viewModel.clearViewState() }
         }
     }
 }
+
+

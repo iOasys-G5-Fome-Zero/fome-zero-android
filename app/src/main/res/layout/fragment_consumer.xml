@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".feature.standbyClass.ConsumerHomeFragment">
+    tools:context=".feature.consumer.home.presentation.ConsumerHomeFragment">
 
     <View
         android:id="@+id/view1"
@@ -111,16 +111,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/helpFightHungerTextView" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationConsumer"
-        android:layout_width="0dp"
-        android:layout_height="64dp"
-        android:background="#FFD8D8D8"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu_producer" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/leftOngImageView"

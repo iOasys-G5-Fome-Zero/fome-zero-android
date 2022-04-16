@@ -13,7 +13,7 @@
     <item
         android:id="@+id/finances_producer"
         android:enabled="true"
-        android:icon="@drawable/ic_money"
+        android:icon="@drawable/ic_green_money"
         android:title="Financeiro"/>
 
     <item

@@ -25,10 +25,3 @@ fun Fragment.showToast(message:Int){
     Toast.makeText(context, message, Toast.LENGTH_LONG).show()
 }
 
-fun Fragment.teste(editText: EditText, ){
-    editText.setOnFocusChangeListener { _, hasFocus ->
-        if (hasFocus) {
-            viewModel.clearViewState()
-        }
-    }
-}
