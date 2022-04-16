@@ -18,8 +18,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:background="@drawable/bg_green_stroke"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_green_stroke">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/coinBalanceTextView"
@@ -187,6 +187,7 @@
                 android:padding="8dp"
                 android:text="@string/go_website"
                 android:textAlignment="center"
+                android:textAllCaps="false"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

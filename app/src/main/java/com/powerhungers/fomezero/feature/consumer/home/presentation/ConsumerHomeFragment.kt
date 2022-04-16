@@ -5,15 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.powerhungers.fomezero.common.extension.openExternalUrl
 import com.powerhungers.fomezero.databinding.FragmentConsumerBinding
+import com.powerhungers.fomezero.feature.consumer.main.presentation.ConsumerSharedViewModel
+import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 const val FOME_ZERO_URL = "https://powerhungers.netlify.app/"
 
 class ConsumerHomeFragment : Fragment() {
 
     private val binding by lazy { FragmentConsumerBinding.inflate(layoutInflater) }
+    private val sharedViewModel: ConsumerSharedViewModel by sharedViewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,9 +41,7 @@ class ConsumerHomeFragment : Fragment() {
             }
 
             makeYourSignature.setOnClickListener {
-                findNavController().navigate(
-                    ConsumerHomeFragmentDirections.navigateToSignatureFragment()
-                )
+                sharedViewModel.navigateToSignature()
             }
         }
     }

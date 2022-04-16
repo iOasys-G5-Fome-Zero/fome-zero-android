@@ -3,6 +3,7 @@ package com.powerhungers.fomezero.base_app
 import android.app.Application
 import com.powerhungers.fomezero.data.di.dataLocalModule
 import com.powerhungers.fomezero.data.remote.di.dataRemoteModule
+import com.powerhungers.fomezero.feature.consumer.di.consumerModule
 import com.powerhungers.fomezero.feature.login.di.loginModule
 import com.powerhungers.fomezero.feature.registration.di.registrationModule
 import org.koin.android.ext.koin.androidContext
@@ -18,7 +19,8 @@ class BaseApplication : Application() {
                     dataRemoteModule,
                     dataLocalModule,
                     loginModule,
-                    registrationModule
+                    registrationModule,
+                    consumerModule
                 )
             )
         }.androidContext(applicationContext)

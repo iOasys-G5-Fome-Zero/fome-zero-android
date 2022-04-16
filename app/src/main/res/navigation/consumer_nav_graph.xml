@@ -21,20 +21,4 @@
         android:label="fragment_consumer_nav_host"
         tools:layout="@layout/fragment_consumer_nav_host" />
 
-    <fragment
-        android:id="@+id/consumerFragment"
-        android:name="com.powerhungers.fomezero.feature.consumer.home.presentation.ConsumerHomeFragment"
-        android:label="fragment_consumer"
-        tools:layout="@layout/fragment_consumer">
-
-        <action
-            android:id="@+id/navigateToSignatureFragment"
-            app:destination="@id/signatureFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/signatureFragment"
-        android:name="com.powerhungers.fomezero.feature.consumer.signature.presentation.SignatureFragment"
-        android:label="fragment_signature"
-        tools:layout="@layout/fragment_signature" />
-
 </navigation>
