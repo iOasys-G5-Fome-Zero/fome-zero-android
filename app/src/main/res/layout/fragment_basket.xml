@@ -63,7 +63,7 @@
         app:layout_constraintTop_toBottomOf="@id/txt_description_my_baskets" />
 
     <com.google.android.material.checkbox.MaterialCheckBox
-        android:id="@+id/checkbox1_my_baskets"
+        android:id="@+id/checkbox_small_basket"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -87,7 +87,7 @@
         app:layout_constraintTop_toBottomOf="@id/view2" />
 
     <com.google.android.material.checkbox.MaterialCheckBox
-        android:id="@+id/checkbox2_my_baskets"
+        android:id="@+id/checkbox_median_basket"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -111,7 +111,7 @@
         app:layout_constraintTop_toBottomOf="@id/view3" />
 
     <com.google.android.material.checkbox.MaterialCheckBox
-        android:id="@+id/checkbox3_my_baskets"
+        android:id="@+id/checkbox_big_basket"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
