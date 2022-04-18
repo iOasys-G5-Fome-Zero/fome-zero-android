@@ -28,6 +28,7 @@ class BasketFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         onCheckboxClicked(view)
+        addObserver()
         //handleClickListener()
     }
 
@@ -37,27 +38,36 @@ class BasketFragment : Fragment() {
             when (view.id) {
                 R.id.checkbox_small_basket -> {
                     if (checked) {
-                        // Put some meat on the sandwich
+                        viewModel.basket(smallBasket = true,medianBasket = false,bigBasket = false)
                     } else {
-                        // Remove the meat
+                        // test
                     }
                 }
                 R.id.checkbox_median_basket -> {
                     if (checked) {
-                        // Cheese me
+                        viewModel.basket(smallBasket = false, medianBasket = true, bigBasket = false)
                     } else {
-                        // I'm lactose intolerant
+                        // test
                     }
                 }
                 R.id.checkbox_big_basket -> {
                     if (checked) {
-                        // Cheese me
+                        viewModel.basket(smallBasket = false, medianBasket = false,bigBasket = true)
                     } else {
-                        // I'm lactose intolerant
+                        // test
                     }
                 }
             }
         }
+    }
+
+    private fun addObserver() {
+
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        viewModel.clearViewState()
     }
 
 //    private fun handleClickListener() {
