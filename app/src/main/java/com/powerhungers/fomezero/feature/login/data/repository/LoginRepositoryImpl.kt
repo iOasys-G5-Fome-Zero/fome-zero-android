@@ -1,6 +1,6 @@
 package com.powerhungers.fomezero.feature.login.data.repository
 
-import com.powerhungers.fomezero.data.remote.model.UserType
+import com.powerhungers.fomezero.domain.model.UserType
 import com.powerhungers.fomezero.feature.login.data.local.LoginLocalDataSource
 import com.powerhungers.fomezero.feature.login.data.remote.data_source.LoginRemoteDataSource
 import com.powerhungers.fomezero.feature.login.domain.repository.LoginRepository

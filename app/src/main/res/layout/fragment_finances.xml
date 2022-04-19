@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".feature.standbyClass.FinancesFragment">
+    tools:context=".feature.producer.finances.presentation.FinancesFragment">
 
     <View
         android:id="@+id/view1"
@@ -79,7 +79,7 @@
         android:layout_height="56dp"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/button_background_2"
+        android:background="@drawable/bg_green_button"
         android:drawableEnd="@drawable/arrow_right"
         android:drawableTint="@color/black"
         android:gravity="center_vertical"
@@ -99,7 +99,7 @@
         android:layout_height="56dp"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/button_background_2"
+        android:background="@drawable/bg_green_button"
         android:drawableEnd="@drawable/arrow_right"
         android:drawableTint="@color/black"
         android:gravity="center_vertical"
@@ -159,16 +159,6 @@
         app:layout_constraintEnd_toEndOf="@id/view2"
         app:layout_constraintStart_toEndOf="@id/txt_phone_number"
         app:layout_constraintTop_toBottomOf="@id/txt_cadastred_keys" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation_finances"
-        android:layout_width="0dp"
-        android:layout_height="64dp"
-        android:background="@color/light_gray"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu_producer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".feature.standbyClass.ConsumerFragment">
+    tools:context=".feature.consumer.home.presentation.ConsumerHomeFragment">
 
     <View
         android:id="@+id/view1"
@@ -17,27 +17,39 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_name"
-        android:layout_width="match_parent"
+        android:id="@+id/helloTextView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="48dp"
-        android:text="Olá Márcia!"
+        android:text="@string/hello"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:drawableTint="@color/black"
         app:layout_constraintStart_toStartOf="@id/view1"
         app:layout_constraintTop_toTopOf="@id/view1" />
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="Name"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:drawableTint="@color/black"
+        app:layout_constraintStart_toEndOf="@id/helloTextView"
+        app:layout_constraintTop_toTopOf="@id/helloTextView" />
+
     <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/ibtn_chat_consumer"
+        android:id="@+id/chatConsumerButton"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_margin="16dp"
         android:background="@drawable/ic_chat"
         android:backgroundTint="@color/black"
-        app:layout_constraintStart_toEndOf="@id/txt_name"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
@@ -51,171 +63,96 @@
         app:layout_constraintTop_toBottomOf="@id/view1" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_help_fight_hunger"
+        android:id="@+id/makeYourSignature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="21dp"
+        android:text="@string/make_your_signature"
+        android:textColor="@color/forest_green"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/view2"
+        app:layout_constraintTop_toTopOf="@id/view2" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/freshProductsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="21dp"
+        android:text="@string/fresh_products"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/makeYourSignature" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/helpFightHungerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:text="Ajude no combate a fome"
+        android:layout_marginTop="24dp"
+        android:text="@string/help_fight_hunger"
         android:textColor="@color/black"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/view2"
         app:layout_constraintTop_toBottomOf="@id/view2" />
 
-    <!--        <androidx.appcompat.widget.LinearLayoutCompat-->
-    <!--            android:id="@+id/linear_layout_1"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="132dp"-->
-    <!--            android:layout_marginHorizontal="24dp"-->
-    <!--            android:layout_marginVertical="8dp"-->
-    <!--            android:orientation="horizontal"-->
-    <!--            android:weightSum="3"-->
-    <!--            app:layout_constraintStart_toStartOf="@id/txt_help_fight_hunger"-->
-    <!--            app:layout_constraintTop_toBottomOf="@id/txt_help_fight_hunger">-->
-
-    <!--            <com.google.android.material.card.MaterialCardView-->
-    <!--                android:id="@+id/cv_1"-->
-    <!--                android:layout_width="96dp"-->
-    <!--                android:layout_height="132dp"-->
-    <!--                android:layout_marginHorizontal="12dp"-->
-    <!--                app:cardCornerRadius="4dp">-->
-
-    <!--                <androidx.appcompat.widget.AppCompatImageView-->
-    <!--                    android:id="@+id/img_1"-->
-    <!--                    android:layout_width="96dp"-->
-    <!--                    android:layout_height="96dp"-->
-    <!--                    android:background="#FFD8D8D8" />-->
-
-    <!--                <androidx.appcompat.widget.AppCompatTextView-->
-    <!--                    android:layout_width="wrap_content"-->
-    <!--                    android:layout_height="wrap_content"-->
-    <!--                    android:layout_marginHorizontal="6dp"-->
-    <!--                    android:layout_marginTop="108dp"-->
-    <!--                    android:text="Lorem ipsum"-->
-    <!--                    android:textColor="@color/black"-->
-    <!--                    android:textSize="14sp" />-->
-
-    <!--            </com.google.android.material.card.MaterialCardView>-->
-
-    <!--            <com.google.android.material.card.MaterialCardView-->
-    <!--                android:id="@+id/cv_2"-->
-    <!--                android:layout_width="96dp"-->
-    <!--                android:layout_height="132dp"-->
-    <!--                android:layout_marginHorizontal="12dp"-->
-    <!--                app:cardCornerRadius="4dp">-->
-
-    <!--                <androidx.appcompat.widget.AppCompatImageView-->
-    <!--                    android:id="@+id/img_2"-->
-    <!--                    android:layout_width="96dp"-->
-    <!--                    android:layout_height="96dp"-->
-    <!--                    android:background="#FFD8D8D8" />-->
-
-    <!--                <androidx.appcompat.widget.AppCompatTextView-->
-    <!--                    android:layout_width="wrap_content"-->
-    <!--                    android:layout_height="wrap_content"-->
-    <!--                    android:layout_marginHorizontal="6dp"-->
-    <!--                    android:layout_marginTop="108dp"-->
-    <!--                    android:text="Lorem ipsum"-->
-    <!--                    android:textColor="@color/black"-->
-    <!--                    android:textSize="14sp" />-->
-
-    <!--            </com.google.android.material.card.MaterialCardView>-->
-
-    <!--            <com.google.android.material.card.MaterialCardView-->
-    <!--                android:id="@+id/cv_3"-->
-    <!--                android:layout_width="96dp"-->
-    <!--                android:layout_height="132dp"-->
-    <!--                android:layout_marginHorizontal="12dp"-->
-    <!--                app:cardCornerRadius="4dp">-->
-
-    <!--                <androidx.appcompat.widget.AppCompatImageView-->
-    <!--                    android:id="@+id/img_3"-->
-    <!--                    android:layout_width="96dp"-->
-    <!--                    android:layout_height="96dp"-->
-    <!--                    android:background="#FFD8D8D8" />-->
-
-    <!--                <androidx.appcompat.widget.AppCompatTextView-->
-    <!--                    android:layout_width="wrap_content"-->
-    <!--                    android:layout_height="wrap_content"-->
-    <!--                    android:layout_marginHorizontal="6dp"-->
-    <!--                    android:layout_marginTop="108dp"-->
-    <!--                    android:text="Lorem ipsum"-->
-    <!--                    android:textColor="@color/black"-->
-    <!--                    android:textSize="14sp" />-->
-
-    <!--            </com.google.android.material.card.MaterialCardView>-->
-
-    <!--        </androidx.appcompat.widget.LinearLayoutCompat>-->
-
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_4"
+        android:id="@+id/informationTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginHorizontal="24dp"
-        android:text="Veja abaixo as instituições e projetos cadastrados na \nnossa rede e ajude-nos a atingir a meta do mês \ndoando suas moedas que serão convertidas em \nalimentos."
+        android:layout_marginTop="8dp"
+        android:text="@string/information_text"
         android:textColor="@color/black"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_help_fight_hunger" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/helpFightHungerTextView" />
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/linear_layout_2"
-        android:layout_width="match_parent"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/leftOngImageView"
+        android:layout_width="152dp"
+        android:layout_height="130dp"
+        android:layout_margin="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/rightOngImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/informationTextView"
+        app:srcCompat="@drawable/ong_food_on_table" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/rightOngImageView"
+        android:layout_width="152dp"
+        android:layout_height="130dp"
+        android:layout_margin="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/leftOngImageView"
+        app:layout_constraintTop_toBottomOf="@id/informationTextView"
+        app:srcCompat="@drawable/ong_child_without_hungry" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="24dp"
-        android:layout_marginVertical="8dp"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        app:layout_constraintStart_toStartOf="@id/txt_4"
-        app:layout_constraintTop_toBottomOf="@id/txt_4">
+        android:layout_marginTop="8dp"
+        android:text="@string/ong_food_on_table"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/leftOngImageView"
+        app:layout_constraintStart_toStartOf="@id/leftOngImageView"
+        app:layout_constraintTop_toBottomOf="@id/leftOngImageView" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cv_4"
-            android:layout_width="152dp"
-            android:layout_height="96dp"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginVertical="8dp"
-            app:cardCornerRadius="4dp">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/img_4"
-                android:layout_width="152dp"
-                android:layout_height="96dp"
-                android:background="#FFD8D8D8" />
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cv_5"
-            android:layout_width="152dp"
-            android:layout_height="96dp"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginVertical="8dp"
-            app:cardCornerRadius="4dp">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/img_5"
-                android:layout_width="152dp"
-                android:layout_height="96dp"
-                android:background="#FFD8D8D8" />
-
-        </com.google.android.material.card.MaterialCardView>
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation_consumer"
-        android:layout_width="0dp"
-        android:layout_height="64dp"
-        android:background="#FFD8D8D8"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu_producer" />
-
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/ong_child_without_hunger"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/rightOngImageView"
+        app:layout_constraintStart_toStartOf="@id/rightOngImageView"
+        app:layout_constraintTop_toBottomOf="@id/rightOngImageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

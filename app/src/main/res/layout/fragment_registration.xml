@@ -75,7 +75,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="16dp"
-            android:background="@color/pale_green"
+            android:hint="@string/name"
+            android:textColorHint="@color/black"
+            app:boxBackgroundColor="@color/pale_green"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/radioGroup">
@@ -84,9 +86,7 @@
                 android:id="@+id/nameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/name"
                 android:inputType="text"
-                android:padding="16dp"
                 android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -96,7 +96,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="16dp"
-            android:background="@color/pale_green"
+            android:hint="@string/email"
+            android:textColorHint="@color/black"
+            app:boxBackgroundColor="@color/pale_green"
             app:layout_constraintEnd_toEndOf="@id/nameInputLayout"
             app:layout_constraintStart_toStartOf="@id/nameInputLayout"
             app:layout_constraintTop_toBottomOf="@id/nameInputLayout">
@@ -105,9 +107,7 @@
                 android:id="@+id/emailEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/email"
                 android:inputType="text"
-                android:padding="16dp"
                 android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -117,7 +117,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="16dp"
-            android:background="@color/pale_green"
+            android:hint="@string/password"
+            android:textColorHint="@color/black"
+            app:boxBackgroundColor="@color/pale_green"
             app:layout_constraintEnd_toEndOf="@id/emailInputLayout"
             app:layout_constraintStart_toStartOf="@id/emailInputLayout"
             app:layout_constraintTop_toBottomOf="@id/emailInputLayout"
@@ -127,9 +129,7 @@
                 android:id="@+id/passwordEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/password"
-                android:inputType="numberPassword"
-                android:padding="16dp"
+                android:inputType="text"
                 android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -173,6 +173,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/registerCheckBox" />
+
+        <ProgressBar
+            android:id="@+id/progressDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/black"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
 

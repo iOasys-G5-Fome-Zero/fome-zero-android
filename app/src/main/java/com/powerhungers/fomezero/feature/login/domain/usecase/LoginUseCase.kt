@@ -2,8 +2,8 @@ package com.powerhungers.fomezero.feature.login.domain.usecase
 
 import com.powerhungers.fomezero.common.exception.EmptyEmailException
 import com.powerhungers.fomezero.common.exception.EmptyPasswordException
-import com.powerhungers.fomezero.data.remote.model.UserType
-import com.powerhungers.fomezero.domain.model.User
+import com.powerhungers.fomezero.data.remote.model.UserTypeResponse
+import com.powerhungers.fomezero.domain.model.UserType
 import com.powerhungers.fomezero.feature.login.domain.repository.LoginRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

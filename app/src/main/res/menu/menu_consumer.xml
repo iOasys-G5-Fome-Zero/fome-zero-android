@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
@@ -8,23 +7,23 @@
         android:id="@+id/home_consumer"
         android:enabled="true"
         android:icon="@drawable/ic_home"
-        android:title="Início" />
+        android:title="@string/home" />
 
     <item
-        android:id="@+id/my_bascket_consumer"
+        android:id="@+id/my_basket_consumer"
         android:enabled="true"
         android:icon="@drawable/ic_piggy_bank"
-        android:title="Minha cesta"/>
+        android:title="@string/my_basket"/>
 
     <item
         android:id="@+id/donations_consumer"
         android:enabled="true"
-        android:icon="@drawable/ic_piggy_bank"
-        android:title="Doações"/>
+        android:icon="@drawable/ic_money"
+        android:title="@string/donation"/>
 
     <item
         android:id="@+id/profile_consumer"
         android:enabled="true"
         android:icon="@drawable/ic_user"
-        android:title="Perfil"/>
+        android:title="@string/profile"/>
 </menu>

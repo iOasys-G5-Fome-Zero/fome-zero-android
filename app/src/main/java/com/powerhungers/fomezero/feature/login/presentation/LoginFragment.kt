@@ -8,9 +8,10 @@ import android.view.ViewGroup
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
+import com.powerhungers.fomezero.common.extension.hasEditTextFocusChanged
 import com.powerhungers.fomezero.common.utils.ViewState
-import com.powerhungers.fomezero.data.remote.model.UserType
 import com.powerhungers.fomezero.databinding.FragmentLoginBinding
+import com.powerhungers.fomezero.domain.model.UserType
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class LoginFragment : Fragment() {
@@ -30,13 +31,14 @@ class LoginFragment : Fragment() {
 
         handleClickListener()
         addObserver()
+        clearError()
     }
 
     private fun handleClickListener() {
         with(binding) {
             btnEnter.setOnClickListener {
                 viewModel.login(
-                    editTxtEmail.text.toString(), editTxtPasswd.text.toString()
+                    emailEditText.text.toString(), passwordEditText.text.toString()
                 )
             }
             txtCadastre.setOnClickListener {
@@ -48,6 +50,12 @@ class LoginFragment : Fragment() {
     }
 
     private fun addObserver() {
+        observeLoginLiveData()
+        observeEmailLiveData()
+        observePasswordLiveData()
+    }
+
+    private fun observeLoginLiveData() {
         viewModel.loginLiveData.observe(viewLifecycleOwner) { state ->
             with(binding) {
                 when (state) {
@@ -63,6 +71,41 @@ class LoginFragment : Fragment() {
                     else -> Unit
                 }
             }
+        }
+    }
+
+    private fun observeEmailLiveData() {
+        viewModel.emailLiveData.observe(viewLifecycleOwner) { state ->
+            with(binding) {
+                if (state is ViewState.Error) {
+                    progressDialog.isGone = true
+                    emailInputLayout.error = state.throwable.message
+                } else {
+                    progressDialog.isGone = true
+                    emailInputLayout.error = null
+                }
+            }
+        }
+    }
+
+    private fun observePasswordLiveData() {
+        viewModel.passwordLiveData.observe(viewLifecycleOwner) { state ->
+            with(binding) {
+                if (state is ViewState.Error) {
+                    progressDialog.isGone = true
+                    passwordInputLayout.error = state.throwable.message
+                } else {
+                    progressDialog.isGone = true
+                    passwordInputLayout.error = null
+                }
+            }
+        }
+    }
+
+    private fun clearError() {
+        with(binding) {
+            emailEditText.hasEditTextFocusChanged { viewModel.clearViewState() }
+            passwordEditText.hasEditTextFocusChanged { viewModel.clearViewState() }
         }
     }
 

@@ -7,16 +7,18 @@
 
     <fragment
         android:id="@+id/onboardingFragment"
-        android:name="com.powerhungers.fomezero.OnboardingFragment"
+        android:name="com.powerhungers.fomezero.feature.onboarding.presentation.OnboardingFragment"
         android:label="fragment_onboarding"
-        tools:layout="@layout/fragment_onboarding" >
+        tools:layout="@layout/fragment_onboarding">
         <action
             android:id="@+id/navigateToHome"
-            app:destination="@id/consumerFragment" />
+            app:destination="@id/consumerNavHostFragment" />
     </fragment>
+
     <fragment
-        android:id="@+id/consumerFragment"
-        android:name="com.powerhungers.fomezero.feature.standbyClass.ConsumerFragment"
-        android:label="fragment_consumer"
-        tools:layout="@layout/fragment_consumer" />
+        android:id="@+id/consumerNavHostFragment"
+        android:name="com.powerhungers.fomezero.feature.consumer.main.presentation.ConsumerNavHostFragment"
+        android:label="fragment_consumer_nav_host"
+        tools:layout="@layout/fragment_consumer_nav_host" />
+
 </navigation>
