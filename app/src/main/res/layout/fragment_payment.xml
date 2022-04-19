@@ -151,7 +151,7 @@
         android:layout_height="56dp"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="24dp"
-        android:background="@drawable/edit_txt_background"
+        android:background="@drawable/edit_text_background"
         android:gravity="center_vertical"
         android:hint="Informe a chave pix"
         android:inputType="textEmailAddress"
