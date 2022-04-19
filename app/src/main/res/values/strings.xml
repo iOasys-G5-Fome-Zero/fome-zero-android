@@ -43,4 +43,9 @@
     <string name="donation_information">Veja abaixo as instituições e projetos cadastrados na\n nossa rede e ajude-nos a atingir a meta do mês\n doando suas Horticoins que serão convertidas\n em alimentos.</string>
     <string name="website_information">Para saber mais sobre os projetos e instituições que \nestamos ajudando, acesse o nosso site.</string>
     <string name="usertype_not_selected">Usuario não selecionado</string>
+
+    <string name="more_text">+</string>
+    <string name="less_text">-</string>
+    <string name="cancel_text">Cancelar</string>
+    <string name="confirm_text">Confirmar</string>
 </resources>

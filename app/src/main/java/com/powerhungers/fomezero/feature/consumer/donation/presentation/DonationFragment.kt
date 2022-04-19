@@ -31,9 +31,19 @@ class DonationFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setupProgressBar()
+        handleImageClick()
 
         binding.websiteButton.setOnClickListener {
             openExternalUrl(FOME_ZERO_URL)
+        }
+    }
+
+    private fun handleImageClick() {
+        binding.leftOngImageView.setOnClickListener{
+            val blankDialog = DonationDialogFragment()
+            activity?.supportFragmentManager?.let { supportFragmentManager ->
+                blankDialog.show(supportFragmentManager,"blank")
+            }
         }
     }
 
