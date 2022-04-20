@@ -43,4 +43,14 @@
     <string name="donation_information">Veja abaixo as instituições e projetos cadastrados na\n nossa rede e ajude-nos a atingir a meta do mês\n doando suas Horticoins que serão convertidas\n em alimentos.</string>
     <string name="website_information">Para saber mais sobre os projetos e instituições que \nestamos ajudando, acesse o nosso site.</string>
     <string name="usertype_not_selected">Usuario não selecionado</string>
+
+    <string name="delivery">Entrega</string>
+    <string name="delivery_information">Escolha se você prefere retirar sua cesta em um dos nossos pontos de coleta, ou receber em casa pagando uma taxa a mais</string>
+    <string name="collect_point">Retirar no ponto de coleta - R$00,00</string>
+    <string name="delivery_match_the_producer">Entrega (à combinar com produtor)</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="payment">Pagamento</string>
+    <string name="pix_payment_information">Realize o pagamento para a chave pix informada abaixo e em seguida anexe o comprovante de pagamento.</string>
+    <string name="attach_document">Anexar comprovante</string>
+    <string name="complete_purchase">Concluir compra</string>
 </resources>
