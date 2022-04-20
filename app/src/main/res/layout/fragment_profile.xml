@@ -8,7 +8,7 @@
     tools:context=".feature.profile.presentation.ProfileFragment">
 
     <View
-        android:id="@+id/view1"
+        android:id="@+id/view_header_profile"
         android:layout_width="0dp"
         android:layout_height="160dp"
         android:background="@drawable/view_background_profile"
@@ -34,7 +34,7 @@
         android:layout_marginStart="56dp"
         android:layout_marginTop="17dp"
         android:layout_marginEnd="48sp"
-        android:text="Perfil"
+        android:text="@string/profile"
         android:textColor="@color/black"
         android:textSize="21sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,9 +58,9 @@
         android:layout_marginTop="104dp"
         android:background="@drawable/profile_background"
         android:backgroundTint="@color/neutral_black"
-        app:layout_constraintEnd_toEndOf="@id/view1"
-        app:layout_constraintStart_toStartOf="@id/view1"
-        app:layout_constraintTop_toTopOf="@id/view1" />
+        app:layout_constraintEnd_toEndOf="@id/view_header_profile"
+        app:layout_constraintStart_toStartOf="@id/view_header_profile"
+        app:layout_constraintTop_toTopOf="@id/view_header_profile" />
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/btn_edit_profile_pic"
@@ -70,16 +70,16 @@
         android:layout_marginTop="96dp"
         android:background="@drawable/profile_background"
         android:src="@drawable/pencil_24"
-        app:layout_constraintEnd_toEndOf="@id/view1"
-        app:layout_constraintStart_toStartOf="@id/view1"
-        app:layout_constraintTop_toTopOf="@id/view1" />
+        app:layout_constraintEnd_toEndOf="@id/view_header_profile"
+        app:layout_constraintStart_toStartOf="@id/view_header_profile"
+        app:layout_constraintTop_toTopOf="@id/view_header_profile" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/txt_profile_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="José"
+        android:text="@string/user_name"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,11 +94,10 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/bg_green_button"
         android:drawableEnd="@drawable/arrow_right"
-        android:drawableTint="@color/black"
         android:gravity="center_vertical"
         android:paddingHorizontal="16dp"
         android:paddingVertical="16dp"
-        android:text="Meus dados"
+        android:text="@string/my_data"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="14sp"
@@ -114,11 +113,10 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/bg_green_button"
         android:drawableEnd="@drawable/arrow_right"
-        android:drawableTint="@color/black"
         android:gravity="center_vertical"
         android:paddingHorizontal="16dp"
         android:paddingVertical="16dp"
-        android:text="Minhas cestas"
+        android:text="@string/my_baskets"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="14sp"
@@ -126,64 +124,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_my_data" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_messages"
-        android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/bg_green_button"
-        android:drawableEnd="@drawable/arrow_right"
-        android:drawableTint="@color/black"
-        android:gravity="center_vertical"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="16dp"
-        android:text="Mensagens"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_my_baskets" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_help"
-        android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/bg_green_button"
-        android:gravity="center_vertical"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="16dp"
-        android:text="Ajuda"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_messages" />
-
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/txt_logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Sair da conta"
+        android:layout_marginTop="96dp"
+        android:text="@string/leave_account"
         android:textColor="@color/black"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@id/btn_help"
-        app:layout_constraintTop_toBottomOf="@id/btn_help" />
+        app:layout_constraintStart_toStartOf="@id/btn_my_baskets"
+        app:layout_constraintTop_toBottomOf="@id/btn_my_baskets" />
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/btn_logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="96dp"
         android:background="@drawable/ic_logout"
         android:backgroundTint="@color/black"
         app:layout_constraintStart_toEndOf="@id/txt_logout"
-        app:layout_constraintTop_toBottomOf="@id/btn_help" />
+        app:layout_constraintTop_toBottomOf="@id/btn_my_baskets" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

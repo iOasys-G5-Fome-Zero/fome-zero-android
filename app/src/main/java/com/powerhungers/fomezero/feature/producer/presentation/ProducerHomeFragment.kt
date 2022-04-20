@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.powerhungers.fomezero.databinding.FragmentProducerHomeBinding
+import com.powerhungers.fomezero.feature.producer.home.presentation.ProducerHomeFragmentDirections
 
 class ProducerHomeFragment : Fragment() {
 
@@ -28,22 +29,12 @@ class ProducerHomeFragment : Fragment() {
         with(binding) {
             btnMyBasketsProducer.setOnClickListener {
                 findNavController().navigate(
-                    ProducerHomeFragmentDirections.navigateToBasketFragment()
-                )
-            }
-            btnIncome.setOnClickListener {
-                findNavController().navigate(
-                    ProducerHomeFragmentDirections.navigateToFinancesFragment()
+                    ProducerHomeFragmentDirections.navigateToBasket()
                 )
             }
             btnPixCadastre.setOnClickListener {
                 findNavController().navigate(
-                    ProducerHomeFragmentDirections.navigateToPaymentFragment()
-                )
-            }
-            btnSeeMessages.setOnClickListener {
-                findNavController().navigate(
-                    ProducerHomeFragmentDirections.navigateToMessagesFragment()
+                    ProducerHomeFragmentDirections.navigateToPayment()
                 )
             }
         }
