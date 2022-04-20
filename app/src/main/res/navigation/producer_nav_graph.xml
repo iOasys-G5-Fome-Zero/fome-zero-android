@@ -18,10 +18,18 @@
         android:id="@+id/producerHomeFragment"
         android:name="com.powerhungers.fomezero.feature.producer.home.presentation.ProducerHomeFragment"
         android:label="fragment_producer_home"
-        tools:layout="@layout/fragment_producer_home" />
+        tools:layout="@layout/fragment_producer_home" >
+        <action
+            android:id="@+id/navigate_to_basketFragment"
+            app:destination="@id/basketFragment" />
+    </fragment>
     <fragment
         android:id="@+id/basketFragment"
         android:name="com.powerhungers.fomezero.feature.producer.basket.presentation.BasketFragment"
         android:label="fragment_basket"
-        tools:layout="@layout/fragment_basket" />
+        tools:layout="@layout/fragment_basket" >
+        <action
+            android:id="@+id/navigate_to_producerHomeFragment"
+            app:destination="@id/producerHomeFragment" />
+    </fragment>
 </navigation>

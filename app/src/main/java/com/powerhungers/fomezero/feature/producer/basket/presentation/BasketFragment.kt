@@ -5,11 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isGone
+import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.checkbox.MaterialCheckBox
 import com.powerhungers.fomezero.R
+import com.powerhungers.fomezero.common.exception.GenericException
+import com.powerhungers.fomezero.common.extension.showToast
+import com.powerhungers.fomezero.common.utils.ViewState
 import com.powerhungers.fomezero.databinding.FragmentBasketBinding
 import com.powerhungers.fomezero.domain.model.UserType
+import com.powerhungers.fomezero.feature.login.presentation.LoginFragmentDirections
 import com.powerhungers.fomezero.feature.registration.presentation.RegistrationViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -27,57 +33,49 @@ class BasketFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        onCheckboxClicked(view)
+        handleClickListener()
         addObserver()
-        //handleClickListener()
     }
 
-    private fun onCheckboxClicked(view: View) {
-        if (view is MaterialCheckBox) {
-            val checked: Boolean = view.isChecked
-            when (view.id) {
-                R.id.checkbox_small_basket -> {
-                    if (checked) {
-                        viewModel.basket(smallBasket = true,medianBasket = false,bigBasket = false)
-                    } else {
-                        // test
-                    }
-                }
-                R.id.checkbox_median_basket -> {
-                    if (checked) {
-                        viewModel.basket(smallBasket = false, medianBasket = true, bigBasket = false)
-                    } else {
-                        // test
-                    }
-                }
-                R.id.checkbox_big_basket -> {
-                    if (checked) {
-                        viewModel.basket(smallBasket = false, medianBasket = false,bigBasket = true)
-                    } else {
-                        // test
-                    }
-                }
+    private fun handleClickListener() {
+        with(binding) {
+            btnConfirmSelection.setOnClickListener {
+                viewModel.basket(
+                    checkboxSmallBasket.isChecked,
+                    checkboxMediumBasket.isChecked,
+                    checkboxBigBasket.isChecked
+                )
             }
         }
     }
 
     private fun addObserver() {
+        observeBasketLiveData()
+    }
 
+    private fun observeBasketLiveData() {
+        viewModel.basketLiveData.observe(viewLifecycleOwner) { state ->
+            with(binding) {
+                when (state) {
+                    is ViewState.Success -> {
+                        btnConfirmSelection.setOnClickListener {
+                            findNavController().navigate(
+                                BasketFragmentDirections.navigateToProducerHomeFragment()
+                            )
+                        }
+                    }
+                    is ViewState.Error -> {
+                        showToast(R.string.something_is_wrong)
+                    }
+                    else -> Unit
+                }
+            }
+        }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         viewModel.clearViewState()
     }
-
-//    private fun handleClickListener() {
-//        with(binding) {
-//            btnConfirmSelection.setOnClickListener {
-//                findNavController().navigate(
-//                    ProducerHomeFragmentDirections.navigateToBasketFragment()
-//                )
-//            }
-//        }
-//    }
 
 }
