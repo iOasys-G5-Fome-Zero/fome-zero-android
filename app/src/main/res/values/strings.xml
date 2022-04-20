@@ -70,7 +70,7 @@
     <string name="my_finances">Minhas finanças</string>
     <string name="configure_basket_type">Configure quais os tipos e tamanhos de cesta de alimentos \nvocê deseja fornecer.</string>
     <string name="hello_user">Olá José!</string>
-    <string name="see_your_income">Veja agora os seus rendimentos!</string>
-    <string name="cadastre_your_pix_key">Cadastre aqui a sua chave Pix!</string>
+    <string name="see_my_income">Ver meus rendimentos</string>
+    <string name="cadastre_your_pix_key">Cadastrar chave Pix</string>
     <string name="start">Início</string>
 </resources>
