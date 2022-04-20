@@ -55,20 +55,16 @@ class BasketFragment : Fragment() {
 
     private fun observeBasketLiveData() {
         viewModel.basketLiveData.observe(viewLifecycleOwner) { state ->
-            with(binding) {
-                when (state) {
-                    is ViewState.Success -> {
-                        btnConfirmSelection.setOnClickListener {
-                            findNavController().navigate(
-                                BasketFragmentDirections.navigateToProducerHomeFragment()
-                            )
-                        }
-                    }
-                    is ViewState.Error -> {
-                        showToast(R.string.something_is_wrong)
-                    }
-                    else -> Unit
+            when (state) {
+                is ViewState.Success -> {
+                    findNavController().navigate(
+                            BasketFragmentDirections.navigateToProducerHomeFragment()
+                    )
                 }
+                is ViewState.Error -> {
+                    showToast(R.string.something_is_wrong)
+                }
+                else -> Unit
             }
         }
     }

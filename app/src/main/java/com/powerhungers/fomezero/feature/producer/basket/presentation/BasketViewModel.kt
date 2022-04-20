@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.powerhungers.fomezero.common.exception.GenericException
+import com.powerhungers.fomezero.common.exception.EmptyCheckboxException
 import com.powerhungers.fomezero.common.extension.postError
 import com.powerhungers.fomezero.common.extension.postLoading
 import com.powerhungers.fomezero.common.extension.postNeutral
@@ -23,27 +23,24 @@ class BasketViewModel(private val basketUseCase: BasketUseCase) : ViewModel() {
     private val basketViewState = MutableLiveData<ViewState<Unit>>()
     val basketLiveData = basketViewState as LiveData<ViewState<Unit>>
 
-    fun basket(smallBasket: Boolean, medianBasket: Boolean, bigBasket: Boolean) {
+    fun basket(smallBasket: Boolean, mediumBasket: Boolean, bigBasket: Boolean) {
         viewModelScope.launch {
-            basketUseCase(smallBasket, medianBasket, bigBasket)
-                .flowOn(Dispatchers.IO)
-                .onStart { basketViewState.postLoading() }
-                .catch { handleError(it) }
-                .collect { basketViewState.postSuccess(Unit) }
+            basketUseCase(smallBasket, mediumBasket, bigBasket)
+                    .flowOn(Dispatchers.IO)
+                    .onStart { basketViewState.postLoading() }
+                    .catch { basketViewState.postError(EmptyCheckboxException()) }
+                    .collect { basketViewState.postSuccess(Unit) }
         }
     }
 
-    private fun handleError(throwable: Throwable) {
-        when (throwable) {
-            is GenericException ->
-                basketViewState.postError(throwable)
-            else ->
-                basketViewState.postError(throwable)
-        }
-    }
+//    private fun handleError(throwable: Throwable) {
+//        when (throwable) {
+//            is EmptyCheckboxException ->
+//                basketViewState.postError(throwable)
+//        }
+//    }
 
     fun clearViewState() {
         basketViewState.postNeutral()
     }
-
 }

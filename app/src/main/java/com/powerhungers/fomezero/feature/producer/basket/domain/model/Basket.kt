@@ -1,6 +1,6 @@
 package com.powerhungers.fomezero.feature.producer.basket.domain.model
 
-enum class BasketType() {
+enum class BasketType {
     SMALL_BASKET,
     MEDIUM_BASKET,
     BIG_BASKET,
