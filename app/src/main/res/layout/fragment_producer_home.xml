@@ -10,7 +10,7 @@
         android:id="@+id/view1"
         android:layout_width="0dp"
         android:layout_height="64dp"
-        android:background="@drawable/view_background"
+        android:background="@drawable/bg_light_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -83,7 +83,7 @@
                 android:layout_marginHorizontal="54dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="16dp"
-                android:background="@drawable/button_background"
+                android:background="@drawable/bg_dark_green_medium_radius"
                 android:gravity="center"
                 android:text="Minhas cestas"
                 android:textColor="@color/white"
