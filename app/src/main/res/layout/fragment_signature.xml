@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:src="@drawable/arrow_back"
+            android:src="@drawable/ic_back_arrow"
             android:tint="@color/black"
             app:layout_constraintBottom_toBottomOf="@id/view1"
             app:layout_constraintStart_toStartOf="@id/view1"
