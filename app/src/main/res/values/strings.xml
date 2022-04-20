@@ -48,4 +48,10 @@
     <string name="less_text">-</string>
     <string name="cancel_text">Cancelar</string>
     <string name="confirm_text">Confirmar</string>
+
+    <string name="chosen_basket_information">Você escolheu a cesta de tamanho médio (12 itens), selecione quantas porções de cada categoria deseja receber.</string>
+    <string name="important">Importante!</string>
+    <string name="donation_message">Cada unidade de alimento retirada da sua cesta, é convertida em Horticoins, nossa moeda virtual que é utilizada por instituições parceiras para adquirir alimentos e ajudar no combate a fome!</string>
+    <string name="spices">Temperos</string>
+    <string name="see_examples">Ver exemplos</string>
 </resources>

@@ -39,11 +39,8 @@ class DonationFragment : Fragment() {
     }
 
     private fun handleImageClick() {
-        binding.leftOngImageView.setOnClickListener{
-            val blankDialog = DonationDialogFragment()
-            activity?.supportFragmentManager?.let { supportFragmentManager ->
-                blankDialog.show(supportFragmentManager,"blank")
-            }
+        binding.leftOngImageView.setOnClickListener {
+            DonationDialogFragment().show(childFragmentManager, javaClass.name)
         }
     }
 
