@@ -31,9 +31,16 @@ class DonationFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setupProgressBar()
+        handleImageClick()
 
         binding.websiteButton.setOnClickListener {
             openExternalUrl(FOME_ZERO_URL)
+        }
+    }
+
+    private fun handleImageClick() {
+        binding.leftOngImageView.setOnClickListener {
+            DonationDialogFragment().show(childFragmentManager, javaClass.name)
         }
     }
 
