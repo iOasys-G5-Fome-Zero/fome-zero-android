@@ -17,7 +17,9 @@
     <color name="forest_green">#FF00843F</color>
     <color name="pale_green">#34C1E9CF</color>
     <color name="sea_green">#FF6CCD91</color>
-    <color name="spring_green">#FF00A857</color>
+    <color name="green_spring">#FF00A857</color>
+    <color name="yellow_spring">#FFD53D</color>
+
 
     <color name="coral">#FFFF9769</color>
     <color name="light_salmon">#FFFFD1BE</color>
