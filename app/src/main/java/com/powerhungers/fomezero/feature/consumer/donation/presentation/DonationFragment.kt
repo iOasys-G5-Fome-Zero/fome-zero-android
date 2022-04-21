@@ -11,7 +11,7 @@ import com.powerhungers.fomezero.databinding.FragmentDonationBinding
 import com.powerhungers.fomezero.feature.consumer.main.presentation.ConsumerSharedViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
-private const val FOME_ZERO_URL = "https://powerhungers.netlify.app/"
+private const val FOME_ZERO_URL = "https://cestou.netlify.app"
 private const val LEFT_PROGRESS = 400
 private const val RIGHT_PROGRESS = 600
 

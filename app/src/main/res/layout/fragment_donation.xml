@@ -94,7 +94,7 @@
         app:layout_constraintEnd_toStartOf="@+id/rightOngImageView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/subtitleTextView"
-        app:srcCompat="@drawable/ong_food_on_table" />
+        app:srcCompat="@drawable/left_ong_image" />
 
     <ProgressBar
         android:id="@+id/progressBarLeft"
@@ -127,7 +127,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/leftOngImageView"
         app:layout_constraintTop_toBottomOf="@id/subtitleTextView"
-        app:srcCompat="@drawable/ong_child_without_hungry" />
+        app:srcCompat="@drawable/right_ong_image" />
 
     <ProgressBar
         android:id="@+id/progressBarRight"
