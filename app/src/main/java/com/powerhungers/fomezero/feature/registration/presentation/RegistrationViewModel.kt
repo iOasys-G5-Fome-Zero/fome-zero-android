@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.powerhungers.fomezero.common.exception.EmptyEmailException
+import com.powerhungers.fomezero.common.exception.EmptyPhoneException
 import com.powerhungers.fomezero.common.exception.EmptyNameException
 import com.powerhungers.fomezero.common.exception.EmptyPasswordException
 import com.powerhungers.fomezero.common.exception.EmptyUserTypeException
@@ -45,7 +45,7 @@ class RegistrationViewModel(private val registrationUseCase: RegistrationUseCase
                 nameViewState.postError(throwable)
             is EmptyUserTypeException ->
                 userTypeViewState.postError(throwable)
-            is EmptyEmailException ->
+            is EmptyPhoneException ->
                 emailViewState.postError(throwable)
             is EmptyPasswordException ->
                 passwordViewState.postError(throwable)

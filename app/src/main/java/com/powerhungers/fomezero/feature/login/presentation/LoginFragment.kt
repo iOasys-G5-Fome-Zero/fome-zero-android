@@ -38,7 +38,7 @@ class LoginFragment : Fragment() {
         with(binding) {
             btnEnter.setOnClickListener {
                 viewModel.login(
-                    emailEditText.text.toString(), passwordEditText.text.toString()
+                    phoneEditText.text.toString(), passwordEditText.text.toString()
                 )
             }
             txtCadastre.setOnClickListener {
@@ -75,14 +75,14 @@ class LoginFragment : Fragment() {
     }
 
     private fun observeEmailLiveData() {
-        viewModel.emailLiveData.observe(viewLifecycleOwner) { state ->
+        viewModel.phoneLiveData.observe(viewLifecycleOwner) { state ->
             with(binding) {
                 if (state is ViewState.Error) {
                     progressDialog.isGone = true
-                    emailInputLayout.error = state.throwable.message
+                    phoneInputLayout.error = state.throwable.message
                 } else {
                     progressDialog.isGone = true
-                    emailInputLayout.error = null
+                    phoneInputLayout.error = null
                 }
             }
         }
@@ -104,7 +104,7 @@ class LoginFragment : Fragment() {
 
     private fun clearError() {
         with(binding) {
-            emailEditText.hasEditTextFocusChanged { viewModel.clearViewState() }
+            phoneEditText.hasEditTextFocusChanged { viewModel.clearViewState() }
             passwordEditText.hasEditTextFocusChanged { viewModel.clearViewState() }
         }
     }

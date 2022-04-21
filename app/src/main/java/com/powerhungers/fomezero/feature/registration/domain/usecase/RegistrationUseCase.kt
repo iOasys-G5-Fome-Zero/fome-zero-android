@@ -16,7 +16,7 @@ class RegistrationUseCase(private val repository: RegistrationRepository) {
     ): Flow<RegistrationModel> = when {
         name.isBlank() -> flow { throw EmptyNameException() }
         userType.isBlank() -> flow { throw EmptyUserTypeException() }
-        email.isBlank() -> flow { throw EmptyEmailException() }
+        email.isBlank() -> flow { throw EmptyPhoneException() }
         password.isBlank() -> flow { throw EmptyPasswordException() }
         else -> repository.registerUser(
             RegistrationRequest(

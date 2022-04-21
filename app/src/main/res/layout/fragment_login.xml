@@ -19,22 +19,22 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailInputLayout"
+        android:id="@+id/phoneInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="16dp"
-        android:hint="@string/email"
+        android:layout_marginTop="64dp"
+        android:hint="@string/phone"
         app:boxBackgroundColor="@color/pale_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img_logo">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/emailEditText"
+            android:id="@+id/phoneEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:inputType="phone"
             android:singleLine="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -49,7 +49,8 @@
         app:boxBackgroundColor="@color/pale_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/emailInputLayout">
+        app:layout_constraintTop_toBottomOf="@id/phoneInputLayout"
+        app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passwordEditText"
@@ -63,7 +64,7 @@
         android:id="@+id/forgotPasswordTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="@string/forgot_password"
         android:textColor="@color/black"
         android:textSize="12sp"
@@ -74,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:clickable="true"
         android:focusable="true"
         android:text="@string/recover_password"
@@ -116,11 +117,11 @@
         android:id="@+id/txt_create_new_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="34dp"
         android:text="@string/no_account_yet"
         android:textColor="@color/black"
         android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/txt_cadastre"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_enter" />
 
@@ -128,7 +129,6 @@
         android:id="@+id/txt_cadastre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:clickable="true"
         android:focusable="true"
         android:text="@string/sign_up"
@@ -136,34 +136,55 @@
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/txt_create_new_account"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/txt_create_new_account" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_cadastre_ong"
-        android:layout_width="wrap_content"
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/goToWebsiteCardView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/want_register_ong"
-        android:textColor="@color/black"
-        android:textSize="14sp"
+        android:background="@drawable/bg_green_stroke"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_create_new_account" />
+        app:layout_constraintTop_toBottomOf="@id/txt_cadastre">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_go_to_site"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:text="@string/go_to_website"
-        android:textColor="@color/forest_green"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/txt_cadastre_ong"
-        app:layout_constraintTop_toBottomOf="@id/txt_cadastre" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/websiteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/ong_againt_hungry"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/websiteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_margin="16dp"
+                android:text="@string/go_website"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/forest_green"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/websiteTextView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
 
     <ProgressBar
         android:id="@+id/progressDialog"
