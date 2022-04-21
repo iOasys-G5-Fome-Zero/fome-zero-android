@@ -6,20 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.powerhungers.fomezero.R
-import com.powerhungers.fomezero.common.utils.ViewState
-import com.powerhungers.fomezero.databinding.FragmentConsumerNavHostBinding
-import com.powerhungers.fomezero.databinding.FragmentFinancesBinding
 import com.powerhungers.fomezero.databinding.FragmentProducerNavHostBinding
-import com.powerhungers.fomezero.feature.consumer.donation.presentation.DonationFragment
-import com.powerhungers.fomezero.feature.consumer.home.presentation.ConsumerHomeFragment
-import com.powerhungers.fomezero.feature.consumer.main.presentation.ConsumerSharedViewModel
-import com.powerhungers.fomezero.feature.consumer.signature.presentation.SignatureFragment
-import com.powerhungers.fomezero.feature.producer.basket.presentation.BasketFragment
 import com.powerhungers.fomezero.feature.producer.finances.presentation.FinancesFragment
 import com.powerhungers.fomezero.feature.producer.home.presentation.ProducerHomeFragment
-import com.powerhungers.fomezero.feature.producer.payment.presentation.PaymentFragment
 import com.powerhungers.fomezero.feature.profile.presentation.ProfileFragment
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 class ProducerNavHostFragment : Fragment() {
 
