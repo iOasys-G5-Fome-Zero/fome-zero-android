@@ -30,28 +30,6 @@
         app:layout_constraintStart_toStartOf="@id/view1"
         app:layout_constraintTop_toTopOf="@id/view1" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/nameTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:text="Name"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:drawableTint="@color/black"
-        app:layout_constraintStart_toEndOf="@id/helloTextView"
-        app:layout_constraintTop_toTopOf="@id/helloTextView" />
-
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/chatConsumerButton"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_margin="16dp"
-        android:background="@drawable/ic_chat"
-        android:backgroundTint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <View
         android:id="@+id/view2"
         android:layout_width="0dp"

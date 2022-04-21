@@ -6,24 +6,24 @@
     <item
         android:id="@+id/home_consumer"
         android:enabled="true"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/ic_home_sign"
         android:title="@string/home" />
 
     <item
         android:id="@+id/my_basket_consumer"
         android:enabled="true"
-        android:icon="@drawable/ic_piggy_bank"
+        android:icon="@drawable/ic_shopping_basket"
         android:title="@string/my_basket"/>
 
     <item
         android:id="@+id/donations_consumer"
         android:enabled="true"
-        android:icon="@drawable/ic_money"
+        android:icon="@drawable/ic_money_sign"
         android:title="@string/donation"/>
 
     <item
         android:id="@+id/profile_consumer"
         android:enabled="true"
-        android:icon="@drawable/ic_user"
+        android:icon="@drawable/ic_profile_sign"
         android:title="@string/profile"/>
 </menu>
