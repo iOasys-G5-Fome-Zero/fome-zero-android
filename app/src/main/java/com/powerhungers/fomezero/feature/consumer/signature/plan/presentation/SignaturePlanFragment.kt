@@ -36,7 +36,7 @@ class SignaturePlanFragment : Fragment() {
 
     private fun handleButtonClickListener() {
         binding.nextButton.setOnClickListener {
-            findNavController().navigate(SignaturePlanFragmentDirections.navigateToSignatureItems())
+
         }
     }
 
