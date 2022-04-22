@@ -7,11 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
+import com.powerhungers.fomezero.common.extension.openExternalUrl
 import androidx.navigation.fragment.findNavController
 import com.powerhungers.fomezero.common.extension.hasEditTextFocusChanged
 import com.powerhungers.fomezero.common.utils.ViewState
 import com.powerhungers.fomezero.databinding.FragmentLoginBinding
 import com.powerhungers.fomezero.domain.model.UserType
+import com.powerhungers.fomezero.feature.consumer.home.presentation.FOME_ZERO_URL
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class LoginFragment : Fragment() {
@@ -45,6 +47,9 @@ class LoginFragment : Fragment() {
                 findNavController().navigate(
                     LoginFragmentDirections.navigateToRegistrationFragment()
                 )
+            }
+            websiteButton.setOnClickListener{
+                openExternalUrl(FOME_ZERO_URL)
             }
         }
     }

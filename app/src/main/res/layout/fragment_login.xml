@@ -11,7 +11,7 @@
         android:id="@+id/img_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         android:src="@drawable/cestou_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="50dp"
         android:hint="@string/phone"
         app:boxBackgroundColor="@color/pale_green"
         app:layout_constraintEnd_toEndOf="parent"
@@ -139,21 +139,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/txt_create_new_account" />
 
-
     <androidx.cardview.widget.CardView
         android:id="@+id/goToWebsiteCardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
-        android:background="@drawable/bg_green_stroke"
-        app:cardBackgroundColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txt_cadastre">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_green_stroke">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/websiteTextView"
@@ -170,8 +169,9 @@
                 android:id="@+id/websiteButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="8dp"
                 android:layout_margin="16dp"
+                android:background="@color/white"
+                android:padding="8dp"
                 android:text="@string/go_website"
                 android:textAlignment="center"
                 android:textAllCaps="false"
