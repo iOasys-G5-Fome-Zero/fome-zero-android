@@ -1,4 +1,4 @@
-package com.powerhungers.fomezero.data.local
+package com.powerhungers.fomezero.data.local.util
 
 import android.content.Context
 

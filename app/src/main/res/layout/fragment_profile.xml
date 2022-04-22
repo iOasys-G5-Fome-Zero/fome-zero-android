@@ -28,7 +28,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_profile"
+        android:id="@+id/profileTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
@@ -48,11 +48,11 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/ic_settings"
         android:backgroundTint="@color/black"
-        app:layout_constraintStart_toEndOf="@id/txt_profile"
+        app:layout_constraintStart_toEndOf="@id/profileTextView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/img_profile"
+        android:id="@+id/profileImage"
         android:layout_width="104dp"
         android:layout_height="104dp"
         android:layout_marginTop="104dp"
@@ -84,7 +84,7 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_profile" />
+        app:layout_constraintTop_toBottomOf="@id/profileImage" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_my_data"

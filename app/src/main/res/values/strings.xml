@@ -24,6 +24,7 @@
     <string name="jump">Pular</string>
     <string name="next">Proximo</string>
     <string name="finish_registration">Finalizar cadastro</string>
+    <string name="hello_user">Olá, %1$s!</string>
     <string name="hello">Olá</string>
     <string name="help_fight_hunger">Ajude no combate a fome</string>
     <string name="information_text">Veja abaixo as instituições e projetos cadastrados na \nnossa rede e ajude-nos a atingir a meta do mês \ndoando suas moedas que serão convertidas em \nalimentos.</string>
@@ -99,7 +100,6 @@
     <string name="user_name">José</string>
     <string name="my_finances">Minhas finanças</string>
     <string name="configure_basket_type">Configure quais os tipos e tamanhos de cesta de alimentos \nvocê deseja fornecer.</string>
-    <string name="hello_user">Olá José!</string>
     <string name="see_my_income">Ver meus rendimentos</string>
     <string name="cadastre_your_pix_key">Cadastrar chave Pix</string>
     <string name="start">Início</string>

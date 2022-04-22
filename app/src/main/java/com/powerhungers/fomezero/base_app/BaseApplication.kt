@@ -1,8 +1,9 @@
 package com.powerhungers.fomezero.base_app
 
 import android.app.Application
-import com.powerhungers.fomezero.data.di.dataLocalModule
+import com.powerhungers.fomezero.data.local.di.dataLocalModule
 import com.powerhungers.fomezero.data.remote.di.dataRemoteModule
+import com.powerhungers.fomezero.domain.di.domainModule
 import com.powerhungers.fomezero.feature.consumer.di.consumerModule
 import com.powerhungers.fomezero.feature.login.di.loginModule
 import com.powerhungers.fomezero.feature.registration.di.registrationModule
@@ -18,6 +19,7 @@ class BaseApplication : Application() {
                 listOf(
                     dataRemoteModule,
                     dataLocalModule,
+                    domainModule,
                     loginModule,
                     registrationModule,
                     consumerModule
