@@ -87,12 +87,12 @@
     <string name="see_extract">Ver extrato</string>
     <string name="cadastred_keys">Chaves cadastradas</string>
     <string name="phone_number">(31) 99999–9999</string>
-    <string name="pix_key">Chaves pix</string>
+    <string name="pix_keys">Chaves pix</string>
     <string name="pix_key_type">Informe qual tipo de chave pix deseja cadastrar para receber suas vendas:</string>
     <string name="cpf">CPF</string>
     <string name="phone">Telefone</string>
     <string name="aleatory_key">Chave aleatória</string>
-    <string name="registre_new_pix_key">Registrar nova chave pix:</string>
+    <string name="registre_new_pix_key">Informe no campo abaixo a chave pix a ser \nregistrada:</string>
     <string name="inform_key">Informe a chave pix</string>
     <string name="registre_key">Registrar chave</string>
     <string name="leave_account">Sair da conta</string>

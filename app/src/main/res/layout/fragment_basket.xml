@@ -7,38 +7,12 @@
     android:background="@color/white"
     tools:context=".feature.producer.basket.presentation.BasketFragment">
 
-    <View
-        android:id="@+id/view_header_basket"
-        android:layout_width="0dp"
-        android:layout_height="64dp"
-        android:background="@drawable/bg_light_green"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btn_back_my_baskets"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:src="@drawable/ic_back_arrow"
-        android:tint="@color/black"
-        app:layout_constraintBottom_toBottomOf="@id/view_header_basket"
-        app:layout_constraintStart_toStartOf="@id/view_header_basket"
-        app:layout_constraintTop_toTopOf="@id/view_header_basket" />
+    <include
+        android:id="@+id/basketToolbar"
+        layout="@layout/toolbar" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/my_baskets"
-        android:textColor="@color/black"
-        android:textSize="21sp"
-        app:layout_constraintBottom_toBottomOf="@id/view_header_basket"
-        app:layout_constraintStart_toEndOf="@id/btn_back_my_baskets"
-        app:layout_constraintTop_toTopOf="@id/view_header_basket" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_description_my_baskets"
+        android:id="@+id/txtDescriptionMyBaskets"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
@@ -48,11 +22,11 @@
         android:textColor="@color/black"
         android:textSize="14sp"
         app:drawableTint="@color/black"
-        app:layout_constraintStart_toStartOf="@id/view_header_basket"
-        app:layout_constraintTop_toBottomOf="@id/view_header_basket" />
+        app:layout_constraintStart_toStartOf="@id/basketToolbar"
+        app:layout_constraintTop_toBottomOf="@id/basketToolbar" />
 
     <View
-        android:id="@+id/view_small_basket"
+        android:id="@+id/viewSmallBasket"
         android:layout_width="0dp"
         android:layout_height="80dp"
         android:layout_marginHorizontal="24dp"
@@ -60,7 +34,7 @@
         android:background="@drawable/bg_green_stroke"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_description_my_baskets" />
+        app:layout_constraintTop_toBottomOf="@id/txtDescriptionMyBaskets" />
 
     <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/checkboxSmallBasket"
@@ -72,11 +46,11 @@
         android:padding="8dp"
         android:text="@string/small_basket"
         android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@id/view_small_basket"
-        app:layout_constraintTop_toTopOf="@id/view_small_basket" />
+        app:layout_constraintStart_toStartOf="@id/viewSmallBasket"
+        app:layout_constraintTop_toTopOf="@id/viewSmallBasket" />
 
     <View
-        android:id="@+id/view_medium_basket"
+        android:id="@+id/viewMediumBasket"
         android:layout_width="0dp"
         android:layout_height="80dp"
         android:layout_marginHorizontal="24dp"
@@ -84,7 +58,7 @@
         android:background="@drawable/bg_green_stroke"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_small_basket" />
+        app:layout_constraintTop_toBottomOf="@id/viewSmallBasket" />
 
     <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/checkboxMediumBasket"
@@ -96,11 +70,11 @@
         android:padding="8dp"
         android:text="@string/medium_basket"
         android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@id/view_medium_basket"
-        app:layout_constraintTop_toTopOf="@id/view_medium_basket" />
+        app:layout_constraintStart_toStartOf="@id/viewMediumBasket"
+        app:layout_constraintTop_toTopOf="@id/viewMediumBasket" />
 
     <View
-        android:id="@+id/view_big_basket"
+        android:id="@+id/viewBigBasket"
         android:layout_width="0dp"
         android:layout_height="80dp"
         android:layout_marginHorizontal="24dp"
@@ -108,7 +82,7 @@
         android:background="@drawable/bg_green_stroke"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_medium_basket" />
+        app:layout_constraintTop_toBottomOf="@id/viewMediumBasket" />
 
     <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/checkboxBigBasket"
@@ -120,11 +94,11 @@
         android:padding="8dp"
         android:text="@string/big_basket"
         android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@id/view_big_basket"
-        app:layout_constraintTop_toTopOf="@id/view_big_basket" />
+        app:layout_constraintStart_toStartOf="@id/viewBigBasket"
+        app:layout_constraintTop_toTopOf="@id/viewBigBasket" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_confirm_selection"
+        android:id="@+id/btnConfirmSelection"
         android:layout_width="200dp"
         android:layout_height="48dp"
         android:layout_marginTop="40dp"
@@ -136,6 +110,6 @@
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_big_basket" />
+        app:layout_constraintTop_toBottomOf="@id/viewBigBasket" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

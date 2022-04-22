@@ -7,17 +7,12 @@
     android:background="@color/white"
     tools:context=".feature.producer.profile.presentation.ProfileFragment">
 
-    <View
-        android:id="@+id/view_header_profile"
-        android:layout_width="0dp"
-        android:layout_height="160dp"
-        android:background="@drawable/bg_light_green_radius"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <include
+        android:id="@+id/profileToolbar"
+        layout="@layout/toolbar_profile" />
 
     <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btn_back_profile"
+        android:id="@+id/profileSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -38,7 +33,7 @@
         android:textColor="@color/black"
         android:textSize="21sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/btn_back_profile"
+        app:layout_constraintStart_toStartOf="@id/profileSettings"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatImageButton
@@ -46,8 +41,10 @@
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
         android:background="@drawable/ic_settings"
         android:backgroundTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/profileTextView"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,24 +55,24 @@
         android:layout_marginTop="104dp"
         android:background="@drawable/bg_profile"
         android:backgroundTint="@color/neutral_black"
-        app:layout_constraintEnd_toEndOf="@id/view_header_profile"
-        app:layout_constraintStart_toStartOf="@id/view_header_profile"
-        app:layout_constraintTop_toTopOf="@id/view_header_profile" />
+        app:layout_constraintEnd_toEndOf="@id/profileToolbar"
+        app:layout_constraintStart_toStartOf="@id/profileToolbar"
+        app:layout_constraintTop_toTopOf="@id/profileToolbar" />
 
     <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btn_edit_profile_pic"
+        android:id="@+id/btnEditProfilePic"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="96dp"
         android:background="@drawable/bg_profile"
         android:src="@drawable/ic_pencil"
-        app:layout_constraintEnd_toEndOf="@id/view_header_profile"
-        app:layout_constraintStart_toStartOf="@id/view_header_profile"
-        app:layout_constraintTop_toTopOf="@id/view_header_profile" />
+        app:layout_constraintEnd_toEndOf="@id/profileToolbar"
+        app:layout_constraintStart_toStartOf="@id/profileToolbar"
+        app:layout_constraintTop_toTopOf="@id/profileToolbar" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_profile_name"
+        android:id="@+id/txtProfileName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -87,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@id/profileImage" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_my_data"
+        android:id="@+id/btnMyData"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginHorizontal="24dp"
@@ -103,10 +100,10 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_profile_name" />
+        app:layout_constraintTop_toBottomOf="@id/txtProfileName" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_my_baskets"
+        android:id="@+id/btnMyBaskets"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginHorizontal="24dp"
@@ -122,28 +119,28 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_my_data" />
+        app:layout_constraintTop_toBottomOf="@id/btnMyData" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_logout"
+        android:id="@+id/txtLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="96dp"
         android:text="@string/leave_account"
         android:textColor="@color/black"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@id/btn_my_baskets"
-        app:layout_constraintTop_toBottomOf="@id/btn_my_baskets" />
+        app:layout_constraintStart_toStartOf="@id/btnMyBaskets"
+        app:layout_constraintTop_toBottomOf="@id/btnMyBaskets" />
 
     <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btn_logout"
+        android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="96dp"
         android:background="@drawable/ic_logout"
         android:backgroundTint="@color/black"
-        app:layout_constraintStart_toEndOf="@id/txt_logout"
-        app:layout_constraintTop_toBottomOf="@id/btn_my_baskets" />
+        app:layout_constraintStart_toEndOf="@id/txtLogout"
+        app:layout_constraintTop_toBottomOf="@id/btnMyBaskets" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
