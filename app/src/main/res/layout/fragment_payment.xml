@@ -7,7 +7,7 @@
     tools:context=".feature.producer.payment.presentation.PaymentFragment">
 
     <View
-        android:id="@+id/view1"
+        android:id="@+id/view_header_payment"
         android:layout_width="0dp"
         android:layout_height="64dp"
         android:background="@drawable/bg_light_green"
@@ -22,19 +22,19 @@
         android:padding="16dp"
         android:src="@drawable/ic_back_arrow"
         android:tint="@color/black"
-        app:layout_constraintBottom_toBottomOf="@id/view1"
-        app:layout_constraintStart_toStartOf="@id/view1"
-        app:layout_constraintTop_toTopOf="@id/view1" />
+        app:layout_constraintBottom_toBottomOf="@id/view_header_payment"
+        app:layout_constraintStart_toStartOf="@id/view_header_payment"
+        app:layout_constraintTop_toTopOf="@id/view_header_payment" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chaves pix"
+        android:text="@string/pix_key"
         android:textColor="@color/black"
         android:textSize="21sp"
-        app:layout_constraintBottom_toBottomOf="@id/view1"
+        app:layout_constraintBottom_toBottomOf="@id/view_header_payment"
         app:layout_constraintStart_toEndOf="@id/btn_back_pix"
-        app:layout_constraintTop_toTopOf="@id/view1" />
+        app:layout_constraintTop_toTopOf="@id/view_header_payment" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/txt_description_pix"
@@ -42,108 +42,78 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="24dp"
-        android:text="Informe qual tipo de chave pix deseja cadastrar para receber suas vendas:"
+        android:text="@string/pix_key_type"
         android:textAlignment="textStart"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@id/view1"
-        app:layout_constraintTop_toBottomOf="@id/view1" />
+        app:layout_constraintStart_toStartOf="@id/view_header_payment"
+        app:layout_constraintTop_toBottomOf="@id/view_header_payment" />
 
-    <com.google.android.material.radiobutton.MaterialRadioButton
-        android:id="@+id/rbtn_cpf"
+    <RadioGroup
+        android:id="@+id/radio_group_payment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:buttonTint="@color/neutral_black"
-        android:paddingHorizontal="16dp"
-        android:text="CPF"
-        android:textSize="14sp"
+        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="@id/txt_description_pix"
-        app:layout_constraintTop_toBottomOf="@id/txt_description_pix" />
+        app:layout_constraintTop_toBottomOf="@id/txt_description_pix">
 
-    <View
-        android:id="@+id/view2"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginHorizontal="24dp"
-        android:background="@color/neutral_black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rbtn_cpf" />
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rbtn_cpf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:buttonTint="@color/neutral_black"
+            android:paddingHorizontal="16dp"
+            android:text="@string/cpf"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/txt_description_pix"
+            app:layout_constraintTop_toBottomOf="@id/txt_description_pix" />
 
-    <com.google.android.material.radiobutton.MaterialRadioButton
-        android:id="@+id/rbtn_cellphone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:buttonTint="@color/neutral_black"
-        android:paddingHorizontal="16dp"
-        android:text="Celular"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@id/rbtn_cpf"
-        app:layout_constraintTop_toBottomOf="@id/view2" />
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rbtn_cellphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/neutral_black"
+            android:paddingHorizontal="16dp"
+            android:text="@string/phone"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/rbtn_cpf"
+            app:layout_constraintTop_toBottomOf="@id/view2" />
 
-    <View
-        android:id="@+id/view3"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginHorizontal="24dp"
-        android:background="@color/neutral_black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rbtn_cellphone" />
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rbtn_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/neutral_black"
+            android:paddingHorizontal="16dp"
+            android:text="@string/email"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/rbtn_cpf"
+            app:layout_constraintTop_toBottomOf="@id/rbtn_cellphone" />
 
-    <com.google.android.material.radiobutton.MaterialRadioButton
-        android:id="@+id/rbtn_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:buttonTint="@color/neutral_black"
-        android:paddingHorizontal="16dp"
-        android:text="E-mail"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@id/rbtn_cpf"
-        app:layout_constraintTop_toBottomOf="@id/view3" />
-
-    <View
-        android:id="@+id/view4"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginHorizontal="24dp"
-        android:background="@color/neutral_black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rbtn_email" />
-
-    <com.google.android.material.radiobutton.MaterialRadioButton
-        android:id="@+id/rbtn_aleatory_key"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:buttonTint="@color/neutral_black"
-        android:paddingHorizontal="16dp"
-        android:text="Chave aleatória"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@id/rbtn_cpf"
-        app:layout_constraintTop_toBottomOf="@id/view4" />
-
-    <View
-        android:id="@+id/view5"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginHorizontal="24dp"
-        android:background="@color/neutral_black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rbtn_aleatory_key" />
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rbtn_aleatory_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/neutral_black"
+            android:paddingHorizontal="16dp"
+            android:text="@string/aleatory_key"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/rbtn_cpf"
+            app:layout_constraintTop_toBottomOf="@id/rbtn_email" />
+    </RadioGroup>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/txt_new_pix"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="Registrar nova chave pix:"
+        android:text="@string/registre_new_pix_key"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@id/txt_description_pix"
-        app:layout_constraintTop_toBottomOf="@id/view5" />
+        app:layout_constraintTop_toBottomOf="@id/radio_group_payment" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_txt_inform_pix"
@@ -153,7 +123,7 @@
         android:layout_marginTop="24dp"
         android:background="@drawable/bg_opacity_green"
         android:gravity="center_vertical"
-        android:hint="Informe a chave pix"
+        android:hint="@string/inform_key"
         android:inputType="textEmailAddress"
         android:paddingHorizontal="16dp"
         android:singleLine="true"
@@ -165,7 +135,7 @@
         app:layout_constraintTop_toBottomOf="@id/txt_new_pix" />
 
     <View
-        android:id="@+id/view6"
+        android:id="@+id/view_edit_txt"
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:background="@color/neutral_black"
@@ -178,14 +148,14 @@
         android:layout_width="200dp"
         android:layout_height="48dp"
         android:layout_marginTop="56dp"
-        android:background="@drawable/bg_dark_green_medium_radius"
+        android:background="@drawable/bg_dark_green_small_radius"
         android:gravity="center"
-        android:text="Registrar chave"
-        android:textColor="@color/white"
+        android:text="@string/registre_key"
         android:textAllCaps="false"
+        android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view6" />
+        app:layout_constraintTop_toBottomOf="@id/view_edit_txt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

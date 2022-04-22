@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
@@ -8,17 +7,17 @@
         android:id="@+id/home_producer"
         android:enabled="true"
         android:icon="@drawable/ic_home"
-        android:title="Início" />
+        android:title="@string/start" />
 
     <item
         android:id="@+id/finances_producer"
         android:enabled="true"
         android:icon="@drawable/ic_green_money"
-        android:title="Financeiro"/>
+        android:title="@string/finances"/>
 
     <item
         android:id="@+id/profile_producer"
         android:enabled="true"
         android:icon="@drawable/ic_user"
-        android:title="Perfil"/>
+        android:title="@string/profile"/>
 </menu>
