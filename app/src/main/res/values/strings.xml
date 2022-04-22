@@ -101,4 +101,5 @@
     <string name="see_my_income">Ver meus rendimentos</string>
     <string name="cadastre_your_pix_key">Cadastrar chave Pix</string>
     <string name="start">Início</string>
+    <string name="something_is_wrong">Algo deu errado!</string>
 </resources>
