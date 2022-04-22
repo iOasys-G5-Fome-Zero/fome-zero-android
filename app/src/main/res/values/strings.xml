@@ -71,4 +71,36 @@
     <string name="biweekly">Quinzenal</string>
     <string name="signature_basket_size">Escolha qual o tamanho deseja para sua cesta de alimentos:</string>
     <string name="signature_plan_value_information">Obs: O valor informado acima é cobrado de acordo com a frequência escolhida.</string>
+
+    <string name="my_baskets">Minhas cestas</string>
+    <string name="choose_basket">Escolha abaixo qual o tamanho da cesta você deseja fornecer, e veja quantos e quais os tipos de alimentos em cada uma.</string>
+    <string name="small_basket">Pequena \n1 tempero, 2 legumes, 2 verduras e 2 frutas</string>
+    <string name="medium_basket">Média \n2 temperos, 3 legumes, 3 verduras e 3 frutas</string>
+    <string name="big_basket">Grande \n3 temperos, 4 legumes, 4 verduras e 4 frutas</string>
+    <string name="confirm_selection">Confirmar seleção</string>
+    <string name="finances">Financeiro</string>
+    <string name="available_balance">Saldo disponível</string>
+    <string name="balance">R$ 00,00</string>
+    <string name="configure_pix">Configurar PIX</string>
+    <string name="see_extract">Ver extrato</string>
+    <string name="cadastred_keys">Chaves cadastradas</string>
+    <string name="phone_number">(31) 99999–9999</string>
+    <string name="pix_key">Chaves pix</string>
+    <string name="pix_key_type">Informe qual tipo de chave pix deseja cadastrar para receber suas vendas:</string>
+    <string name="cpf">CPF</string>
+    <string name="phone">Telefone</string>
+    <string name="aleatory_key">Chave aleatória</string>
+    <string name="registre_new_pix_key">Registrar nova chave pix:</string>
+    <string name="inform_key">Informe a chave pix</string>
+    <string name="registre_key">Registrar chave</string>
+    <string name="leave_account">Sair da conta</string>
+    <string name="my_data">Meus dados</string>
+    <string name="user_name">José</string>
+    <string name="my_finances">Minhas finanças</string>
+    <string name="configure_basket_type">Configure quais os tipos e tamanhos de cesta de alimentos \nvocê deseja fornecer.</string>
+    <string name="hello_user">Olá José!</string>
+    <string name="see_my_income">Ver meus rendimentos</string>
+    <string name="cadastre_your_pix_key">Cadastrar chave Pix</string>
+    <string name="start">Início</string>
+    <string name="something_is_wrong">Algo deu errado!</string>
 </resources>

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.powerhungers.fomezero.R
 import com.powerhungers.fomezero.common.extension.openExternalUrl
 import com.powerhungers.fomezero.common.extension.setAnimationDuration
 import com.powerhungers.fomezero.databinding.FragmentDonationBinding
@@ -29,6 +30,7 @@ class DonationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.donationToolbar.title.text = getString(R.string.donation)
 
         setupProgressBar()
         handleImageClick()

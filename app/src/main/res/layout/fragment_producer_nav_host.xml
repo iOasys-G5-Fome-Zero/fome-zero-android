@@ -17,6 +17,7 @@
         android:id="@+id/producerBottomNavHost"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        app:itemPaddingBottom="5dp"
         app:itemRippleColor="@color/forest_green"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
