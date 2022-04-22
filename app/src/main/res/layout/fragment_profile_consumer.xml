@@ -116,13 +116,32 @@
         android:gravity="center_vertical"
         android:paddingHorizontal="16dp"
         android:paddingVertical="16dp"
-        android:text="@string/my_baskets"
+        android:text="Configurar plano"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_my_data" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/contactProducer"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_opacity_green"
+        android:drawableEnd="@drawable/ic_foward_arrow"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="16dp"
+        android:text="Contactar produtor"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_my_baskets" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/txt_logout"
@@ -133,7 +152,7 @@
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@id/btn_my_baskets"
-        app:layout_constraintTop_toBottomOf="@id/btn_my_baskets" />
+        app:layout_constraintTop_toBottomOf="@id/contactProducer" />
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/btn_logout"
@@ -144,6 +163,6 @@
         android:background="@drawable/ic_logout"
         android:backgroundTint="@color/black"
         app:layout_constraintStart_toEndOf="@id/txt_logout"
-        app:layout_constraintTop_toBottomOf="@id/btn_my_baskets" />
+        app:layout_constraintTop_toBottomOf="@id/contactProducer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

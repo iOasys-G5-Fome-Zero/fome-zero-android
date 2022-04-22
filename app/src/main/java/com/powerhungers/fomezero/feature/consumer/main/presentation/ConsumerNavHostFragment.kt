@@ -12,7 +12,7 @@ import com.powerhungers.fomezero.feature.consumer.donation.presentation.Donation
 import com.powerhungers.fomezero.feature.consumer.home.presentation.ConsumerHomeFragment
 import com.powerhungers.fomezero.feature.consumer.signature.plan.presentation.SignaturePlanFragment
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
-import com.powerhungers.fomezero.feature.profile.presentation.ProfileFragment
+import com.powerhungers.fomezero.feature.producer.profile.presentation.ProfileFragment
 
 class ConsumerNavHostFragment : Fragment() {
 

@@ -104,4 +104,7 @@
     <string name="start">Início</string>
     <string name="something_is_wrong">Algo deu errado!</string>
     <string name="ong_againt_hungry">Se você é uma instituição que atua no combate a fome e deseja solicitar seu cadastro, visite nosso site e saiba mais.</string>
+    <string name="onboarding_subtitle">Alimentação é direito básico e a sua partilha é fundamental à quem tem fome. Através da assinatura mensal, você garante alimentação saudável democratizada pra sua família e ainda possibilita o mesmo consumo pra uma família em vulnerabilidade.</string>
+    <string name="onboarding_home_title">Tire a fome do caminho</string>
+
 </resources>

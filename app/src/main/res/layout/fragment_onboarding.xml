@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".feature.onboarding.presentation.OnboardingFragment">
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintBottom_toTopOf="@+id/title_presentation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image_onboard" />
+
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/txt_jump"
         android:layout_width="wrap_content"
@@ -15,42 +26,43 @@
         android:textColor="@color/forest_green"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
- />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/title_presentation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:layout_marginStart="54dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="54dp"
-        android:text="Uma forma fácil de se conectar aos consumidores"
+        android:text="@string/onboarding_home_title"
         android:textAlignment="center"
+        android:textColor="@color/forest_green"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_jump" />
+        app:layout_constraintBottom_toTopOf="@id/subtitle_presentation" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/subtitle_presentation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:layout_marginStart="24sp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24sp"
-        android:text="Através do nosso aplicativo você poderá vender seus alimentos para a comunidade local, sem depender de  atravessadores."
+        android:text="@string/onboarding_subtitle"
+        app:layout_constraintBottom_toTopOf="@id/btn_next"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_presentation" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_next"
         android:layout_width="90dp"
         android:layout_height="38dp"
-        android:gravity="center"
         android:layout_margin="24dp"
         android:background="@drawable/bg_dark_green_medium_radius"
+        android:gravity="center"
         android:text="@string/next"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
