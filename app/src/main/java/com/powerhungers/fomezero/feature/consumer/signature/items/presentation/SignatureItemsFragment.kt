@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.powerhungers.fomezero.databinding.FragmentSignatureItemsBinding
+import com.powerhungers.fomezero.databinding.FragmentSignatureOrderBinding
 
 class SignatureItemsFragment : Fragment() {
     private val binding by lazy { FragmentSignatureItemsBinding.inflate(layoutInflater) }
@@ -15,10 +16,5 @@ class SignatureItemsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
     }
 }

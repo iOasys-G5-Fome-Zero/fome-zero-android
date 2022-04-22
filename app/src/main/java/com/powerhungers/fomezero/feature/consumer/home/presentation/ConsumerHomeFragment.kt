@@ -48,7 +48,7 @@ class ConsumerHomeFragment : Fragment() {
             }
 
             makeYourSignature.setOnClickListener {
-                sharedViewModel.navigateToSignature()
+                sharedViewModel.navigateToSignaturePlan()
             }
         }
     }

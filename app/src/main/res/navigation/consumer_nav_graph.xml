@@ -12,7 +12,9 @@
         tools:layout="@layout/fragment_onboarding">
         <action
             android:id="@+id/navigateToHome"
-            app:destination="@id/consumerNavHostFragment" />
+            app:destination="@id/consumerNavHostFragment"
+            app:popUpTo="@id/onboardingFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
@@ -20,19 +22,5 @@
         android:name="com.powerhungers.fomezero.feature.consumer.main.presentation.ConsumerNavHostFragment"
         android:label="fragment_consumer_nav_host"
         tools:layout="@layout/fragment_consumer_nav_host" />
-    <fragment
-        android:id="@+id/signaturePlanFragment"
-        android:name="com.powerhungers.fomezero.feature.consumer.signature.plan.presentation.SignaturePlanFragment"
-        android:label="fragment_signature_plan"
-        tools:layout="@layout/fragment_signature_plan" >
-        <action
-            android:id="@+id/navigateToSignatureItems"
-            app:destination="@id/signatureItemsFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/signatureItemsFragment"
-        android:name="com.powerhungers.fomezero.feature.consumer.signature.items.presentation.SignatureItemsFragment"
-        android:label="fragment_signature_items"
-        tools:layout="@layout/fragment_signature_items" />
 
 </navigation>

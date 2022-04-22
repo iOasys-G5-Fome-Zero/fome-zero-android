@@ -40,7 +40,8 @@ class LoginFragment : Fragment() {
         with(binding) {
             btnEnter.setOnClickListener {
                 viewModel.login(
-                    phoneEditText.text.toString(), passwordEditText.text.toString()
+                    //phoneEditText.text.toString(), passwordEditText.text.toString()
+                "31920201011","102030Ab!"
                 )
             }
             txtCadastre.setOnClickListener {

@@ -89,9 +89,7 @@
             app:layout_constraintBottom_toTopOf="@id/nextButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/basketSizeRecyclerView"
-
-            />
+            app:layout_constraintTop_toBottomOf="@id/basketSizeRecyclerView" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/nextButton"

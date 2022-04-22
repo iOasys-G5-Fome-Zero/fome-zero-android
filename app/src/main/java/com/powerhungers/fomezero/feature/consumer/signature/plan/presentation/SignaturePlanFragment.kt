@@ -31,10 +31,19 @@ class SignaturePlanFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.signatureToolbar.title.text = getString(R.string.signature)
+        configureToolbar()
         setupSizeAdapter()
         setupDateAdapter()
         handleButtonClickListener()
+    }
+
+    private fun configureToolbar() {
+        with(binding.signatureToolbar) {
+            title.text = getString(R.string.signature)
+            backButton.setOnClickListener {
+                sharedViewModel.navigateToConsumerHome()
+            }
+        }
     }
 
     private fun setupDateAdapter() {
@@ -44,7 +53,7 @@ class SignaturePlanFragment : Fragment() {
 
     private fun handleButtonClickListener() {
         binding.nextButton.setOnClickListener {
-
+            sharedViewModel.navigateToSignatureItem()
         }
     }
 
