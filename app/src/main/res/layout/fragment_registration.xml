@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="32dp"
+    android:fillViewport="true"
     tools:context=".feature.registration.presentation.RegistrationFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -96,15 +96,36 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="16dp"
-            android:hint="@string/phone"
+            android:hint="@string/email"
             android:textColorHint="@color/black"
             app:boxBackgroundColor="@color/pale_green"
-            app:layout_constraintEnd_toEndOf="@id/nameInputLayout"
-            app:layout_constraintStart_toStartOf="@id/nameInputLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/nameInputLayout">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phoneInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/phone"
+            android:textColorHint="@color/black"
+            app:boxBackgroundColor="@color/pale_green"
+            app:layout_constraintEnd_toEndOf="@id/emailInputLayout"
+            app:layout_constraintStart_toStartOf="@id/emailInputLayout"
+            app:layout_constraintTop_toBottomOf="@id/emailInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phoneEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="phone"
@@ -120,9 +141,9 @@
             android:hint="@string/password"
             android:textColorHint="@color/black"
             app:boxBackgroundColor="@color/pale_green"
-            app:layout_constraintEnd_toEndOf="@id/emailInputLayout"
-            app:layout_constraintStart_toStartOf="@id/emailInputLayout"
-            app:layout_constraintTop_toBottomOf="@id/emailInputLayout"
+            app:layout_constraintEnd_toEndOf="@id/phoneInputLayout"
+            app:layout_constraintStart_toStartOf="@id/phoneInputLayout"
+            app:layout_constraintTop_toBottomOf="@id/phoneInputLayout"
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -145,7 +166,6 @@
             app:layout_constraintStart_toStartOf="@id/passwordInputLayout"
             app:layout_constraintTop_toBottomOf="@id/passwordInputLayout" />
 
-
         <com.google.android.material.checkbox.MaterialCheckBox
             android:id="@+id/registerCheckBox"
             android:layout_width="wrap_content"
@@ -164,12 +184,14 @@
             android:layout_width="200dp"
             android:layout_height="48dp"
             android:layout_marginTop="40dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/bg_dark_green_medium_radius"
             android:gravity="center"
             android:text="@string/finish_registration"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/registerCheckBox" />

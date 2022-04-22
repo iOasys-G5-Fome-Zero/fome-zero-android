@@ -10,20 +10,25 @@ import kotlinx.coroutines.flow.flow
 class RegistrationUseCase(private val repository: RegistrationRepository) {
     operator fun invoke(
         name: String,
-        userType: String,
         email: String,
-        password: String
-    ): Flow<RegistrationModel> = when {
+        phone: String,
+        password: String,
+        userType: String,
+
+        ): Flow<RegistrationModel> = when {
         name.isBlank() -> flow { throw EmptyNameException() }
-        userType.isBlank() -> flow { throw EmptyUserTypeException() }
-        email.isBlank() -> flow { throw EmptyPhoneException() }
+        email.isBlank() -> flow { throw EmptyEmailException() }
+        phone.isBlank() -> flow { throw EmptyPhoneException() }
         password.isBlank() -> flow { throw EmptyPasswordException() }
+        userType.isBlank() -> flow { throw EmptyUserTypeException() }
+
         else -> repository.registerUser(
             RegistrationRequest(
                 firstName = name,
-                userType = userType,
                 email = email,
-                password = password
+                phone = phone,
+                password = password,
+                userType = userType,
             )
         )
     }

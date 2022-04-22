@@ -44,11 +44,12 @@ class RegistrationFragment : Fragment() {
                 if (registerCheckBox.isChecked) {
                     viewModel.registration(
                         name = nameEditText.text.toString(),
-                        userType = userType,
                         email = emailEditText.text.toString(),
-                        password = passwordEditText.text.toString()
+                        phone = phoneEditText.text.toString(),
+                        password = passwordEditText.text.toString(),
+                        userType = userType
                     )
-                }else showToast(R.string.accept_use_terms)
+                } else showToast(R.string.accept_use_terms)
             }
         }
     }
@@ -122,10 +123,10 @@ class RegistrationFragment : Fragment() {
             with(binding) {
                 if (state is ViewState.Error) {
                     progressDialog.isGone = true
-                    emailInputLayout.error = state.throwable.message
+                    phoneInputLayout.error = state.throwable.message
                 } else {
                     progressDialog.isGone = true
-                    emailInputLayout.error = null
+                    phoneInputLayout.error = null
                 }
             }
         }
@@ -148,7 +149,7 @@ class RegistrationFragment : Fragment() {
     private fun clearError() {
         with(binding) {
             nameEditText.hasEditTextFocusChanged { viewModel.clearViewState() }
-            emailEditText.hasEditTextFocusChanged { viewModel.clearViewState() }
+            phoneEditText.hasEditTextFocusChanged { viewModel.clearViewState() }
         }
     }
 }

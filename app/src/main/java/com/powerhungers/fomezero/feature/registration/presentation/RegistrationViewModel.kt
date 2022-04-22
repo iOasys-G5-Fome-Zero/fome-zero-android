@@ -29,9 +29,15 @@ class RegistrationViewModel(private val registrationUseCase: RegistrationUseCase
     val emailLiveData = emailViewState as LiveData<ViewState<Unit>>
     val passwordLiveData = passwordViewState as LiveData<ViewState<Unit>>
 
-    fun registration(name: String, userType: String, email: String, password: String) {
+    fun registration(
+        name: String,
+        email: String,
+        phone: String,
+        password: String,
+        userType: String
+    ) {
         viewModelScope.launch {
-            registrationUseCase(name, userType, email, password)
+            registrationUseCase(name, email, phone, password, userType)
                 .flowOn(Dispatchers.IO)
                 .onStart { registrationViewState.postLoading() }
                 .catch { handleError(it) }
