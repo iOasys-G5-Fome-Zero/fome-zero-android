@@ -20,4 +20,9 @@ class FinancesFragment : Fragment() {
     ): View {
         return binding.root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.financesToolbar.title.text = getString(R.string.finances)
+    }
 }
