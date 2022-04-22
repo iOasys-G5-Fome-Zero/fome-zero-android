@@ -41,12 +41,14 @@ class RegistrationFragment : Fragment() {
     private fun handleClickListener() {
         with(binding) {
             finishRegisterButton.setOnClickListener {
-                viewModel.registration(
-                    name = nameEditText.text.toString(),
-                    userType = userType,
-                    email = emailEditText.text.toString(),
-                    password = passwordEditText.text.toString()
-                )
+                if (registerCheckBox.isChecked) {
+                    viewModel.registration(
+                        name = nameEditText.text.toString(),
+                        userType = userType,
+                        email = emailEditText.text.toString(),
+                        password = passwordEditText.text.toString()
+                    )
+                }else showToast(R.string.accept_use_terms)
             }
         }
     }

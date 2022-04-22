@@ -10,9 +10,9 @@ import com.powerhungers.fomezero.common.utils.ViewState
 import com.powerhungers.fomezero.databinding.FragmentConsumerNavHostBinding
 import com.powerhungers.fomezero.feature.consumer.donation.presentation.DonationFragment
 import com.powerhungers.fomezero.feature.consumer.home.presentation.ConsumerHomeFragment
+import com.powerhungers.fomezero.feature.consumer.profile.presentation.ProfileConsumerFragment
 import com.powerhungers.fomezero.feature.consumer.signature.plan.presentation.SignaturePlanFragment
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
-import com.powerhungers.fomezero.feature.producer.profile.presentation.ProfileFragment
 
 class ConsumerNavHostFragment : Fragment() {
 
@@ -22,7 +22,7 @@ class ConsumerNavHostFragment : Fragment() {
     private val consumerHomeFragment = ConsumerHomeFragment()
     private val signatureFragment = SignaturePlanFragment()
     private val donationFragment = DonationFragment()
-    private val profileFragment = ProfileFragment()
+    private val profileConsumerFragment = ProfileConsumerFragment()
     private var activeFragment: Fragment = consumerHomeFragment
 
 
@@ -53,7 +53,7 @@ class ConsumerNavHostFragment : Fragment() {
                     R.id.donations_consumer ->
                         handleFragmentTransaction(donationFragment)
                     R.id.profile_consumer ->
-                        handleFragmentTransaction(profileFragment)
+                        handleFragmentTransaction(profileConsumerFragment)
                 }
                 true
             }
@@ -72,8 +72,8 @@ class ConsumerNavHostFragment : Fragment() {
         if (!donationFragment.isAdded) {
             addAndHideFragment(donationFragment)
         }
-        if (!profileFragment.isAdded) {
-            addAndHideFragment(profileFragment)
+        if (!profileConsumerFragment.isAdded) {
+            addAndHideFragment(profileConsumerFragment)
         }
     }
 

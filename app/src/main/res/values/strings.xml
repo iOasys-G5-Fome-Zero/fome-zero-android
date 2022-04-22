@@ -19,6 +19,7 @@
     <string name="i_am_consumer">Sou consumidor</string>
     <string name="rules_password_text">A senha deve conter pelo menos 6 caracteres, incluindo letras e números.</string>
     <string name="agree_privacy_policy_and_use_terms">Concordo com a Política de Privacidade e Termos de Uso</string>
+    <string name="accept_use_terms">Necessario aceitar os termos de uso</string>
 
     <string name="jump">Pular</string>
     <string name="next">Proximo</string>
