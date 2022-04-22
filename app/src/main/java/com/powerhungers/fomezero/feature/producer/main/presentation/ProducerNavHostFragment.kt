@@ -1,29 +1,22 @@
 package com.powerhungers.fomezero.feature.producer.main.presentation
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.powerhungers.fomezero.R
 import com.powerhungers.fomezero.common.utils.ViewState
-import com.powerhungers.fomezero.databinding.FragmentConsumerNavHostBinding
-import com.powerhungers.fomezero.databinding.FragmentFinancesBinding
 import com.powerhungers.fomezero.databinding.FragmentProducerNavHostBinding
-import com.powerhungers.fomezero.feature.consumer.donation.presentation.DonationFragment
-import com.powerhungers.fomezero.feature.consumer.home.presentation.ConsumerHomeFragment
-import com.powerhungers.fomezero.feature.consumer.main.presentation.ConsumerSharedViewModel
-import com.powerhungers.fomezero.feature.consumer.signature.presentation.SignatureFragment
-import com.powerhungers.fomezero.feature.producer.basket.presentation.BasketFragment
 import com.powerhungers.fomezero.feature.producer.finances.presentation.FinancesFragment
 import com.powerhungers.fomezero.feature.producer.home.presentation.ProducerHomeFragment
-import com.powerhungers.fomezero.feature.producer.payment.presentation.PaymentFragment
 import com.powerhungers.fomezero.feature.profile.presentation.ProfileFragment
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 class ProducerNavHostFragment : Fragment() {
 
     private val binding by lazy { FragmentProducerNavHostBinding.inflate(layoutInflater) }
+    private val sharedViewModel: ProducerSharedViewModel by sharedViewModel()
 
     private val producerHomeFragment = ProducerHomeFragment()
     private val financesFragment = FinancesFragment()
@@ -39,8 +32,8 @@ class ProducerNavHostFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         setupBottomNav()
+        addObserver()
     }
 
     private fun setupBottomNav() {
@@ -88,6 +81,18 @@ class ProducerNavHostFragment : Fragment() {
             .show(fragment)
             .commit()
         activeFragment = fragment
+    }
+
+    private fun addObserver() {
+        observeNavigateToFinancesLiveData()
+    }
+
+    private fun observeNavigateToFinancesLiveData() {
+        sharedViewModel.navigateToFinancesLiveData.observe(viewLifecycleOwner) { state ->
+            if (state is ViewState.Success) {
+                handleFragmentTransaction(financesFragment)
+            }
+        }
     }
 
 }

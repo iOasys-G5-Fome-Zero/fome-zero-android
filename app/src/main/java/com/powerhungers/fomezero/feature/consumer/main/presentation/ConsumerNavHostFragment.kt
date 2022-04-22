@@ -10,7 +10,7 @@ import com.powerhungers.fomezero.common.utils.ViewState
 import com.powerhungers.fomezero.databinding.FragmentConsumerNavHostBinding
 import com.powerhungers.fomezero.feature.consumer.donation.presentation.DonationFragment
 import com.powerhungers.fomezero.feature.consumer.home.presentation.ConsumerHomeFragment
-import com.powerhungers.fomezero.feature.consumer.signature.presentation.SignatureFragment
+import com.powerhungers.fomezero.feature.consumer.signature.plan.presentation.SignaturePlanFragment
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import com.powerhungers.fomezero.feature.profile.presentation.ProfileFragment
 
@@ -20,7 +20,7 @@ class ConsumerNavHostFragment : Fragment() {
     private val sharedViewModel: ConsumerSharedViewModel by sharedViewModel()
 
     private val consumerHomeFragment = ConsumerHomeFragment()
-    private val signatureFragment = SignatureFragment()
+    private val signatureFragment = SignaturePlanFragment()
     private val donationFragment = DonationFragment()
     private val profileFragment = ProfileFragment()
     private var activeFragment: Fragment = consumerHomeFragment

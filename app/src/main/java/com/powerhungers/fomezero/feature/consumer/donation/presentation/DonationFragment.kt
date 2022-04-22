@@ -5,13 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.powerhungers.fomezero.R
 import com.powerhungers.fomezero.common.extension.openExternalUrl
 import com.powerhungers.fomezero.common.extension.setAnimationDuration
 import com.powerhungers.fomezero.databinding.FragmentDonationBinding
 import com.powerhungers.fomezero.feature.consumer.main.presentation.ConsumerSharedViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
-private const val FOME_ZERO_URL = "https://powerhungers.netlify.app/"
+private const val FOME_ZERO_URL = "https://cestou.netlify.app"
 private const val LEFT_PROGRESS = 400
 private const val RIGHT_PROGRESS = 600
 
@@ -29,6 +30,7 @@ class DonationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.donationToolbar.title.text = getString(R.string.donation)
 
         setupProgressBar()
         handleImageClick()

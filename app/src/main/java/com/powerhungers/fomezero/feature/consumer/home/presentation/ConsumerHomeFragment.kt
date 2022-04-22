@@ -27,6 +27,7 @@ class ConsumerHomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.homeToolbar.title.text = "exibir nome"
         handleButtonClick()
     }
 
