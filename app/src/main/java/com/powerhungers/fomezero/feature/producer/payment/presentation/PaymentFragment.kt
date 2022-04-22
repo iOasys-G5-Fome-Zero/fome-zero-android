@@ -20,4 +20,9 @@ class PaymentFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.paymentToolbar.title.text = getString(R.string.pix_keys)
+    }
+
 }

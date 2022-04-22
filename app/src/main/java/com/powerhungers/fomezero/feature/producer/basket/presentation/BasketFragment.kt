@@ -26,6 +26,7 @@ class BasketFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.basketToolbar.title.text = getString(R.string.my_baskets)
         handleClickListener()
         addObserver()
     }
