@@ -30,19 +30,30 @@ class DonationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.donationToolbar.title.text = getString(R.string.donation)
 
+        configureToolbar()
         setupProgressBar()
         handleImageClick()
+        handleWebsiteButton()
+    }
 
-        binding.websiteButton.setOnClickListener {
-            openExternalUrl(FOME_ZERO_URL)
+    private fun configureToolbar() {
+        with(binding.donationToolbar) {
+            title.text = getString(R.string.donation)
+            backButton.setOnClickListener {
+                sharedViewModel.navigateToSignaturePlan()
+            }
         }
     }
 
     private fun handleImageClick() {
-        binding.leftOngImageView.setOnClickListener {
-            DonationDialogFragment().show(childFragmentManager, javaClass.name)
+        with(binding) {
+            leftOngImageView.setOnClickListener {
+                DonationDialogFragment().show(childFragmentManager, javaClass.name)
+            }
+            rightOngImageView.setOnClickListener {
+                DonationDialogFragment().show(childFragmentManager, javaClass.name)
+            }
         }
     }
 
@@ -50,6 +61,12 @@ class DonationFragment : Fragment() {
         with(binding) {
             progressBarLeft.setAnimationDuration(LEFT_PROGRESS)
             progressBarRight.setAnimationDuration(RIGHT_PROGRESS)
+        }
+    }
+
+    private fun handleWebsiteButton() {
+        binding.websiteButton.setOnClickListener {
+            openExternalUrl(FOME_ZERO_URL)
         }
     }
 }

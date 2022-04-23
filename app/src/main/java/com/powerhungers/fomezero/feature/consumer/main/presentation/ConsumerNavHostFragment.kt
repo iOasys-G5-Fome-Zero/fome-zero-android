@@ -107,6 +107,7 @@ class ConsumerNavHostFragment : Fragment() {
         observeNavigateToSignaturePlanLiveData()
         observeNavigateToSignatureItemLiveData()
         observeNavigateToSignatureOrderLiveData()
+        observeNavigateToDonationLiveData()
     }
 
     private fun observeNavigateToConsumerHomeLiveData() {
@@ -139,6 +140,14 @@ class ConsumerNavHostFragment : Fragment() {
         sharedViewModel.navigateToSignatureOrderLiveData.observe(viewLifecycleOwner) { state ->
             if (state is ViewState.Success) {
                 handleFragmentTransaction(signatureOrderFragment)
+            }
+        }
+    }
+    private fun observeNavigateToDonationLiveData() {
+        sharedViewModel.navigateToDonationLiveData.observe(viewLifecycleOwner) { state ->
+            if (state is ViewState.Success) {
+                binding.consumerBottomNavHost.selectedItemId = R.id.donations_consumer
+                handleFragmentTransaction(donationFragment)
             }
         }
     }

@@ -12,6 +12,7 @@ class ConsumerSharedViewModel : ViewModel() {
     private val navigateToSignaturePlanViewState = MutableLiveData<ViewState<Unit>>()
     private val navigateToSignatureItemViewState = MutableLiveData<ViewState<Unit>>()
     private val navigateToSignatureOrderViewState = MutableLiveData<ViewState<Unit>>()
+    private val navigateToDonationViewState = MutableLiveData<ViewState<Unit>>()
 
     val navigateToConsumerHomeLiveData =
         navigateToConsumerHomeViewState as LiveData<ViewState<Unit>>
@@ -21,6 +22,8 @@ class ConsumerSharedViewModel : ViewModel() {
         navigateToSignatureItemViewState as LiveData<ViewState<Unit>>
     val navigateToSignatureOrderLiveData =
         navigateToSignatureOrderViewState as LiveData<ViewState<Unit>>
+    val navigateToDonationLiveData =
+        navigateToDonationViewState as LiveData<ViewState<Unit>>
 
     fun navigateToConsumerHome() {
         navigateToConsumerHomeViewState.postSuccess(Unit)
@@ -36,5 +39,9 @@ class ConsumerSharedViewModel : ViewModel() {
 
     fun navigateToSignatureOrder() {
         navigateToSignatureOrderViewState.postSuccess(Unit)
+    }
+
+    fun navigateToDonation() {
+        navigateToDonationViewState.postSuccess(Unit)
     }
 }
