@@ -7,11 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
+import com.powerhungers.fomezero.common.extension.openExternalUrl
 import androidx.navigation.fragment.findNavController
 import com.powerhungers.fomezero.common.extension.hasEditTextFocusChanged
 import com.powerhungers.fomezero.common.utils.ViewState
 import com.powerhungers.fomezero.databinding.FragmentLoginBinding
 import com.powerhungers.fomezero.domain.model.UserType
+import com.powerhungers.fomezero.feature.consumer.home.presentation.FOME_ZERO_URL
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class LoginFragment : Fragment() {
@@ -38,13 +40,17 @@ class LoginFragment : Fragment() {
         with(binding) {
             btnEnter.setOnClickListener {
                 viewModel.login(
-                    emailEditText.text.toString(), passwordEditText.text.toString()
+                    //phoneEditText.text.toString(), passwordEditText.text.toString()
+                "31920201011","102030Ab!"
                 )
             }
             txtCadastre.setOnClickListener {
                 findNavController().navigate(
                     LoginFragmentDirections.navigateToRegistrationFragment()
                 )
+            }
+            websiteButton.setOnClickListener{
+                openExternalUrl(FOME_ZERO_URL)
             }
         }
     }
@@ -75,14 +81,14 @@ class LoginFragment : Fragment() {
     }
 
     private fun observeEmailLiveData() {
-        viewModel.emailLiveData.observe(viewLifecycleOwner) { state ->
+        viewModel.phoneLiveData.observe(viewLifecycleOwner) { state ->
             with(binding) {
                 if (state is ViewState.Error) {
                     progressDialog.isGone = true
-                    emailInputLayout.error = state.throwable.message
+                    phoneInputLayout.error = state.throwable.message
                 } else {
                     progressDialog.isGone = true
-                    emailInputLayout.error = null
+                    phoneInputLayout.error = null
                 }
             }
         }
@@ -104,7 +110,7 @@ class LoginFragment : Fragment() {
 
     private fun clearError() {
         with(binding) {
-            emailEditText.hasEditTextFocusChanged { viewModel.clearViewState() }
+            phoneEditText.hasEditTextFocusChanged { viewModel.clearViewState() }
             passwordEditText.hasEditTextFocusChanged { viewModel.clearViewState() }
         }
     }

@@ -10,9 +10,11 @@ import com.powerhungers.fomezero.common.utils.ViewState
 import com.powerhungers.fomezero.databinding.FragmentConsumerNavHostBinding
 import com.powerhungers.fomezero.feature.consumer.donation.presentation.DonationFragment
 import com.powerhungers.fomezero.feature.consumer.home.presentation.ConsumerHomeFragment
+import com.powerhungers.fomezero.feature.consumer.profile.presentation.ProfileConsumerFragment
+import com.powerhungers.fomezero.feature.consumer.signature.items.presentation.SignatureItemsFragment
+import com.powerhungers.fomezero.feature.consumer.signature.order.presentation.SignatureOrderFragment
 import com.powerhungers.fomezero.feature.consumer.signature.plan.presentation.SignaturePlanFragment
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
-import com.powerhungers.fomezero.feature.profile.presentation.ProfileFragment
 
 class ConsumerNavHostFragment : Fragment() {
 
@@ -20,9 +22,11 @@ class ConsumerNavHostFragment : Fragment() {
     private val sharedViewModel: ConsumerSharedViewModel by sharedViewModel()
 
     private val consumerHomeFragment = ConsumerHomeFragment()
-    private val signatureFragment = SignaturePlanFragment()
+    private val signaturePlanFragment = SignaturePlanFragment()
+    private val signatureItemFragment = SignatureItemsFragment()
+    private val signatureOrderFragment = SignatureOrderFragment()
     private val donationFragment = DonationFragment()
-    private val profileFragment = ProfileFragment()
+    private val profileConsumerFragment = ProfileConsumerFragment()
     private var activeFragment: Fragment = consumerHomeFragment
 
 
@@ -49,11 +53,11 @@ class ConsumerNavHostFragment : Fragment() {
                     R.id.home_consumer ->
                         handleFragmentTransaction(consumerHomeFragment)
                     R.id.my_basket_consumer ->
-                        handleFragmentTransaction(signatureFragment)
+                        handleFragmentTransaction(signaturePlanFragment)
                     R.id.donations_consumer ->
                         handleFragmentTransaction(donationFragment)
                     R.id.profile_consumer ->
-                        handleFragmentTransaction(profileFragment)
+                        handleFragmentTransaction(profileConsumerFragment)
                 }
                 true
             }
@@ -66,14 +70,20 @@ class ConsumerNavHostFragment : Fragment() {
                 .add(R.id.consumerNavHostContainer, consumerHomeFragment)
                 .commit()
         }
-        if (!signatureFragment.isAdded) {
-            addAndHideFragment(signatureFragment)
+        if (!signaturePlanFragment.isAdded) {
+            addAndHideFragment(signaturePlanFragment)
+        }
+        if (!signatureItemFragment.isAdded) {
+            addAndHideFragment(signatureItemFragment)
+        }
+        if (!signatureOrderFragment.isAdded) {
+            addAndHideFragment(signatureOrderFragment)
         }
         if (!donationFragment.isAdded) {
             addAndHideFragment(donationFragment)
         }
-        if (!profileFragment.isAdded) {
-            addAndHideFragment(profileFragment)
+        if (!profileConsumerFragment.isAdded) {
+            addAndHideFragment(profileConsumerFragment)
         }
     }
 
@@ -93,13 +103,51 @@ class ConsumerNavHostFragment : Fragment() {
     }
 
     private fun addObserver() {
-        observeNavigateToSignatureLiveData()
+        observeNavigateToConsumerHomeLiveData()
+        observeNavigateToSignaturePlanLiveData()
+        observeNavigateToSignatureItemLiveData()
+        observeNavigateToSignatureOrderLiveData()
+        observeNavigateToDonationLiveData()
     }
 
-    private fun observeNavigateToSignatureLiveData() {
-        sharedViewModel.navigateToSignatureLiveData.observe(viewLifecycleOwner) { state ->
+    private fun observeNavigateToConsumerHomeLiveData() {
+        sharedViewModel.navigateToConsumerHomeLiveData.observe(viewLifecycleOwner) { state ->
             if (state is ViewState.Success) {
-                handleFragmentTransaction(signatureFragment)
+                binding.consumerBottomNavHost.selectedItemId = R.id.home_consumer
+                handleFragmentTransaction(consumerHomeFragment)
+            }
+        }
+    }
+
+    private fun observeNavigateToSignaturePlanLiveData() {
+        sharedViewModel.navigateToSignaturePlanLiveData.observe(viewLifecycleOwner) { state ->
+            if (state is ViewState.Success) {
+                binding.consumerBottomNavHost.selectedItemId = R.id.my_basket_consumer
+                handleFragmentTransaction(signaturePlanFragment)
+            }
+        }
+    }
+
+    private fun observeNavigateToSignatureItemLiveData() {
+        sharedViewModel.navigateToSignatureItemLiveData.observe(viewLifecycleOwner) { state ->
+            if (state is ViewState.Success) {
+                handleFragmentTransaction(signatureItemFragment)
+            }
+        }
+    }
+
+    private fun observeNavigateToSignatureOrderLiveData() {
+        sharedViewModel.navigateToSignatureOrderLiveData.observe(viewLifecycleOwner) { state ->
+            if (state is ViewState.Success) {
+                handleFragmentTransaction(signatureOrderFragment)
+            }
+        }
+    }
+    private fun observeNavigateToDonationLiveData() {
+        sharedViewModel.navigateToDonationLiveData.observe(viewLifecycleOwner) { state ->
+            if (state is ViewState.Success) {
+                binding.consumerBottomNavHost.selectedItemId = R.id.donations_consumer
+                handleFragmentTransaction(donationFragment)
             }
         }
     }

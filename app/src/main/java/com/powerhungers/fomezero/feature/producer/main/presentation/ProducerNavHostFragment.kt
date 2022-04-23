@@ -10,7 +10,7 @@ import com.powerhungers.fomezero.common.utils.ViewState
 import com.powerhungers.fomezero.databinding.FragmentProducerNavHostBinding
 import com.powerhungers.fomezero.feature.producer.finances.presentation.FinancesFragment
 import com.powerhungers.fomezero.feature.producer.home.presentation.ProducerHomeFragment
-import com.powerhungers.fomezero.feature.profile.presentation.ProfileFragment
+import com.powerhungers.fomezero.feature.producer.profile.presentation.ProfileFragment
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 class ProducerNavHostFragment : Fragment() {

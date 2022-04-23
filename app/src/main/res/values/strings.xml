@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Android Fome Zero</string>
-    <string name="no_account_yet">Ainda não tem uma conta?</string>
+    <string name="no_account_yet">Ainda não tem conta?</string>
     <string name="sign_up">Cadastre-se</string>
     <string name="create_account">Criar conta</string>
     <string name="recover_password">Recuperar senha</string>
@@ -19,10 +19,12 @@
     <string name="i_am_consumer">Sou consumidor</string>
     <string name="rules_password_text">A senha deve conter pelo menos 6 caracteres, incluindo letras e números.</string>
     <string name="agree_privacy_policy_and_use_terms">Concordo com a Política de Privacidade e Termos de Uso</string>
+    <string name="accept_use_terms">Necessario aceitar os termos de uso</string>
 
     <string name="jump">Pular</string>
     <string name="next">Proximo</string>
     <string name="finish_registration">Finalizar cadastro</string>
+    <string name="hello_user">Olá, %1$s!</string>
     <string name="hello">Olá</string>
     <string name="help_fight_hunger">Ajude no combate a fome</string>
     <string name="information_text">Veja abaixo as instituições e projetos cadastrados na \nnossa rede e ajude-nos a atingir a meta do mês \ndoando suas moedas que serão convertidas em \nalimentos.</string>
@@ -63,6 +65,10 @@
     <string name="important">Importante!</string>
     <string name="donation_message">Cada unidade de alimento retirada da sua cesta, é convertida em Horticoins, nossa moeda virtual que é utilizada por instituições parceiras para adquirir alimentos e ajudar no combate a fome!</string>
     <string name="spices">Temperos</string>
+    <string name="vegetable">Legumes</string>
+    <string name="greens">Verduras</string>
+    <string name="fruits">Frutas</string>
+    <string name="processed_foods">Processados</string>
     <string name="see_examples">Ver exemplos</string>
     <string name="signature">Assinatura</string>
     <string name="signature_plan_title">Vamos configurar seu plano?</string>
@@ -70,6 +76,7 @@
     <string name="weekly">Semanal</string>
     <string name="biweekly">Quinzenal</string>
     <string name="signature_basket_size">Escolha qual o tamanho deseja para sua cesta de alimentos:</string>
+    <string name="signature_plan_value_information">Obs: O valor informado acima é cobrado de acordo com a frequência escolhida.</string>
 
     <string name="my_baskets">Minhas cestas</string>
     <string name="choose_basket">Escolha abaixo qual o tamanho da cesta você deseja fornecer, e veja quantos e quais os tipos de alimentos em cada uma.</string>
@@ -87,7 +94,7 @@
     <string name="pix_keys">Chaves pix</string>
     <string name="pix_key_type">Informe qual tipo de chave pix deseja cadastrar para receber suas vendas:</string>
     <string name="cpf">CPF</string>
-    <string name="phone">Celular</string>
+    <string name="phone">Telefone</string>
     <string name="aleatory_key">Chave aleatória</string>
     <string name="registre_new_pix_key">Informe no campo abaixo a chave pix a ser \nregistrada:</string>
     <string name="inform_key">Informe a chave pix</string>
@@ -97,9 +104,14 @@
     <string name="user_name">José</string>
     <string name="my_finances">Minhas finanças</string>
     <string name="configure_basket_type">Configure quais os tipos e tamanhos de cesta de alimentos \nvocê deseja fornecer.</string>
-    <string name="hello_user">Olá José!</string>
     <string name="see_my_income">Ver meus rendimentos</string>
     <string name="cadastre_your_pix_key">Cadastrar chave Pix</string>
     <string name="start">Início</string>
     <string name="something_is_wrong">Algo deu errado!</string>
+    <string name="ong_againt_hungry">Se você é uma instituição que atua no combate a fome e deseja solicitar seu cadastro, visite nosso site e saiba mais.</string>
+    <string name="onboarding_subtitle">Alimentação é direito básico e a sua partilha é fundamental à quem tem fome. Através da assinatura mensal, você garante alimentação saudável democratizada pra sua família e ainda possibilita o mesmo consumo pra uma família em vulnerabilidade.</string>
+    <string name="onboarding_home_title">Tire a fome do caminho</string>
+    <string name="contact_producer">Contactar produtor</string>
+    <string name="setup_plan">Configurar plano</string>
+
 </resources>

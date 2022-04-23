@@ -1,4 +1,4 @@
-package com.powerhungers.fomezero.feature.profile.presentation
+package com.powerhungers.fomezero.feature.producer.profile.presentation
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
