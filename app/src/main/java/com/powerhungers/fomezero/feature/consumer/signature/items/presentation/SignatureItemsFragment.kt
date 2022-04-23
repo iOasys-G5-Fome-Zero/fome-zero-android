@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.powerhungers.fomezero.R
+import com.powerhungers.fomezero.common.utils.ViewState
 import com.powerhungers.fomezero.databinding.FragmentSignatureItemsBinding
 import com.powerhungers.fomezero.feature.consumer.main.presentation.ConsumerSharedViewModel
 import com.powerhungers.fomezero.feature.consumer.signature.domain.model.BasketOptions
+import com.powerhungers.fomezero.feature.consumer.signature.domain.model.BasketType
 import com.powerhungers.fomezero.feature.consumer.signature.items.presentation.adapter.FoodItemsAdapter
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
@@ -29,6 +31,7 @@ class SignatureItemsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         configureToolbar()
         setupAdapter()
+        addObserver()
     }
 
 
@@ -43,7 +46,27 @@ class SignatureItemsFragment : Fragment() {
 
     private fun setupAdapter() {
         binding.foodItemRecyclerView.adapter = foodItemAdapter
-        foodItemAdapter.submitList(BasketOptions.small())
+    }
+
+    private fun addObserver() {
+        observeNavigateToSignatureItemLiveData()
+    }
+
+    private fun observeNavigateToSignatureItemLiveData() {
+        sharedViewModel.navigateToSignatureItemLiveData.observe(viewLifecycleOwner) { state ->
+            if (state is ViewState.Success) {
+                handleBasketType(state.data)
+            }
+        }
+    }
+
+    private fun handleBasketType(basketType: BasketType) {
+        val optionList = when (basketType) {
+            BasketType.SMALL -> BasketOptions.small()
+            BasketType.MEDIUM -> BasketOptions.medium()
+            BasketType.LARGE -> BasketOptions.large()
+        }
+        foodItemAdapter.submitList(optionList)
     }
 
 }

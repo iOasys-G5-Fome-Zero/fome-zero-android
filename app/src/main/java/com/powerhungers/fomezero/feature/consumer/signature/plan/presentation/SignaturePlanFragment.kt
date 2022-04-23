@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.powerhungers.fomezero.R
 import com.powerhungers.fomezero.databinding.FragmentSignaturePlanBinding
 import com.powerhungers.fomezero.feature.consumer.main.presentation.ConsumerSharedViewModel
+import com.powerhungers.fomezero.feature.consumer.signature.domain.model.BasketType
 import com.powerhungers.fomezero.feature.consumer.signature.plan.presentation.adapter.SignatureBasketDateAdapter
 import com.powerhungers.fomezero.feature.consumer.signature.plan.presentation.adapter.SignatureBasketSizeAdapter
 import com.powerhungers.fomezero.feature.consumer.signature.plan.presentation.model.BasketDate
@@ -20,6 +21,7 @@ class SignaturePlanFragment : Fragment() {
     private val sharedViewModel: ConsumerSharedViewModel by sharedViewModel()
     private val basketSizeAdapter = SignatureBasketSizeAdapter()
     private val basketDateAdapter = SignatureBasketDateAdapter()
+    private lateinit var basketType: BasketType
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,6 +48,14 @@ class SignaturePlanFragment : Fragment() {
         }
     }
 
+    private fun setupSizeAdapter() {
+        binding.basketSizeRecyclerView.adapter = basketSizeAdapter
+        basketSizeAdapter.submitList(BasketSize().list)
+        basketSizeAdapter.itemClickListener = {
+            basketType = it
+        }
+    }
+
     private fun setupDateAdapter() {
         binding.basketDateRecyclerView.adapter = basketDateAdapter
         basketDateAdapter.submitList(BasketDate().list)
@@ -53,12 +63,7 @@ class SignaturePlanFragment : Fragment() {
 
     private fun handleButtonClickListener() {
         binding.nextButton.setOnClickListener {
-            sharedViewModel.navigateToSignatureItem()
+            sharedViewModel.navigateToSignatureItem(basketType)
         }
-    }
-
-    private fun setupSizeAdapter() {
-        binding.basketSizeRecyclerView.adapter = basketSizeAdapter
-        basketSizeAdapter.submitList(BasketSize().list)
     }
 }

@@ -5,12 +5,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.powerhungers.fomezero.common.extension.postSuccess
 import com.powerhungers.fomezero.common.utils.ViewState
+import com.powerhungers.fomezero.feature.consumer.signature.domain.model.BasketType
 
 class ConsumerSharedViewModel : ViewModel() {
 
     private val navigateToConsumerHomeViewState = MutableLiveData<ViewState<Unit>>()
     private val navigateToSignaturePlanViewState = MutableLiveData<ViewState<Unit>>()
-    private val navigateToSignatureItemViewState = MutableLiveData<ViewState<Unit>>()
+    private val navigateToSignatureItemViewState = MutableLiveData<ViewState<BasketType>>()
     private val navigateToSignatureOrderViewState = MutableLiveData<ViewState<Unit>>()
     private val navigateToDonationViewState = MutableLiveData<ViewState<Unit>>()
 
@@ -19,7 +20,7 @@ class ConsumerSharedViewModel : ViewModel() {
     val navigateToSignaturePlanLiveData =
         navigateToSignaturePlanViewState as LiveData<ViewState<Unit>>
     val navigateToSignatureItemLiveData =
-        navigateToSignatureItemViewState as LiveData<ViewState<Unit>>
+        navigateToSignatureItemViewState as LiveData<ViewState<BasketType>>
     val navigateToSignatureOrderLiveData =
         navigateToSignatureOrderViewState as LiveData<ViewState<Unit>>
     val navigateToDonationLiveData =
@@ -33,8 +34,8 @@ class ConsumerSharedViewModel : ViewModel() {
         navigateToSignaturePlanViewState.postSuccess(Unit)
     }
 
-    fun navigateToSignatureItem() {
-        navigateToSignatureItemViewState.postSuccess(Unit)
+    fun navigateToSignatureItem(basketType: BasketType) {
+        navigateToSignatureItemViewState.postSuccess(basketType)
     }
 
     fun navigateToSignatureOrder() {
