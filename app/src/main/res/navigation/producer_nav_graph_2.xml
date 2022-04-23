@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/producer_nav_graph_2"
+    app:startDestination="@id/producerHomeFragment">
+
+    <fragment
+        android:id="@+id/producerHomeFragment"
+        android:name="com.powerhungers.fomezero.feature.producer.home.presentation.ProducerHomeFragment"
+        android:label="fragment_producer_home"
+        tools:layout="@layout/fragment_producer_home" >
+        <action
+            android:id="@+id/navigateToPayment"
+            app:destination="@id/paymentFragment" />
+        <action
+            android:id="@+id/navigateToBasket"
+            app:destination="@id/basketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/basketFragment"
+        android:name="com.powerhungers.fomezero.feature.producer.basket.presentation.BasketFragment"
+        android:label="fragment_basket"
+        tools:layout="@layout/fragment_basket" >
+        <action
+            android:id="@+id/navigateToProducerHome"
+            app:destination="@id/producerHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.powerhungers.fomezero.feature.producer.payment.presentation.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" />
+</navigation>

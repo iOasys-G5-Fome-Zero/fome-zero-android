@@ -8,7 +8,7 @@
     tools:context=".feature.producer.home.presentation.ProducerHomeFragment">
 
     <View
-        android:id="@+id/view_header_home"
+        android:id="@+id/viewHeaderHome"
         android:layout_width="0dp"
         android:layout_height="64dp"
         android:background="@drawable/bg_light_green"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_name"
+        android:id="@+id/txtName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -27,11 +27,11 @@
         android:textColor="@color/black"
         android:textSize="24sp"
         app:drawableTint="@color/black"
-        app:layout_constraintStart_toStartOf="@id/view_header_home"
-        app:layout_constraintTop_toTopOf="@id/view_header_home" />
+        app:layout_constraintStart_toStartOf="@id/viewHeaderHome"
+        app:layout_constraintTop_toTopOf="@id/viewHeaderHome" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_my_baskets"
+        android:id="@+id/txtMyBaskets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -39,11 +39,11 @@
         android:textColor="@color/black"
         android:textSize="16sp"
         app:drawableTint="@color/black"
-        app:layout_constraintStart_toStartOf="@id/txt_name"
-        app:layout_constraintTop_toBottomOf="@id/view_header_home" />
+        app:layout_constraintStart_toStartOf="@id/txtName"
+        app:layout_constraintTop_toBottomOf="@id/viewHeaderHome" />
 
     <View
-        android:id="@+id/view_baskets"
+        android:id="@+id/viewBaskets"
         android:layout_width="0dp"
         android:layout_height="128dp"
         android:layout_marginHorizontal="24dp"
@@ -52,7 +52,7 @@
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_my_baskets" />
+        app:layout_constraintTop_toBottomOf="@id/txtMyBaskets" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
@@ -62,12 +62,12 @@
         android:text="@string/configure_basket_type"
         android:textColor="@color/black"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@id/view_baskets"
-        app:layout_constraintStart_toStartOf="@id/view_baskets"
-        app:layout_constraintTop_toTopOf="@id/view_baskets" />
+        app:layout_constraintEnd_toEndOf="@id/viewBaskets"
+        app:layout_constraintStart_toStartOf="@id/viewBaskets"
+        app:layout_constraintTop_toTopOf="@id/viewBaskets" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_my_baskets_producer"
+        android:id="@+id/btnMyBasketsProducer"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginHorizontal="54dp"
@@ -78,23 +78,23 @@
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@id/view_baskets"
-        app:layout_constraintEnd_toEndOf="@id/view_baskets"
-        app:layout_constraintStart_toStartOf="@id/view_baskets" />
+        app:layout_constraintBottom_toBottomOf="@id/viewBaskets"
+        app:layout_constraintEnd_toEndOf="@id/viewBaskets"
+        app:layout_constraintStart_toStartOf="@id/viewBaskets" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_my_finances"
+        android:id="@+id/txtMyFinances"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/my_finances"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@id/view_baskets"
-        app:layout_constraintTop_toBottomOf="@id/view_baskets" />
+        app:layout_constraintStart_toStartOf="@id/viewBaskets"
+        app:layout_constraintTop_toBottomOf="@id/viewBaskets" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_income"
+        android:id="@+id/btnIncome"
         android:layout_width="match_parent"
         android:layout_height="104dp"
         android:layout_marginHorizontal="24dp"
@@ -105,10 +105,10 @@
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_my_finances" />
+        app:layout_constraintTop_toBottomOf="@id/txtMyFinances" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_pix_cadastre"
+        android:id="@+id/btnPixCadastre"
         android:layout_width="match_parent"
         android:layout_height="104dp"
         android:layout_marginHorizontal="24dp"
@@ -119,6 +119,6 @@
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_income" />
+        app:layout_constraintTop_toBottomOf="@id/btnIncome" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
