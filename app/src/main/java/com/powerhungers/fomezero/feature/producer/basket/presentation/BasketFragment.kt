@@ -52,7 +52,7 @@ class BasketFragment : Fragment() {
             when (state) {
                 is ViewState.Success -> {
                     findNavController().navigate(
-                        BasketFragmentDirections.navigateToProducerHomeFragment()
+                        BasketFragmentDirections.navigateBackToProducerHome()
                     )
                 }
                 is ViewState.Error -> {

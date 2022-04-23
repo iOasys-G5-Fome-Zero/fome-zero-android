@@ -11,8 +11,10 @@
         android:label="fragment_onboarding"
         tools:layout="@layout/fragment_onboarding">
         <action
-            android:id="@+id/navigateToProducerHome"
-            app:destination="@id/producerNavHostFragment" />
+            android:id="@+id/navigateToHome"
+            app:destination="@id/producerNavHostFragment"
+            app:popUpTo="@id/onboardingFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/producerHomeFragment"
