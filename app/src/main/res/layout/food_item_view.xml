@@ -24,7 +24,7 @@
             app:srcCompat="@drawable/left_ong_image" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/spicesTextView"
+            android:id="@+id/itemNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -44,19 +44,17 @@
             android:textColor="@color/forest_green"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/imageItemView"
-            app:layout_constraintTop_toBottomOf="@id/spicesTextView" />
+            app:layout_constraintTop_toBottomOf="@id/itemNameTextView" />
 
         <include
             android:id="@+id/moreOrLessButton"
             layout="@layout/more_or_less_button_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
             android:layout_margin="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
