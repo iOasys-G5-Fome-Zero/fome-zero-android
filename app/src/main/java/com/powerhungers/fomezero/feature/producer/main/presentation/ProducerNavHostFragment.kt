@@ -8,8 +8,10 @@ import androidx.fragment.app.Fragment
 import com.powerhungers.fomezero.R
 import com.powerhungers.fomezero.common.utils.ViewState
 import com.powerhungers.fomezero.databinding.FragmentProducerNavHostBinding
+import com.powerhungers.fomezero.feature.producer.basket.presentation.BasketFragment
 import com.powerhungers.fomezero.feature.producer.finances.presentation.FinancesFragment
 import com.powerhungers.fomezero.feature.producer.home.presentation.ProducerHomeFragment
+import com.powerhungers.fomezero.feature.producer.payment.presentation.PaymentFragment
 import com.powerhungers.fomezero.feature.producer.profile.presentation.ProfileFragment
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
@@ -20,6 +22,8 @@ class ProducerNavHostFragment : Fragment() {
 
     private val producerHomeFragment = ProducerHomeFragment()
     private val financesFragment = FinancesFragment()
+    private val basketFragment = BasketFragment()
+    private val paymentFragment = PaymentFragment()
     private val profileFragment = ProfileFragment()
     private var activeFragment: Fragment = producerHomeFragment
 
@@ -62,6 +66,12 @@ class ProducerNavHostFragment : Fragment() {
         }
         if (!financesFragment.isAdded) {
             addAndHideFragment(financesFragment)
+        }
+//        if (!basketFragment.isAdded) {
+//            addAndHideFragment(basketFragment)
+//        }
+        if (!paymentFragment.isAdded) {
+            addAndHideFragment(paymentFragment)
         }
         if (!profileFragment.isAdded) {
             addAndHideFragment(profileFragment)

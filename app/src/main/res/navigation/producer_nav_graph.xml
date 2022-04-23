@@ -11,44 +11,10 @@
         android:label="fragment_onboarding"
         tools:layout="@layout/fragment_onboarding">
         <action
-            android:id="@+id/navigateToProducerHome"
+            android:id="@+id/navigateToHome"
             app:destination="@id/producerNavHostFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/producerHomeFragment"
-        android:name="com.powerhungers.fomezero.feature.producer.home.presentation.ProducerHomeFragment"
-        android:label="fragment_producer_home"
-        tools:layout="@layout/fragment_producer_home">
-        <action
-            android:id="@+id/navigateToBasket"
-            app:destination="@id/basketFragment" />
-        <action
-            android:id="@+id/navigateToPayment"
-            app:destination="@id/paymentFragment" />
-        <action
-            android:id="@+id/navigateToFinances"
-            app:destination="@id/financesFragment" />
-    </fragment>
 
-    <fragment
-        android:id="@+id/basketFragment"
-        android:name="com.powerhungers.fomezero.feature.producer.basket.presentation.BasketFragment"
-        android:label="fragment_basket"
-        tools:layout="@layout/fragment_basket">
-        <action
-            android:id="@+id/navigateBackToProducerHome"
-            app:destination="@id/producerHomeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/paymentFragment"
-        android:name="com.powerhungers.fomezero.feature.producer.payment.presentation.PaymentFragment"
-        android:label="fragment_payment"
-        tools:layout="@layout/fragment_payment" />
-    <fragment
-        android:id="@+id/financesFragment"
-        android:name="com.powerhungers.fomezero.feature.producer.finances.presentation.FinancesFragment"
-        android:label="fragment_finances"
-        tools:layout="@layout/fragment_finances" />
     <fragment
         android:id="@+id/producerNavHostFragment"
         android:name="com.powerhungers.fomezero.feature.producer.main.presentation.ProducerNavHostFragment"
