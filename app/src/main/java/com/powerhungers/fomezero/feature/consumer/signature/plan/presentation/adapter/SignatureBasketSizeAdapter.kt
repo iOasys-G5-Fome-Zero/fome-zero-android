@@ -32,7 +32,6 @@ class SignatureBasketSizeAdapter :
                 radioButtonTitle.text = item.title
                 radioButtonDescription.text = item.description
                 handleRadioButton(binding, position)
-
             }
         }
 

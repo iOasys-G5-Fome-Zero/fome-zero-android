@@ -65,6 +65,10 @@
     <string name="important">Importante!</string>
     <string name="donation_message">Cada unidade de alimento retirada da sua cesta, é convertida em Horticoins, nossa moeda virtual que é utilizada por instituições parceiras para adquirir alimentos e ajudar no combate a fome!</string>
     <string name="spices">Temperos</string>
+    <string name="vegetable">Legumes</string>
+    <string name="greens">Verduras</string>
+    <string name="fruits">Frutas</string>
+    <string name="processed_foods">Processados</string>
     <string name="see_examples">Ver exemplos</string>
     <string name="signature">Assinatura</string>
     <string name="signature_plan_title">Vamos configurar seu plano?</string>
